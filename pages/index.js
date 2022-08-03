@@ -1,28 +1,16 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import ProTip from '../src/ProTip';
-import Link from '../src/Link';
-import Copyright from '../src/Copyright';
-import Head from 'next/head'
-export default function Index() {
-  return (
+import Home from '../src/components/Home/Home'
+import {Box} from "@mui/material";
+import Head from "next/head";
+const Index = () => {
+    return (
+        <Box>
+            <Head>
+                <title> Hello Wil</title>
+            </Head>
+            <Home/>
+        </Box>
 
-    <Container maxWidth="sm">
-      <Head>
-        <title> Hello Wil</title>
-      </Head>
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Wilfredo Colina
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
-  );
+    );
 }
+export default Index;
