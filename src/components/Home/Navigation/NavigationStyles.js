@@ -25,7 +25,7 @@ export const Item = styled(ListItem)`
 export const UList = styled(List)`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: .5rem;
   font-weight: 400;
@@ -35,6 +35,11 @@ export const UList = styled(List)`
   }
   & *{
     font-family: 'Inconsolata', monospace;
+  }
+
+  ${props => props.theme.breakpoints.down("md")} {
+    justify-content: space-between;
+
   }
 `
 
@@ -46,11 +51,11 @@ export const Wrapper = styled(Grid)`
   top: 0;
   position: sticky;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
-  z-index: 100;
+  z-index: 99;
 `
 
 export const Logo = styled(Typography)`
-  color: #000;
+ color: #000;
   margin-left: 1rem;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
@@ -68,31 +73,15 @@ export const ContactLink = styled(Stack)`
   }
 `
 
-export const BoxIcon = styled(props => (
-    <Box {...props} />
-))`
 
-  background: #01B19C;
-  border: 1px solid #000;
-  border-radius: 60%;
-  align-items: center;
-  height: 28px;
-  margin-right: .5rem;
-  cursor: pointer;
-  box-shadow: ${props => props.hoverState ? "4px 0 #000" : 'none'};
-  &:hover {
-    transition: .4ms ease-in-out;
-    
-  }
-`
 
 export const Identifier = styled('span')`
   position: absolute;
   background:#01B19C;
   border: 1px solid #000;
   border-radius: 60%;
-  height: 12px;
-  width: 12px;
+  height: 10px;
+  width: 10px;
   top: 45px;
 `
 export const BurgerController = styled(Box)`
@@ -125,11 +114,14 @@ export const Burger = styled((props)=>(
   &:focus {
     outline: none;
   }
+    &:hover {
+      background-color: transparent;
+    }
   div {
     width: 2rem;
     height: 0.2rem;
     background: ${(props) =>
-    props.open ? "#060505" : "#0b0b0b"};
+    props.open ? "#313030" : "#0b0b0b"};
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 3px;

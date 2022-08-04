@@ -1,29 +1,29 @@
 import React, {useState} from "react";
 import Box from "@mui/material/Box";
-import {Stack, Grid} from "@mui/material";
+import {Stack} from "@mui/material";
 import {
     Item,
     UList,
     Wrapper,
     Logo,
     ContactLink,
-    BoxIcon,
     Identifier,
     Burger,
     BurgerController
 } from "./NavigationStyles"
 import Link from "../../../Link"
 import Typography from "@mui/material/Typography";
-import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
-
+import BoxIcon from "../BoxIcon";
+import HamburgerModal from "./HamburgerModal/HamburgerModal";
 const Navigation = () => {
     const [logHover, isLogHover] = useState(false);
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
     return (<Wrapper>
+        <HamburgerModal active={isBurgerOpen}/>
         <UList>
             <Link href='/'>
                 <Box>
-                    <Logo variant={"h5"}>
+                    <Logo variant={"h5"} >
                         Wilfredo Colina
                     </Logo>
                 </Box>
@@ -48,9 +48,7 @@ const Navigation = () => {
                 <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)}>
                     <Link href="/contact" color="secondary">
                         <ContactLink direction="row">
-                            <BoxIcon hoverState={logHover}>
-                                <TrendingFlatIcon/>
-                            </BoxIcon>
+                            <BoxIcon hoverState={logHover}/>
                             <Typography>
                                 Let's chat
                             </Typography>
