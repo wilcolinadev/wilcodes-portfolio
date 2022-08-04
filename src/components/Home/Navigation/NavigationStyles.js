@@ -42,15 +42,15 @@ export const Wrapper = styled(Grid)`
   box-sizing: border-box;
   width: 100%;
   height: auto;
-  background-color:rgba(0,0,0,0.006);
+  background-color: #f8f7f7;
   top: 0;
   position: sticky;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+  z-index: 100;
 `
 
 export const Logo = styled(Typography)`
-  color: #069985;
-  text-shadow: 0 0 1px #000000;
+  color: #000;
   margin-left: 1rem;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
