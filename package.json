@@ -23,7 +23,8 @@
     "next-images": "^1.8.4",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",

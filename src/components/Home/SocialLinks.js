@@ -28,10 +28,9 @@ const SocialLinks = () => {
                 <GitHubIcon fontSize={'large'}/>
             </Link>
             <Link href={'https://github.com/wilcodes'}>
-            <InstagramIcon fontSize={'large'}/>
+                <InstagramIcon fontSize={'large'}/>
             </Link>
-        </SocialStack>
-)
+        </SocialStack>)
 
 };
 

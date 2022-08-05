@@ -1,14 +1,13 @@
 import {styled} from "@mui/material/styles";
 import {Grid, Button, Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
+
 
 export const GridController = styled(Grid)`
   width: 100%;
   box-sizing: border-box;
   height: 100vh;
-  padding: 1rem;
-
+  padding: .5rem;
   ${props => props.theme.breakpoints.up("lg")} {
     width: 60%;
     padding: 1rem;

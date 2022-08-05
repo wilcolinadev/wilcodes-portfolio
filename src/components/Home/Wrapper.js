@@ -5,7 +5,7 @@ import bg from "../../assets/bg.svg"
 
 export const Wrapper = styled(Box)`
   background-image: url(${bg});
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-position: center;
   background-size:cover ;
