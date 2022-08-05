@@ -6,7 +6,7 @@ export const SkillsBox = styled(Stack)`
   height: auto;
   padding: 1rem;
   box-sizing: border-box;
-
+  overflow: hidden;
 `;
 
 export const SkillsTitle = styled(Typography)`
@@ -33,7 +33,7 @@ export const Element = styled(ListItem)`
 
 `
 export const SkillsRow = styled(Stack)`
-  
+  width: calc(100px * 24);
   transform: translate3d(0, 0, 0);
   animation: 30s linear .2s infinite running translateinfinite;
   margin-top: 1rem;

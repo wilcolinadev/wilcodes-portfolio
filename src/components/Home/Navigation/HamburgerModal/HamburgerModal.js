@@ -35,10 +35,9 @@ const LinkItem = styled(Typography)`
   font-weight: bold;
   
   transition: .5s;
-  &:hover{
+  &:hover, &:active{
     --s: 0.1em;   /* the thickness of the line */
     --c: #1095c1; /* the color */
-
     color: #0000;
     padding-bottom: var(--s);
     background:
@@ -47,6 +46,7 @@ const LinkItem = styled(Typography)`
     -webkit-background-clip: text,padding-box;
     transition: 0.5s;
   }
+  
 `
 
 

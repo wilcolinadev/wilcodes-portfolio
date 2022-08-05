@@ -10,4 +10,5 @@ export const Wrapper = styled(Box)`
   background-position: center;
   background-size:cover ;
   z-index: 99;
+  overflow-x:unset ;
 `
