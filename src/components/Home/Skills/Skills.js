@@ -1,6 +1,6 @@
 import React from "react";
 import {Box} from "@mui/material";
-import {SkillsBox,SkillsTitle,Element,SkillsRow} from '../Skills/SkillsStyles'
+import {SkillsBox, SkillsTitle, Element, SkillsRow} from '../Skills/SkillsStyles'
 import {
     IoLogoReact,
     IoLogoHtml5, IoLogoCss3,
@@ -13,13 +13,14 @@ import {
 
 
 } from "react-icons/io5";
-import {TbBrandNotion,TbBrandBootstrap,TbBrandNextjs } from "react-icons/tb";
-
+import {TbBrandNotion, TbBrandBootstrap, TbBrandNextjs} from "react-icons/tb";
 
 const Skills = () => {
     return (
         <Box>
+
             <SkillsBox>
+
                 <SkillsTitle variant={'h4'}>
                     Main tools I use to build my projects
                 </SkillsTitle>
@@ -58,7 +59,7 @@ const Skills = () => {
                         <TbBrandBootstrap fontSize={'60px'}/>
                     </Element>
                     <Element>
-                        <TbBrandNextjs  fontSize={'60px'}/>
+                        <TbBrandNextjs fontSize={'60px'}/>
                     </Element>
                 </SkillsRow>
             </SkillsBox>
