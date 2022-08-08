@@ -1,16 +1,18 @@
 import React, {useEffect} from "react";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, get } from "firebase/database";
 
 
 const LatestProjects = () => {
 
-  const testApp = async () => {
-      const db = await getDatabase();
-        console.log(db);
-    }
+
 
     useEffect(() => {
-       testApp();
+        const getProjects = async () => {
+            const db = getDatabase();
+            const data = await get(ref(db,'projects'));
+            console.log(data.val());
+        }
+       getProjects();
     }, []);
 
     return (<>
