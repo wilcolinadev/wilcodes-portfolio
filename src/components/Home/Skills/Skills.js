@@ -1,70 +1,75 @@
-import React from "react";
-import {Box} from "@mui/material";
-import {SkillsBox, SkillsTitle, Element, SkillsRow} from '../Skills/SkillsStyles'
+import React, {useState} from "react";
+import {Box, Grid, Typography} from "@mui/material";
+import {SkillsBox, SkillsTitle, Element, SkillsRow, Label} from './SkillsStyles'
 import {
-    IoLogoReact,
-    IoLogoHtml5, IoLogoCss3,
-    IoLogoJavascript,
-    IoLogoGithub,
-    IoLogoNpm,
-    IoLogoStackoverflow,
-    IoLogoElectron,
-    IoLogoFigma,
-
-
+    IoLogoReact, IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoNpm,
 } from "react-icons/io5";
 import {TbBrandNotion, TbBrandBootstrap, TbBrandNextjs} from "react-icons/tb";
 
 const Skills = () => {
-    return (
-        <Box>
 
-            <SkillsBox>
+    const [isLabelActive, setIsLabel] = useState(false);
+    const fontSize = '56px';
 
-                <SkillsTitle variant={'h4'}>
-                    Main tools I use to build my projects
-                </SkillsTitle>
-                <SkillsRow direction={'row'}>
+    return (<Box>
+
+        <SkillsBox>
+
+            <SkillsTitle variant={'h4'}>
+                Main tools I use to build my projects
+            </SkillsTitle>
+
+            <SkillsRow container fluid="true">
+                <Grid item onMouseEnter={() => setIsLabel(true)} onMouseLeave={() => setIsLabel(false)}>
                     <Element>
-                        <IoLogoHtml5 fontSize={'60px'}/>
+                        <IoLogoHtml5 fontSize={fontSize} />
+                        { isLabelActive && <Label>
+                            HTML5
+                        </Label>}
                     </Element>
+                </Grid>
+                <Grid item>
                     <Element>
-                        <IoLogoJavascript fontSize={'60px'}/>
+                        <IoLogoJavascript fontSize={fontSize}/>
                     </Element>
+                </Grid>
+                <Grid item>
                     <Element>
-                        <IoLogoCss3 fontSize={'60px'}/>
+                        <IoLogoCss3 fontSize={fontSize}/>
                     </Element>
+                </Grid>
+                <Grid item>
                     <Element>
-                        <IoLogoReact fontSize={'60px'}/>
+                        <IoLogoReact fontSize={fontSize}/>
                     </Element>
+                </Grid>
+
+
+                <Grid item>
                     <Element>
-                        <IoLogoNpm fontSize={'60px'}/>
+                        <IoLogoNpm fontSize={fontSize}/>
                     </Element>
+                </Grid>
+
+                <Grid item>
                     <Element>
-                        <IoLogoGithub fontSize={'60px'}/>
+                        <TbBrandBootstrap fontSize={fontSize}/>
                     </Element>
+                </Grid>
+
+                <Grid item>
                     <Element>
-                        <TbBrandNotion fontSize={'60px'}/>
+                        <TbBrandNextjs fontSize={fontSize}/>
                     </Element>
+                </Grid>
+                <Grid item>
                     <Element>
-                        <IoLogoStackoverflow fontSize={'60px'}/>
+                        <TbBrandNotion fontSize={fontSize}/>
                     </Element>
-                    <Element>
-                        <IoLogoElectron fontSize={'60px'}/>
-                    </Element>
-                    <Element>
-                        <IoLogoFigma fontSize={'60px'}/>
-                    </Element>
-                    <Element>
-                        <TbBrandBootstrap fontSize={'60px'}/>
-                    </Element>
-                    <Element>
-                        <TbBrandNextjs fontSize={'60px'}/>
-                    </Element>
-                </SkillsRow>
-            </SkillsBox>
-        </Box>
-    )
+                </Grid>
+            </SkillsRow>
+        </SkillsBox>
+    </Box>)
 };
 
 export default Skills;

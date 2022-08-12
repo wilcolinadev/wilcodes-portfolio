@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {ListItem, Stack, Typography} from "@mui/material";
+import {ListItem, Stack, Typography, Grid} from "@mui/material";
 
 export const SkillsBox = styled(Stack)`
   background-color: #575571;
@@ -21,26 +21,42 @@ export const SkillsTitle = styled(Typography)`
   ${props => props.theme.breakpoints.up("sm")} {
     font-size: 2.5rem;
   }
+  
 
 `
 
 export const Element = styled(ListItem)`
   color: #fff;
+  margin: .5rem 1rem;
+  animation: translateinfinite 1s infinite alternate;
+  text-align: center;
+  position: relative;
+  transition: 3ms ease-in-out;
   display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-
-
-`
-export const SkillsRow = styled(Stack)`
-  width: calc(100px * 24);
-  transform: translate3d(0, 0, 0);
-  animation: 30s linear .2s infinite running translateinfinite;
-  margin-top: 1rem;
+  flex-flow: column;
+  
   @keyframes translateinfinite {
-    100% {
-      transform: translateX(calc(-100px * 24));
-    }
+    to { transform: scale(1.1); }
     
   }
+
+  ${props => props.theme.breakpoints.up("sm")} {
+    margin: 1rem 2rem;
+  }
+
+`
+export const SkillsRow = styled(Grid)`
+ 
+  margin: .8rem 0;
+  justify-content: center;
+  ${props => props.theme.breakpoints.up("sm")} {
+    margin: 1rem 0;
+    
+  }
+`
+
+export const Label = styled(Typography)`
+  top: 100%;
+  position: absolute;
+  box-sizing: border-box;
 `
