@@ -100,13 +100,13 @@ export const BurgerController = styled(Box)`
 export const Burger = styled((props) => (<Button{...props} />))`
 
   ${props => props.theme.breakpoints.down("md")} {
+    padding: .5rem;
     position: relative;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     width: 24px;
     line-height: 50px;
-    padding: 0;
     background: transparent;
     justify-content: center;
     box-sizing: border-box;
@@ -116,7 +116,7 @@ export const Burger = styled((props) => (<Button{...props} />))`
     transition: transform 0.3s ease-in-out;
     align-items: center;
     color: #f3f3bd;
-
+    
     &:focus {
       outline: none;
     }

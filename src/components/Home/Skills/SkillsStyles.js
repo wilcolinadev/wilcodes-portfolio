@@ -7,6 +7,10 @@ export const SkillsBox = styled(Stack)`
   padding: 1rem;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 50px 50px 0 0;
+  ${props => props.theme.breakpoints.up("sm")} {
+    border-radius: 100px 100px 0 0;
+  }
 `;
 
 export const SkillsTitle = styled(Typography)`

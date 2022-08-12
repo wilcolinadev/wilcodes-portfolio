@@ -49,7 +49,7 @@ const Navigation = () => {
                     <Link href="/contact" color="secondary">
                         <ContactLink direction="row">
                             <BoxIcon hoverState={logHover}/>
-                            <Typography>
+                            <Typography style={{display:"flex",alignItems:'center'}}>
                                 Let's chat
                             </Typography>
                         </ContactLink>
