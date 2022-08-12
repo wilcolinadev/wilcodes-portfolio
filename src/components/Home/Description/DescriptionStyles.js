@@ -6,8 +6,9 @@ import Typography from "@mui/material/Typography";
 export const GridController = styled(Grid)`
   width: 100%;
   box-sizing: border-box;
-  height: 100vh;
+  height: auto;
   padding: .5rem;
+  margin-bottom: 2rem;
   ${props => props.theme.breakpoints.up("lg")} {
     width: 60%;
     padding: 1rem;
@@ -36,17 +37,27 @@ export const MainDescription = styled(Typography)`
   font-family: 'Open Sans', serif;
   text-align: justify;
   margin-top: .5rem;
-  
+  width: 90%;
 
   ${props => props.theme.breakpoints.up("sm")} {
     font-size: 1.2rem;
-    
+    width: 80%;
   }
 
   ${props => props.theme.breakpoints.up("md")} {
-    font-size: 1.1rem;
-    width: 80%;
+    width: 70%;
   }
+  ${props => props.theme.breakpoints.up("lg")} {
+    font-size: 1.1rem;
+    width: 65%;
+  }
+  ${props => props.theme.breakpoints.up("xl")} {
+    font-size: 1.2rem;
+    width: 60%;
+  }
+
+  
+  
 
 
 `;
