@@ -9,7 +9,7 @@ export const Wrapper =styled(Grid)`
 
 export const MainWrapper =styled(Grid)`
 
-  background: #f1e8e8;
+  background: #e1f1ed;
 
   * {
     text-decoration: none;
@@ -29,6 +29,7 @@ text-align: center;
   font-family: 'Open Sans', serif;
   font-weight: bold;
   color: #000;
+  font-size: 1.2rem;
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
 `
@@ -40,9 +41,9 @@ export const ProjectsLink = styled(Typography)`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  font-weight: bold;
   text-decoration: none;
-  color: #055c36;
+  color: #3F3D55;
 
 
 
