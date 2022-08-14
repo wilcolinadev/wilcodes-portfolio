@@ -5,14 +5,14 @@ import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import SocialLinks from "../../SocialLinks";
 
-const ModalController  = styled((props)=> <Stack {...props}/>)`
+const ModalController = styled((props) => <Stack {...props}/>)`
   width: 100%;
   height: 100%;
   position: fixed;
   min-height: 100vh;
   background-color: rgba(251, 251, 255, 0.85);
   transform: ${(props) =>
-          props.open ? "translateX(0)" : "translateX(-100%)"};
+    props.open ? "translateX(0)" : "translateX(-100%)"};
   transition: transform 0.4s ease-in-out;
   box-sizing: border-box;
   padding-top: 3.5rem;
@@ -53,15 +53,15 @@ const LinkItem = styled(Typography)`
 const HamburgerModal = ({active}) => {
     return (
         <ModalController direction="column" open={active}>
-           <Link href={'/'}>
-               <LinkItem>
-                   HOME
-
-               </LinkItem>
-           </Link>
             <Link href={'/'}>
                 <LinkItem>
-                   PROJECTS
+                    HOME
+
+                </LinkItem>
+            </Link>
+            <Link href={'/'}>
+                <LinkItem>
+                    PROJECTS
                 </LinkItem>
             </Link>
             <Link href={'/'}>
@@ -69,7 +69,7 @@ const HamburgerModal = ({active}) => {
                     ABOUT
                 </LinkItem>
             </Link>
-            <Link href={'/'} >
+            <Link href={'/'}>
                 <LinkItem>
                     Let's Chat
 
@@ -77,7 +77,7 @@ const HamburgerModal = ({active}) => {
 
             </Link>
 
-          <SocialLinks/>
+            <SocialLinks/>
         </ModalController>)
 };
 

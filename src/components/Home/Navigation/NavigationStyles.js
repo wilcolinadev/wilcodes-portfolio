@@ -116,7 +116,7 @@ export const Burger = styled((props) => (<Button{...props} />))`
     transition: transform 0.3s ease-in-out;
     align-items: center;
     color: #f3f3bd;
-    
+
     &:focus {
       outline: none;
     }

@@ -1,11 +1,12 @@
 import React from "react";
-import {SoftBox,SoxtText, IconBox} from "./SoftSkillsStyles";
+import {SoftBox, SoxtText, IconBox} from "./SoftSkillsStyles";
 import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
 import EmojiObjectsRoundedIcon from '@mui/icons-material/EmojiObjectsRounded';
 import RecordVoiceOverRoundedIcon from '@mui/icons-material/RecordVoiceOverRounded';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 import BrushRoundedIcon from '@mui/icons-material/BrushRounded';
 import DataObjectRoundedIcon from '@mui/icons-material/DataObjectRounded';
+
 const SoftSkills = () => {
     return (
         <SoftBox direction={'row'}>
@@ -13,7 +14,7 @@ const SoftSkills = () => {
                 User experience
             </SoxtText>
             <IconBox>
-                <PsychologyRoundedIcon />
+                <PsychologyRoundedIcon/>
             </IconBox>
 
 
@@ -25,14 +26,14 @@ const SoftSkills = () => {
             </IconBox>
 
             <SoxtText>
-               Problem Solving
+                Problem Solving
             </SoxtText>
             <IconBox>
                 <DataObjectRoundedIcon/>
             </IconBox>
 
             <SoxtText>
-               Gestal principles
+                Gestal principles
             </SoxtText>
             <IconBox>
                 <BrushRoundedIcon/>

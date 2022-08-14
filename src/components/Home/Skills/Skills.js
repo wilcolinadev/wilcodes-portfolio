@@ -14,7 +14,7 @@ const Skills = () => {
                 Core tools I use to build my projects
             </SkillsTitle>
 
-            <SkillsRow container fluid="true">
+            <SkillsRow>
                 {skills.map(name => <Skill name={name} key={name}/>)}
             </SkillsRow>
         </SkillsBox>

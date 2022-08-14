@@ -31,14 +31,14 @@ const Skill = ({name}) => {
         }
     }
     const [isLabelActive, setIsLabel] = useState(false);
-    return (<GridController item onMouseEnter={() => setIsLabel(true)} onMouseLeave={() => setIsLabel(false)}>
-            <Element>
-                {determineElement()}
-                {isLabelActive && <Label>
-                    {name}
-                </Label>}
-            </Element>
-        </GridController>)
+    return (<GridController onMouseEnter={() => setIsLabel(true)} onMouseLeave={() => setIsLabel(false)}>
+        <Element>
+            {determineElement()}
+            {isLabelActive && <Label>
+                {name}
+            </Label>}
+        </Element>
+    </GridController>)
 };
 
 export default Skill;

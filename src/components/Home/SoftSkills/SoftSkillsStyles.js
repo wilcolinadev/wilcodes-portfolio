@@ -7,6 +7,8 @@ export const SoftBox = styled(Stack)`
   justify-content: space-evenly;
   animation: cycle 25s linear infinite;
   padding: 1rem;
+  
+ 
   @keyframes cycle {
     0% {
       transform: translateX(-100%);
@@ -30,10 +32,11 @@ export const SoxtText = styled(Typography)`
   padding: .5rem;
   text-transform: uppercase;
   flex: 0 0 auto;
+  color: #3F3D55;
 `
 export const IconBox = styled("span")`
   padding: .5rem;
   display: flex;
   align-items: center;
-  color: #979494;
+  color: #3F3D55;
 `

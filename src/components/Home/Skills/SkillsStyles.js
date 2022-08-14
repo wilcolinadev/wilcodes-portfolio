@@ -2,12 +2,13 @@ import {styled} from "@mui/material/styles";
 import {ListItem, Stack, Typography, Grid} from "@mui/material";
 
 export const SkillsBox = styled(Stack)`
-  background-color: #6c6b88;
+  background-color: #3F3D55;
   height: auto;
   padding: 1rem;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 50px 50px 0 0;
+
   ${props => props.theme.breakpoints.up("sm")} {
     border-radius: 100px 100px 0 0;
   }
@@ -56,13 +57,15 @@ export const Element = styled(ListItem)`
   }
 
 `
-export const SkillsRow = styled(Grid)`
-
+export const SkillsRow = styled('div')`
+  text-align: center;
   box-sizing: border-box;
+  display: flex;
   justify-content: center;
+  flex-flow: row wrap;
   ${props => props.theme.breakpoints.up("sm")} {
-    margin: 1rem 0;
-    
+    margin: 2rem 0;
+
   }
 `
 
@@ -73,16 +76,18 @@ export const Label = styled(Typography)`
   color: #fff;
 `
 
-export const GridController = styled(Grid)`
+export const GridController = styled('div')`
+  align-items: center;
   margin: 2rem 1.3rem;
-  
+
   ${props => props.theme.breakpoints.up("sm")} {
     margin: 2rem 2rem;
 
   }
+
   ${props => props.theme.breakpoints.up("md")} {
     margin: 1rem 2rem;
 
   }
-  
+
 `

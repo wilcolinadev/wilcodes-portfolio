@@ -7,8 +7,10 @@ export const Wrapper = styled(Box)`
   background-image: url(${bg});
   height: auto;
   width: 100%;
-  background-position: center;
-  background-size:cover ;
+ background-position:center ;
+  background-size: cover;
   z-index: 99;
-  overflow-x:unset ;
+ `
+  export const OverFlow= styled(Box)`
+    overflow-x: hidden;
 `

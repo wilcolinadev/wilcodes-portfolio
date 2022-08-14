@@ -15,6 +15,7 @@ import Link from "../../../Link"
 import Typography from "@mui/material/Typography";
 import BoxIcon from "../BoxIcon";
 import HamburgerModal from "./HamburgerModal/HamburgerModal";
+
 const Navigation = () => {
     const [logHover, isLogHover] = useState(false);
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navigation = () => {
         <UList>
             <Link href='/'>
                 <Box>
-                    <Logo variant={"h5"} >
+                    <Logo variant={"h5"}>
                         Wilfredo Colina
                     </Logo>
                 </Box>
@@ -49,7 +50,7 @@ const Navigation = () => {
                     <Link href="/contact" color="secondary">
                         <ContactLink direction="row">
                             <BoxIcon hoverState={logHover}/>
-                            <Typography style={{display:"flex",alignItems:'center'}}>
+                            <Typography style={{display: "flex", alignItems: 'center'}}>
                                 Let's chat
                             </Typography>
                         </ContactLink>

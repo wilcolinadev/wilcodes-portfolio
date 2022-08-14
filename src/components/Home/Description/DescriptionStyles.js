@@ -9,6 +9,7 @@ export const GridController = styled(Grid)`
   height: auto;
   padding: .5rem;
   margin-bottom: 2rem;
+
   ${props => props.theme.breakpoints.up("lg")} {
     width: 60%;
     padding: 1rem;
@@ -47,17 +48,19 @@ export const MainDescription = styled(Typography)`
   ${props => props.theme.breakpoints.up("md")} {
     width: 70%;
   }
+
   ${props => props.theme.breakpoints.up("lg")} {
     font-size: 1.1rem;
     width: 65%;
   }
+
   ${props => props.theme.breakpoints.up("xl")} {
     font-size: 1.2rem;
     width: 60%;
   }
 
-  
-  
+
+
 
 
 `;
@@ -69,11 +72,12 @@ export const MainButton = styled(Button)`
   text-transform: unset;
   font-family: 'Inconsolata', monospace;
   letter-spacing: -1px;
-  
+
   &:hover {
     transition: .4ms ease-in-out;
     background-color: transparent;
   }
+
   ${props => props.theme.breakpoints.up("sm")} {
     font-size: 2.2rem;
     margin-top: 1rem;
@@ -83,12 +87,13 @@ export const MainButton = styled(Button)`
 export const ImageS = styled('img')`
   width: 250px;
   height: 250px;
+
   ${props => props.theme.breakpoints.up("sm")} {
     width: 350px;
     height: 350px;
   }
- 
-  
+
+
 `
 export const ImageBox = styled(Box)`
   ${props => props.theme.breakpoints.down("sm")} {

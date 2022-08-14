@@ -11,7 +11,7 @@ const Icon = styled(props => (
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid #666565;
+  border: 1px solid #141313;
   border-radius: 60%;
   width: 40px;
   height: 40px;
