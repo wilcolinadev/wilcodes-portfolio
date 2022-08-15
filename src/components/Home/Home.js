@@ -5,17 +5,20 @@ import Description from "./Description/Description";
 import Skills from "./Skills/Skills";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 import SoftSkills from "./SoftSkills/SoftSkills";
+import Footer from "./Footer/Footer";
 
 const Home = () => {
     return (
         <Wrapper>
             <Navigation/>
             <OverFlow>
-            <Description/>
-            <SoftSkills/>
-            <Skills/>
-            <FeaturedProjects/>
+                <Description/>
+                <SoftSkills/>
+                <Skills/>
+                <FeaturedProjects/>
+                <Footer/>
             </OverFlow>
+
         </Wrapper>
     )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import {styled} from "@mui/material/styles";
 import {Box} from "@mui/material";
-import bg from "../../assets/bg.svg"
+import bg from "../../assets/Fluid-10s-1235px.svg"
 
 export const Wrapper = styled(Box)`
   background-image: url(${bg});

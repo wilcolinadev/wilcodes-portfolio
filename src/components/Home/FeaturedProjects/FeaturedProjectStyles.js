@@ -9,7 +9,7 @@ export const Wrapper =styled(Grid)`
 
 export const MainWrapper =styled(Grid)`
 
-  background: #e1f1ed;
+  background: #fefffe;
 
   * {
     text-decoration: none;

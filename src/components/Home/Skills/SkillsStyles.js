@@ -2,12 +2,14 @@ import {styled} from "@mui/material/styles";
 import {ListItem, Stack, Typography, Grid} from "@mui/material";
 
 export const SkillsBox = styled(Stack)`
-  background-color: #3F3D55;
+  //background-color: #f1eaea;
+  background: #3F3D55;
   height: auto;
   padding: 1rem;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 50px 50px 0 0;
+  margin-top: 1rem;
 
   ${props => props.theme.breakpoints.up("sm")} {
     border-radius: 100px 100px 0 0;
@@ -73,7 +75,7 @@ export const Label = styled(Typography)`
   top: 110%;
   position: absolute;
   box-sizing: border-box;
-  color: #fff;
+  color: #ffffff;
 `
 
 export const GridController = styled('div')`

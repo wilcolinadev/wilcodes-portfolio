@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Element, Label} from "./SkillsStyles";
-import {Grid} from "@mui/material";
 import {GridController} from "./SkillsStyles";
 import {
     IoLogoReact, IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoNpm,
