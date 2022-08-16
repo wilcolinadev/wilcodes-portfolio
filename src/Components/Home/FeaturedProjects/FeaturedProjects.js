@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {getDatabase, ref, get} from "firebase/database";
 import Project from "./Project/Project";
-import BoxIcon from "../BoxIcon";
+import BoxIcon from "../../BoxIcon";
 import {Wrapper, MainWrapper, Title, Description, ProjectsLink, InnerText} from "./FeaturedProjectStyles";
 import Link from "../../../Link";
 

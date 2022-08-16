@@ -11,7 +11,7 @@ const Skills = () => {
         <SkillsBox>
 
             <SkillsTitle variant={'h4'}>
-                Core tools I use to build my projects
+                Core tools I use to build my projects 🛠
             </SkillsTitle>
 
             <SkillsRow>

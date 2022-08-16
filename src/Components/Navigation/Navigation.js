@@ -11,7 +11,7 @@ import {
     Burger,
     BurgerController
 } from "./NavigationStyles"
-import Link from "../../../Link"
+import Link from "../../Link"
 import Typography from "@mui/material/Typography";
 import BoxIcon from "../BoxIcon";
 import HamburgerModal from "./HamburgerModal/HamburgerModal";
@@ -22,7 +22,7 @@ const Navigation = () => {
     return (<Wrapper>
         <HamburgerModal active={isBurgerOpen}/>
         <UList>
-            <Link href='/'>
+            <Link href='/pages'>
                 <Box>
                     <Logo variant={"h5"}>
                         Wilfredo Colina

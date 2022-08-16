@@ -4,7 +4,7 @@ import {Grid, Box} from "@mui/material";
 import {GridController, MainTitle, MainDescription, MainButton, ImageBox} from "./DescriptionStyles";
 import {ImageS} from "./DescriptionStyles";
 import dev from "../../../assets/undraw_developer.svg"
-import BoxIcon from "../BoxIcon"
+import BoxIcon from "../../BoxIcon"
 import Link from "next/link";
 
 

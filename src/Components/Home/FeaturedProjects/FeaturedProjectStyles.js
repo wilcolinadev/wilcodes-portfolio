@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 export const Wrapper =styled(Grid)`
   
   margin-top: 2rem;
+ padding-bottom: 4rem;
 `
 
 export const MainWrapper =styled(Grid)`

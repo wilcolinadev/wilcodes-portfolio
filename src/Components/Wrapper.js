@@ -1,7 +1,7 @@
 import React from "react";
 import {styled} from "@mui/material/styles";
 import {Box} from "@mui/material";
-import bg from "../../assets/Fluid-10s-1235px.svg"
+import bg from "../assets/Fluid-10s-1235px.svg"
 
 export const Wrapper = styled(Box)`
   background-image: url(${bg});
@@ -10,6 +10,8 @@ export const Wrapper = styled(Box)`
  background-position:center ;
   background-size: cover;
   z-index: 99;
+  background-color: white;
+
 
  `
   export const OverFlow= styled(Box)`

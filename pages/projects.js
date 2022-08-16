@@ -1,12 +1,10 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import Projects from "../src/Components/Projects/Projects";
 
-const Projects = () => {
+const ProjectsPage = ()=> {
     return (
-        <Typography>
-            Projects
-        </Typography>
+     <Projects/>
     )
 };
 
-export default Projects;
+export default ProjectsPage;

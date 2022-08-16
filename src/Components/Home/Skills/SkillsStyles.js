@@ -5,7 +5,7 @@ export const SkillsBox = styled(Stack)`
   //background-color: #f1eaea;
   background: #3F3D55;
   height: auto;
-  padding: 1rem;
+  padding: .5rem;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 50px 50px 0 0;
@@ -20,20 +20,26 @@ export const SkillsTitle = styled(Typography)`
   color: #ffffff;
   text-align: center;
   font-family: 'Inconsolata', monospace;
-  letter-spacing: -1.5px;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
+  line-height: 2.7rem;
+  font-size: 1.3rem;
+  width: 70%;
+  margin: .5rem auto;
+  
+  
 
   ${props => props.theme.breakpoints.up("sm")} {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    width: 70%;
   }
-
+  ${props => props.theme.breakpoints.up("lg")} {
+    font-size: 2.2rem;
+    width: 90%;
+  }
 
 `
 
 export const Element = styled(ListItem)`
+  
   color: #474646;
   animation: translateinfinite 1s infinite alternate;
   position: relative;
@@ -65,6 +71,7 @@ export const SkillsRow = styled('div')`
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  
   ${props => props.theme.breakpoints.up("sm")} {
     margin: 2rem 0;
 

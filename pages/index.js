@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Home from '../src/components/Home/Home'
+import Home from '../src/Components/Home/Home'
 import {Box} from "@mui/material";
 import Head from "next/head";
 

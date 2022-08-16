@@ -1,12 +1,14 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import Contact from "../src/Components/Contact/Contact";
 
-const Contact = () => {
+
+const ContactPage = () => {
     return (
-        <Typography>
+        <Contact>
             Contact me
-        </Typography>
+        </Contact>
     )
 };
 
-export default Contact;
+export default ContactPage;
