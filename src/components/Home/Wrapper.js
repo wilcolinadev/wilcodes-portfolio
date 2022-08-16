@@ -10,6 +10,7 @@ export const Wrapper = styled(Box)`
  background-position:center ;
   background-size: cover;
   z-index: 99;
+
  `
   export const OverFlow= styled(Box)`
     overflow-x: hidden;

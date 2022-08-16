@@ -6,12 +6,21 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import {styled} from "@mui/material/styles";
 import Link from "next/link";
 
-const SocialStack = styled(Stack)`
+const SocialStack = styled((props)=><Stack {...props}/>)`
+  
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 1.5rem;
-  padding: 1.5rem;
+  justify-content: center;
+  margin-top: .5rem;
+  padding: ${props => !props.padding ? '0' : '1.5rem'};
   cursor: pointer;
+  *{
+    margin-left: .7rem;
+  }
+  ${props => props.theme.breakpoints.up("sm")} {
+    margin-top: ${props => !props.padding ? '0' : '1.5rem'};
+  }
+ 
+  
 `
 
 
