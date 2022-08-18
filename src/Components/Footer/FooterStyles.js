@@ -26,3 +26,8 @@ export const FooterLink = styled(Typography)`
   }
 `
 
+export const FooterCopyright = styled('p')`
+  margin: 0;
+  padding: .5rem;
+`
+

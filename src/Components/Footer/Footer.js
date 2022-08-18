@@ -2,17 +2,20 @@ import React from "react";
 import {Stack} from "@mui/material";
 import Link from "../../Link";
 import SocialLinks from "../SocialLinks";
-import {FooterBox, FooterLink} from "./FooterStyles";
-import {Grid} from "@material-ui/core"
+import {FooterBox, FooterLink, FooterCopyright} from "./FooterStyles";
+import {Grid, Typography} from "@material-ui/core"
 
 const Footer = () => {
+    const getCurrentYear = ()=>{
+        return new Date().getFullYear();
+    }
     return (
 
         <FooterBox>
-            <Grid container fluid="true" justifyContent={'space-evenly'} alignItems={'center'}>
+            <Grid container fluid="true" justifyContent={'space-evenly'} alignItems={'center'} >
 
-                <Grid item >
-                    <Stack direction="row">
+                <Grid item sm={12} lg={3} >
+                    <Stack direction="row" justifyContent={'center'}>
                         <Link href="/pages" color="secondary">
                             <FooterLink> Home </FooterLink>
 
@@ -31,13 +34,15 @@ const Footer = () => {
                     </Stack>
                 </Grid>
 
-                <Grid item >
-                    <SocialLinks padding={true}/>
+                <Grid item sm={12} lg={3}>
+                    <SocialLinks padding={false}/>
                 </Grid>
-                <Grid item >
-                    <p>
-                        © 2022 Wilfredo Colina. All Rights Reserved.
-                    </p>
+                <Grid item  lg={3} >
+                    <FooterCopyright>
+                        ©
+
+                        {getCurrentYear()} Wilfredo Colina. All Rights Reserved.
+                    </FooterCopyright>
                 </Grid>
 
 

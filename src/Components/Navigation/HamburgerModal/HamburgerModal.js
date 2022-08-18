@@ -24,7 +24,7 @@ const ModalController = styled((props) => <Stack {...props}/>)`
 
 const LinkItem = styled(Typography)`
   cursor: pointer;
-  color: #066852;
+  color: #3F3D55;
   font-family: 'Inconsolata', monospace;
   font-size: 2.2rem;
   display: flex;
@@ -33,17 +33,9 @@ const LinkItem = styled(Typography)`
   padding: .5rem;
   align-items: center;
   font-weight: bold;
-  
   transition: .5s;
   &:hover, &:active{
-    --s: 0.1em;   /* the thickness of the line */
-    --c: #1095c1; /* the color */
-    color: #0000;
-    padding-bottom: var(--s);
-    background:
-            linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
-            linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-    -webkit-background-clip: text,padding-box;
+    color: #0cb978;
     transition: 0.5s;
   }
   
@@ -77,7 +69,7 @@ const HamburgerModal = ({active}) => {
 
             </Link>
 
-            <SocialLinks/>
+            <SocialLinks  padding={true}/>
         </ModalController>)
 };
 

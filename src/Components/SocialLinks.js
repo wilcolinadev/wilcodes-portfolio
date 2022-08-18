@@ -11,24 +11,24 @@ const SocialStack = styled((props)=><Stack {...props}/>)`
   display: flex;
   justify-content: center;
   margin-top: .5rem;
-  padding: ${props => !props.padding ? '0' : '1.5rem'};
+  padding: ${props => !props.padding ? '.5rem' : '1rem'};
   cursor: pointer;
   *{
     margin-left: .7rem;
   }
   ${props => props.theme.breakpoints.up("sm")} {
-    margin-top: ${props => !props.padding ? '0' : '1.5rem'};
+    margin-top: ${props => !props.padding ? '0' : '1rem'};
   }
  
   
 `
 
 
-const SocialLinks = () => {
+const SocialLinks = (props) => {
 
     return (
 
-        <SocialStack direction={'row'}>
+        <SocialStack direction={'row'} padding={props.padding}>
             <Link href={'https://www.linkedin.com/in/wilcodes/'}>
                 <LinkedInIcon fontSize={'large'}/>
             </Link>

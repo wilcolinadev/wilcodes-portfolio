@@ -33,6 +33,7 @@ text-align: center;
   font-size: 1.2rem;
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
+  justify-content: center;
 `
 
 export const ProjectsLink = styled(Typography)`
