@@ -2,7 +2,7 @@ import React from "react";
 import {ProjectBox, ProjectImage, ProjectTitle, ProjectDescription} from "./ProjectStyles";
 import {Grid} from '@material-ui/core';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-const Project = ({name, url, urlImage}) => {
+const Project = ({name, url, urlImage, description}) => {
 
     const urlHandler = (url) => {
         if (Array.isArray(url)) {
@@ -20,7 +20,7 @@ const Project = ({name, url, urlImage}) => {
                     <a href={'/'}> {name}  </a> <ArrowCircleRightIcon style={{marginLeft:'6px'}} />
                 </ProjectTitle>
                 <ProjectDescription>
-                    Application that will allow companies to keep on track of issues presented with their customers.
+                    {description}
 
                 </ProjectDescription>
                 <ProjectImage src={urlHandler(urlImage)}/>

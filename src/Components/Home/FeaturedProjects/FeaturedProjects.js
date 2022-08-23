@@ -36,7 +36,8 @@ const FeaturedProjects = () => {
 
         <Wrapper container fluid="true">
             {projects.map(project => {
-                return (<Project key={project.name} name={project.name} urlImage={project.urlImage} url={project.url}/>)
+                return (<Project key={project.name} name={project.name} urlImage={project.urlImage} url={project.url}
+                                 description={project.description}/>)
             })}
         </Wrapper>
     </MainWrapper>)

@@ -3,7 +3,7 @@ import {Stack} from "@mui/material";
 import Link from "../../Link";
 import SocialLinks from "../SocialLinks";
 import {FooterBox, FooterLink, FooterCopyright} from "./FooterStyles";
-import {Grid, Typography} from "@material-ui/core"
+import {Grid} from "@material-ui/core"
 
 const Footer = () => {
     const getCurrentYear = ()=>{
