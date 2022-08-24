@@ -22,7 +22,7 @@ export const IntroductionBox = styled(Box)`
   flex-flow: column nowrap;
   ${props => props.theme.breakpoints.up("md")} {
    flex-flow: row nowrap;
-    
+    padding: 2rem;
   }
 `
 
