@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 import ActionCall from "./ActionCall/ActionCall";
 const Home = () => {
     return (
-        <Wrapper>
+        <Wrapper type={'home'}>
             <Navigation/>
             <OverFlow>
                 <Description/>
