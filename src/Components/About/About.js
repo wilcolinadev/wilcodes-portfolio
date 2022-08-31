@@ -4,6 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import {Wrapper} from "../Wrapper";
 import Introduction from "./Introduction/Introduction";
 import Bio from "./Bio/Bio";
+import Career from "./Career/Career";
 
 const About = () => {
     return (
@@ -11,6 +12,7 @@ const About = () => {
             <Navigation/>
             <Introduction/>
             <Bio/>
+            <Career/>
             <Footer/>
         </Wrapper>
     )

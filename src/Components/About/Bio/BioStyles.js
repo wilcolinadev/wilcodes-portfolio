@@ -15,8 +15,6 @@ export const BioWrapper = styled(Box)`
 
 export const BioTittle = styled(Typography)`
   padding: .5rem 0;
-  
-  
 `
 export const BioImage = styled('img')`
   width: 90%;
