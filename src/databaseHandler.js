@@ -1,43 +1,68 @@
-import {ref, getDatabase,set} from "firebase/database";
+import {ref, getDatabase, set} from "firebase/database";
 import React from "react";
-const db = getDatabase();
-const reference = ref(db,'featuredProjects');
 
-const useDb = ()=>{
-    const updateDb = async (obj)  =>{
-        const response =  await set(reference,obj);
+const db = getDatabase();
+const reference = ref(db, 'career-data');
+
+const useDb = () => {
+    const updateDb = async (obj) => {
+        const response = await set(reference, obj);
         console.log(response);
     }
     const databaseData = {
-
-        issuestrack:{
-            name:'Issuestrack',
-            urlImage:['https://res.cloudinary.com/djf9jqpml/image/upload/v1659758720/Issuestrack-1_gw9irw.png','https://res.cloudinary.com/djf9jqpml/image/upload/v1659758716/IssuesTrack_ymjpfv.png'],
-            url:'https://main--benevolent-clafoutis-fee81f.netlify.app/'
-
+        cadif1: {
+            year: '2015',
+            about: 'Data structures and algorithms',
+            type: 'Bootcamp',
+            institution: 'cadif1',
+            link: 'https://cadif1.com/',
+            location: 'Barquisimeto, Venezuela'
         },
-        planetsApp:{
-            name:'The Planets',
-            urlImage:'https://res.cloudinary.com/djf9jqpml/image/upload/v1659758718/Planets_lmdwod.png',
-            url:'https://elegant-kilby-1dced9.netlify.app/'
+        ferminToro: {
+            year: '2016-2018',
+            about: 'Engineer degree',
+            type: 'University',
+            institution: 'Fermin Toro',
+            link: 'http://www.uft.edu.ve/',
+            location: 'Cabudare, Venezuela'
         },
-        devChat:{
-            name:'Dev Chat',
-            urlImage:'https://res.cloudinary.com/djf9jqpml/image/upload/v1659758719/slack-clone_eumy9g.png',
-            url:'https://shimmering-gaufre-6ec0b9.netlify.app/'
+        others:{
+            year: '2018-2020',
+            about: 'Frontend developer path',
+            type: 'Online software academy',
+            institution: 'Platzi',
+            link: 'https://platzi.com/',
+            location: 'Remote'
         },
-        mainStArepa:{
-            name:'Main Street Arepa',
-            urlImage: 'https://res.cloudinary.com/djf9jqpml/image/upload/v1659758719/MainSt_h3id5w.png',
-            url:'https://sad-perlman-bf5547.netlify.app/'
+        sanJacinto: {
+            year: '2020-2022',
+            about: 'Web development application',
+            type: 'College',
+            institution: 'San Jacinto College',
+            link: 'https://publications.sanjac.edu/areas-study/science-technology-engineering-math/cit-web-applications-development-specialty-aas/#planofstudytext',
+            location: 'Houston, Texas'
+        },
+        wildlifeResponse: {
+            year: '2021',
+            about: 'Web Development / Design',
+            type: 'Freelance',
+            institution: 'Wildlife Response Services',
+            link: 'https://www.wildliferesponse.net/',
+            location: 'Seabrook, Texas'
+        },
+        phiThetaKappa:{
+            year: '2022',
+            about: 'Honor Society',
+            type: 'Organization',
+            institution: 'Phi Theta Kappa',
+            link: 'https://www.ptk.org/',
+            location: 'Houston, Texas'
         }
-
-
 
     };
 
-    React.useEffect(()=>{
+    React.useEffect(() => {
         updateDb(databaseData);
-    },[])
+    }, [])
 }
 export default useDb;

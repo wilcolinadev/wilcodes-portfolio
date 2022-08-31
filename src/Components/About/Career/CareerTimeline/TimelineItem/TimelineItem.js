@@ -12,7 +12,7 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 const TimelineStep = (props) => {
     const {year, about, type, institution} = props;
 
-    return (<TimelineItem>
+    return (<TimelineItem >
         <TimelineOppositeContent
             sx={{m: 'auto 0'}}
             align="right"
@@ -20,23 +20,29 @@ const TimelineStep = (props) => {
             color="text.secondary"
         >
             {year}
-            <Typography variant="h6" >{institution}</Typography>
+            <Typography variant="h6">{type}</Typography>
         </TimelineOppositeContent>
-        <TimelineSeparator >
-            <TimelineConnector/>
+        <TimelineSeparator sx={{
+            height:'150px',
+            color:'#3F3D55',
+
+        }}>
+            <TimelineConnector  />
             <TimelineDot>
                 <SchoolIcon/>
             </TimelineDot>
             <TimelineConnector/>
         </TimelineSeparator>
-        <TimelineContent sx={{py: '12px', px: 2}}>
-            <Typography variant="h6" component="span">
-                {type}
+        <TimelineContent sx={{py: '12px', px: 2}}  >
+            <Typography variant="h6" component="span" >
+                {institution}
+
             </Typography>
 
             <Typography>{about}</Typography>
 
         </TimelineContent>
+
     </TimelineItem>)
 
 };
