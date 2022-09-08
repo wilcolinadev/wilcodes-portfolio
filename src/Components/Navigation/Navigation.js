@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import BoxIcon from "../BoxIcon";
 import HamburgerModal from "./HamburgerModal/HamburgerModal";
 
-const Navigation = () => {
+const Navigation = ({page}) => {
     const [logHover, isLogHover] = useState(false);
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
     return (<Wrapper>
@@ -31,15 +31,15 @@ const Navigation = () => {
             </Link>
             <Stack direction="row">
                 <Link href="/" color="secondary">
-                    <Item> Home <Identifier/> </Item>
+                    <Item> Home {page==='home' && <Identifier/>} </Item>
 
                 </Link>
 
                 <Link href="/projects" color="secondary">
-                    <Item> Projects </Item>
+                    <Item> Projects {page==='projects' && <Identifier/>} </Item>
                 </Link>
                 <Link href="/about" color="secondary">
-                    <Item> About </Item>
+                    <Item> About {page==='about' && <Identifier/>} </Item>
                 </Link>
 
             </Stack>

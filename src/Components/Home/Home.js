@@ -10,7 +10,7 @@ import ActionCall from "./ActionCall/ActionCall";
 const Home = () => {
     return (
         <Wrapper type={'home'}>
-            <Navigation/>
+            <Navigation page={'home'}/>
             <OverFlow>
                 <Description/>
                 <SoftSkills/>

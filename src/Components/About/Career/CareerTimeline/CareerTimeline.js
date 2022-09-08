@@ -29,7 +29,7 @@ const CareerTimeline = () => {
         <Timeline position="left">
             {careerData.map(background => (
                 <TimelineStep year={background.year} about={background.about} type={background.type}
-                              institution={background.institution} id={background.about}/>))}
+                              institution={background.institution} id={background.about} location={background.location}/> ))}
         </Timeline>
 
     </TimelineBox>)

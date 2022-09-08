@@ -8,10 +8,28 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import Typography from "@mui/material/Typography";
 import {TimelineItem} from "@mui/lab";
 import EngineeringIcon from '@mui/icons-material/Engineering';
-
+import CastForEducationIcon from '@mui/icons-material/CastForEducation';
+import DataObjectIcon from '@mui/icons-material/DataObject';
+import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 const TimelineStep = (props) => {
-    const {year, about, type, institution} = props;
-
+    const {year, about, type, institution,location} = props;
+    const determineIcon = ()=>{
+        const newType = type.toLowerCase();
+        switch (newType){
+            case 'college':
+                return <SchoolIcon/>;
+            case 'freelance':
+                return <EngineeringIcon/>;
+            case 'online software academy':
+                return <CastForEducationIcon/>;
+            case 'bootcamp':
+                return <DataObjectIcon/>;
+            case 'organization':
+                return <AssuredWorkloadIcon/>;
+            default:
+                return <SchoolIcon/>
+        }
+    };
     return (<TimelineItem >
         <TimelineOppositeContent
             sx={{m: 'auto 0'}}
@@ -20,7 +38,7 @@ const TimelineStep = (props) => {
             color="text.secondary"
         >
             {year}
-            <Typography variant="h6">{type}</Typography>
+            <Typography variant="h6">{about}</Typography>
         </TimelineOppositeContent>
         <TimelineSeparator sx={{
             height:'150px',
@@ -28,8 +46,11 @@ const TimelineStep = (props) => {
 
         }}>
             <TimelineConnector  />
-            <TimelineDot>
-                <SchoolIcon/>
+            <TimelineDot sx={{
+                color:'#3F3D56',
+                backgroundColor:'transparent'
+            }}>
+                {determineIcon()}
             </TimelineDot>
             <TimelineConnector/>
         </TimelineSeparator>
@@ -39,7 +60,7 @@ const TimelineStep = (props) => {
 
             </Typography>
 
-            <Typography>{about}</Typography>
+            <Typography>{location}</Typography>
 
         </TimelineContent>
 
@@ -50,26 +71,3 @@ const TimelineStep = (props) => {
 
 export default TimelineStep;
 
-
-// <TimelineItem>
-//     <TimelineOppositeContent
-//         sx={{ m: 'auto 0' }}
-//         variant="body2"
-//         color="text.secondary"
-//     >
-//         10:00 am
-//     </TimelineOppositeContent>
-//     <TimelineSeparator>
-//         <TimelineConnector />
-//         <TimelineDot color="primary">
-//             <Fastfood />
-//         </TimelineDot>
-//         <TimelineConnector />
-//     </TimelineSeparator>
-//     <TimelineContent sx={{ py: '12px', px: 2 }}>
-//         <Typography variant="h6" component="span">
-//             Code
-//         </Typography>
-//         <Typography>Because it&apos;s awesome!</Typography>
-//     </TimelineContent>
-// </TimelineItem>

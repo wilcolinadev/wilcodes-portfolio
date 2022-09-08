@@ -9,7 +9,7 @@ import Career from "./Career/Career";
 const About = () => {
     return (
         <Wrapper type={'about'}>
-            <Navigation/>
+            <Navigation page={'about'}/>
             <Introduction/>
             <Bio/>
             <Career/>
