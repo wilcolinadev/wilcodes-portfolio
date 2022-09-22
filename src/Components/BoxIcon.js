@@ -18,7 +18,7 @@ const Icon = styled(props => (
   margin-right: .5rem;
   cursor: pointer;
   margin-left: .8rem;
-  box-shadow: ${props => props.hoverState ? "6px 0 #464545FF" : 'none'};
+  box-shadow: ${props => props.hoverstate};
 
   &:hover {
     transition: .4ms ease-in-out;
@@ -28,7 +28,7 @@ const Icon = styled(props => (
 const BoxIcon = ({hoverState}) => {
 
     return (
-        <Icon hoverState={hoverState}>
+        <Icon hoverstate={hoverState ? "6px 0 #464545FF" : 'none'}>
             <TrendingFlatIcon/>
         </Icon>
     )
