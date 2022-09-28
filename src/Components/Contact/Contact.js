@@ -2,14 +2,14 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Navigation from '../Navigation/Navigation';
 import {Wrapper} from "../Wrapper";
-import Typography from "@mui/material/Typography";
+import FormHeader from "./FormHeader/FormHeader";
+import Form from './Form/Form'
 const Contact = ()=>{
     return(
-        <Wrapper>
+        <Wrapper type={'contact'}>
             <Navigation/>
-            <Typography>
-                Contact me
-            </Typography>
+           <FormHeader/>
+            <Form/>
             <Footer/>
         </Wrapper>
     )

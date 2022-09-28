@@ -4,13 +4,15 @@ import {Box} from "@mui/material";
 import bg from "../assets/home-bg.svg"
 import bgAbout from "../assets/home-bg.svg";
 import aboutBg from "../assets/about-bg1.svg"
-
+import contactBg from "../assets/contact-bg1.svg"
 const getBg = (type) => {
     switch (type) {
         case 'home':
             return bg;
         case 'about':
             return aboutBg;
+        case 'contact':
+            return contactBg
         default:
             return bgAbout
     }
