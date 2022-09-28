@@ -22,18 +22,26 @@ export const Title = styled(Typography)`
   text-align: center;
   font-family: 'Inconsolata', monospace;
   font-weight: bold;
-  padding: 5rem 0 1rem 0;
+  padding: 3rem 0 1rem 0;
   color: #000;
+  font-size: 2.5rem;
+  ${props => props.theme.breakpoints.up("lg")} {
+    font-size: 3.3rem;
+    padding: 5rem 0 1rem 0;
+  }
 `
 export const Description = styled(Typography)`
-text-align: center;
+  text-align: center;
   font-family: 'Open Sans', serif;
   font-weight: bold;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   justify-content: center;
+  ${props => props.theme.breakpoints.up("lg")} {
+    font-size: 1.2rem;
+  }
 `
 
 export const ProjectsLink = styled(Typography)`

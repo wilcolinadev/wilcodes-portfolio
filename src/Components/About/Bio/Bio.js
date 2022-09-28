@@ -1,7 +1,11 @@
 import React from "react";
-import {BioTittle, BioWrapper, BioImage, BioContentBox, BioSpan} from "./BioStyles";
+import {BioTittle, BioWrapper, BioImage, BioContentBox, BioSpan, BioLink} from "./BioStyles";
 import bioImage from "../../../assets/undraw_profile_details_re_ch9r.svg";
+import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import {TextController, Description} from "../Introduction/IntroductionStyles";
+import {Box} from "@material-ui/core";
+
+
 
 const Bio = () => {
     return (<BioWrapper>
@@ -22,8 +26,16 @@ const Bio = () => {
                     vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
                     dolore te feugait nulla facilisi.
                 </Description>
+
             </TextController>
-            <BioImage src={bioImage} alt={'bio of a web developer'}/>
+            <Box>
+                <BioImage src={bioImage} alt={'bio of a web developer'}/>
+                <BioLink href={'https://res.cloudinary.com/djf9jqpml/image/upload/v1664377054/WilfredoResume_zgqpyh.pdf'} download={'WilfredoColina.pdf'}>
+                    Download Resume
+                    <CloudDownloadOutlinedIcon sx={{marginLeft:'.5rem'}}/>
+                </BioLink>
+            </Box>
+
         </BioContentBox>
 
 

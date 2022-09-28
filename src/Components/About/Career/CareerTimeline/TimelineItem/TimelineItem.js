@@ -38,10 +38,10 @@ const TimelineStep = (props) => {
             color="text.secondary"
         >
             {year}
-            <Typography variant="h6">{about}</Typography>
+            <Typography >{about}</Typography>
         </TimelineOppositeContent>
         <TimelineSeparator sx={{
-            height:'150px',
+            height:'170px',
             color:'#3F3D55',
 
         }}>
@@ -54,7 +54,7 @@ const TimelineStep = (props) => {
             </TimelineDot>
             <TimelineConnector/>
         </TimelineSeparator>
-        <TimelineContent sx={{py: '12px', px: 2}}  >
+        <TimelineContent sx={{py: '14px', px: 2}}  >
             <Typography variant="h6" component="span" >
                 {institution}
 

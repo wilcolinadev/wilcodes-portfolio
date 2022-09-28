@@ -1,6 +1,7 @@
 import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import {Box, Stack} from "@mui/material";
+import {Box} from "@mui/material";
+import Link from "@mui/material/Link";
 
 
 export const BioWrapper = styled(Box)`
@@ -43,4 +44,25 @@ export const BioContentBox = styled(Box)`
 export const BioSpan = styled('span')`
   font-size: 2rem;
   text-transform: uppercase;
+`
+
+export const BioLink = styled(Link)`
+  font-size: 1.1rem;
+  
+  margin: 2rem 0;
+  color: #3F3D55;
+  display: flex;
+  align-items: center;
+ 
+  font-weight: bold;
+  text-decoration-color: #3F3D55;
+  
+  &:hover {
+    transition: .5s ease-in-out;
+    text-decoration-color: #20c976;
+  }
+  ${props => props.theme.breakpoints.up("md")} {
+    justify-content: flex-end;
+  }
+  
 `
