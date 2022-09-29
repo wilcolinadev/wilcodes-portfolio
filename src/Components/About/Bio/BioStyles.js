@@ -23,7 +23,7 @@ export const BioImage = styled('img')`
   margin-top: 2rem;
 
   ${props => props.theme.breakpoints.up("md")} {
-    width: 400px;
+    width: 300px;
     margin-left: 4rem;
   }
 `

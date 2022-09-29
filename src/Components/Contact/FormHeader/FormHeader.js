@@ -1,18 +1,24 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
-
-
+import {Title, HeaderBox, Description, ContactImage} from "./FormHeaderStyles";
+import contactImage from "../../../assets/undraw_fill_form_re_cwyf.svg"
+import {Stack} from "@mui/material";
 const FormHeader = ()=>{
 
     return(
-        <div>
-            <Typography variant={'h1'}>
-                Love to hear from you
-            </Typography>
-            <Typography variant={'h5'}>
-                Get in touch and tell me how to help you!👋🏼
-            </Typography>
-        </div>
+        <HeaderBox>
+            <Stack >
+                <Title variant={'h3'}>
+                    Love to hear from you!
+                </Title>
+                <Description variant={'h5'}>
+                    Get in touch <br/> and fill the form below! 👋🏼
+                </Description>
+
+            </Stack>
+
+            <ContactImage src={contactImage}/>
+
+        </HeaderBox>
     )
 };
 

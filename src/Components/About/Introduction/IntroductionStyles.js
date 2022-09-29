@@ -7,12 +7,12 @@ export const AboutImage = styled('img')`
   height: auto;
   margin-top: 2rem;
   ${props => props.theme.breakpoints.up("md")} {
-    width: 400px;
+    width: 300px;
     margin-left: 4rem;
   }
 `
 
-export const IntroductionBox = styled(Box)` 
+export const IntroductionBox = styled(Box)`
   display:flex;
   padding: 1rem;
   margin-top: 1rem;

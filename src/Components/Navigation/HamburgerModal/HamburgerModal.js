@@ -61,7 +61,7 @@ const HamburgerModal = ({active}) => {
                     ABOUT
                 </LinkItem>
             </Link>
-            <Link href={'/'}>
+            <Link href={'/contact'}>
                 <LinkItem>
                     Let's Chat
 
