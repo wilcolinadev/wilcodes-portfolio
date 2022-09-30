@@ -8,10 +8,10 @@ const FormHeader = ()=>{
         <HeaderBox>
             <Stack >
                 <Title variant={'h3'}>
-                    Love to hear from you!
+                    Get in touch 👋🏼
                 </Title>
-                <Description variant={'h5'}>
-                    Get in touch <br/> and fill the form below! 👋🏼
+                <Description variant={'h4'}>
+                    Love to hear from you!
                 </Description>
 
             </Stack>

@@ -26,6 +26,7 @@ export const HeaderBox = styled(Box)`
   ${props => props.theme.breakpoints.up("md")} {
     flex-flow: row nowrap;
     padding: 0;
+    margin: 2rem auto;
     width: 60%;
     
   }

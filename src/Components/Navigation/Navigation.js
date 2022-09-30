@@ -53,9 +53,13 @@ const Navigation = ({page}) => {
                             <Typography style={{display: "flex", alignItems: 'center'}}>
                                 Let's chat
                             </Typography>
+
                         </ContactLink>
+
                     </Link>
+
                 </Box>
+
                 <BurgerController>
                     <Burger open={isBurgerOpen}
                             onClick={() => setIsBurgerOpen(!isBurgerOpen)}
@@ -65,6 +69,7 @@ const Navigation = ({page}) => {
                         <div/>
                     </Burger>
                 </BurgerController>
+
             </Stack>
         </UList>
     </Wrapper>)

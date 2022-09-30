@@ -1,5 +1,7 @@
 import {styled} from "@mui/material/styles";
 import {Box} from "@mui/material";
+import Typography from "@mui/material/Typography";
+
 
 
 export const ContactForm = styled('form')`
@@ -16,15 +18,17 @@ export const ContactForm = styled('form')`
     font-size: 1.2rem;
     margin:1rem 0;
   }
-
   
-
-
-
+  
 `;
 
+export const FormDescription = styled(Typography)`
+font-family: 'inconsolata', monospace;
+  padding: 1rem 0;
+`
+
 export const FormWrapper = styled(Box)`
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   border-top: 2px solid #3F3D55;
   padding: 2rem;
   ${props => props.theme.breakpoints.up("md")} {
@@ -39,5 +43,34 @@ export const Button = styled('button')`
   border: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  margin: 1rem 0 2rem;
+`
+export const FormInput = styled("input")`
+  font-family: 'inconsolata', monospace;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  background-color: #f7f3f3;
+  font-size: 1.1rem;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px #5b9675;
+  }
 `
 
+export const FormArea = styled('textarea')`
+  width: 100%;
+  height: 150px;
+  font-family: 'inconsolata', monospace;
+  border: none;
+  padding: 1rem;
+  background-color: #f7f3f3;
+  font-size: 1.1rem;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px #5b9675;
+  }
+`
