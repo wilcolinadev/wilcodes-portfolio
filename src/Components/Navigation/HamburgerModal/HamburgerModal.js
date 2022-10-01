@@ -8,8 +8,8 @@ import SocialLinks from "../../SocialLinks";
 const ModalController = styled((props) => <Stack {...props}/>)`
   width: 100%;
   height: 100%;
-  position: fixed;
-  min-height: 100vh;
+  position:fixed;
+  top: 0;
   background-color: rgba(251, 251, 255, 0.85);
   transform: ${(props) =>
     props.open ? "translateX(0)" : "translateX(-100%)"};
@@ -56,12 +56,12 @@ const HamburgerModal = ({active}) => {
                     PROJECTS
                 </LinkItem>
             </Link>
-            <Link href={'/'}>
+            <Link href={'/about'}>
                 <LinkItem>
                     ABOUT
                 </LinkItem>
             </Link>
-            <Link href={'/'}>
+            <Link href={'/contact'}>
                 <LinkItem>
                     Let's Chat
 

@@ -20,17 +20,18 @@ const ActionCallMainBox = styled('div')`
 `
 
 const ActionCallText = styled(Typography)`
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
   color: #fff;
-  padding: .4rem;
+
   box-sizing: border-box;
   font-family: 'Inconsolata', monospace;
   animation: translateinfinite 1s infinite alternate;
   ${props => props.theme.breakpoints.up("md")} {
     font-size: 1.6rem;
+    
   }
   ${props => props.theme.breakpoints.up("sm")} {
     font-size: 1.4rem;

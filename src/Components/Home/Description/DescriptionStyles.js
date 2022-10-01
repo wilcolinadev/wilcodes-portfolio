@@ -8,11 +8,12 @@ export const GridController = styled(Grid)`
   box-sizing: border-box;
   height: auto;
   padding: .5rem;
+  margin-left: 1rem;
   margin-bottom: 2rem;
-
   ${props => props.theme.breakpoints.up("lg")} {
     width: 60%;
     padding: 1rem;
+    margin-left: 2rem;
   }
 `
 
