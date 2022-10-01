@@ -1,10 +1,10 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import {FormControl, Grid} from "@mui/material";
 import {ContactForm, FormWrapper, Button, FormDescription, FormInput, FormArea, FileLabel} from './FormStyles'
 import BoxIcon from "../../BoxIcon";
 import Typography from "@mui/material/Typography";
 import UploadFileOutlinedIcon from '@mui/icons-material/UploadFileOutlined';
-
+import {formValidation} from "./formValidation";
 const Form = () => {
     const sxStyles = {
         width: '100%',
@@ -34,6 +34,11 @@ const Form = () => {
         const file = [...e.target.files];
         setFiles((prevState)=>[...prevState,...file]);
     }
+
+    useEffect(() => {
+        setIsFormValid(formValidation(name, lastName,email,company))
+    }, [name, lastName, email, company]);
+
 
     return (
         <FormWrapper>
@@ -121,14 +126,14 @@ const Form = () => {
                             onChange={(e)=>handleFile(e)}
                         />
                         <UploadFileOutlinedIcon/>
-                        Upload file
+                        Upload files
 
                     </FileLabel>
                 </Grid>
                 <Grid container justifyContent="center" alignItems="center">
                     <Button type="submit" onMouseEnter={() => setIsButtonHover(!isButtonHover)}
                             onMouseLeave={() => setIsButtonHover(!isButtonHover)}
-                            disabled={isFormValid}
+                            disabled={!isFormValid}
                     >
                         <BoxIcon hoverState={isButtonHover}/>
                         <Typography>
@@ -138,6 +143,7 @@ const Form = () => {
 
                 </Grid>
             </ContactForm>
+
         </FormWrapper>
 
     )
