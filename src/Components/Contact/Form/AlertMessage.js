@@ -16,7 +16,7 @@ const AlertMessage = ({error, success, setError, setSuccess}) => {
             <Snackbar open={success}
                       anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
                       onClose={() => setSuccess(false)}
-                      autoHideDuration={3000}
+                      autoHideDuration={2000}
             >
                 <Alert severity="success">
                     Message Sent succesfully!
@@ -25,7 +25,7 @@ const AlertMessage = ({error, success, setError, setSuccess}) => {
 
             <Snackbar open={error}
                       anchorOrigin={{vertical: 'bottom', horizontal: 'center'}} onClose={() => setError(false)}
-                      autoHideDuration={3000}>
+                      autoHideDuration={2000}>
                 <Alert severity="error">
                   Server Erro, Try again!
                 </Alert>

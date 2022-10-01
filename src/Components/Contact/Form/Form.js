@@ -44,14 +44,15 @@ const Form = () => {
 
     useEffect(() => {
         setIsFormValid(formValidation(name, lastName, email, company))
+
     }, [name, lastName, email, company]);
 
     const sendForm = async (e) => {
         e.preventDefault();
         const data = {
-            service_id: 'service_c7mmf6g',
-            template_id: 'template_gotx84l',
-            user_id: 'user_SVVnZkO5DWGt5scPKPwAx',
+            service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
+            template_id: process.env.NEXT_PUBLIC_TEMPLATE_ID,
+            user_id: process.env.NEXT_PUBLIC_USER_ID,
             template_params: {
                 'name': name,
                 'lastName': lastName,
