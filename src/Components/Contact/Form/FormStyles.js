@@ -25,6 +25,7 @@ export const ContactForm = styled('form')`
 export const FormDescription = styled(Typography)`
 font-family: 'inconsolata', monospace;
   padding: 1rem 0;
+  color: #3F3D55;
 `
 
 export const FormWrapper = styled(Box)`

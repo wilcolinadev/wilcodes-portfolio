@@ -42,10 +42,18 @@ const Form = () => {
         setFiles((prevState) => [...prevState, ...file]);
     }
 
-    useEffect(() => {
-        setIsFormValid(formValidation(name, lastName, email, company))
+    const cleanForm = ()=>{
+        setEmail('');
+        setMessage('');
+        setName('');
+        setCompany('');
+        setFiles([]);
+    }
 
-    }, [name, lastName, email, company]);
+    useEffect(() => {
+        setIsFormValid(formValidation(name, lastName, email, company, message))
+
+    }, [name, lastName, email, company,message]);
 
     const sendForm = async (e) => {
         e.preventDefault();
@@ -71,13 +79,13 @@ const Form = () => {
             setError(!error);
         }
 
-
+    cleanForm();
     }
 
 
     return (
         <FormWrapper>
-            <ContactForm onSubmit={sendForm}>
+            <ContactForm onSubmit={sendForm} id={'form'}>
                 <FormDescription variant={'h4'}>
                     Fill the Form Below!
                 </FormDescription>
@@ -167,8 +175,8 @@ const Form = () => {
                     </FileLabel>
                 </Grid>
                 <Grid container justifyContent="center" alignItems="center">
-                    <Button type="submit" onMouseEnter={() => setIsButtonHover(!isButtonHover)}
-                            onMouseLeave={() => setIsButtonHover(!isButtonHover)}
+                    <Button type="submit" onMouseEnter={() => isFormValid && setIsButtonHover(!isButtonHover)}
+                            onMouseLeave={() => isFormValid && setIsButtonHover(!isButtonHover)}
                             disabled={!isFormValid}
                     >
                         <BoxIcon hoverState={isButtonHover}/>

@@ -2,24 +2,37 @@ import React from "react";
 import {Title, HeaderBox, Description, ContactImage} from "./FormHeaderStyles";
 import contactImage from "../../../assets/undraw_fill_form_re_cwyf.svg"
 import {Stack} from "@mui/material";
-const FormHeader = ()=>{
+import SocialLinks from "../../SocialLinks";
+import Typography from "@mui/material/Typography";
 
-    return(
-        <HeaderBox>
-            <Stack >
-                <Title variant={'h3'}>
-                    Get in touch 👋🏼
-                </Title>
-                <Description variant={'h4'}>
-                    Love to hear from you!
-                </Description>
+const FormHeader = () => {
+
+    return (<HeaderBox>
+        <Stack>
+            <Title variant={'h3'}>
+                Get in touch 👋🏼
+            </Title>
+            <Description variant={'h4'}>
+                Love to hear from you!
+            </Description>
+            <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} marginTop={'1rem'}>
+                <SocialLinks align={'left'}/>
+                <Stack>
+                    <Typography sx={{fontFamily:'inconsolata'}}>
+                        Location
+                    </Typography>
+                    <Typography variant={"h6"}>
+                        Houston, Texas.
+                    </Typography>
+                </Stack>
 
             </Stack>
 
-            <ContactImage src={contactImage}/>
+        </Stack>
 
-        </HeaderBox>
-    )
+        <ContactImage src={contactImage}/>
+
+    </HeaderBox>)
 };
 
 export default FormHeader;
