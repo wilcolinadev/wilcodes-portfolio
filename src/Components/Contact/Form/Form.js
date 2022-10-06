@@ -9,7 +9,8 @@ import axios from "axios";
 import CustomizedSnackbars from "./AlertMessage";
 
 const Form = () => {
-
+    const instance = axios.create();
+    instance.defaults.headers.common["Content-Type"] = "application/json";
     const sxStyles = {
         width: '100%',
     }
@@ -33,40 +34,78 @@ const Form = () => {
 
     const [error, setError] = useState(false);
     const [successResponse, setsuccessResponse] = useState(false);
-
-
     const [files, setFiles] = useState([]);
+    const [urlFiles, setUrlFiles] = useState([]);
 
     const handleFile = (e) => {
         const file = [...e.target.files];
         setFiles((prevState) => [...prevState, ...file]);
     }
 
-    const cleanForm = ()=>{
+    const cleanForm = () => {
         setEmail('');
         setMessage('');
         setName('');
         setCompany('');
         setFiles([]);
-    }
+    };
+
+
+    useEffect(() => {
+        const uploadFiles = async () => {
+            const uploaders = files.map(file => {
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('tags', "browser_upload");
+                formData.append("upload_preset", process.env.NEXT_PUBLIC_PRESET);
+                try {
+                    return instance.post(`https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUD_NAME}/upload`, formData, {
+                        headers: {
+                            "Content-Type": null, "X-Requested-With": "XMLHttpRequest",
+                        },
+                    });
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+            try{
+                await axios.all(uploaders.map(async (data) => {
+                    const result = await data;
+                    const fileURL = result.data.secure_url;
+                    setUrlFiles((prevState) => {
+                        const newState = [...prevState];
+                        newState.push(fileURL);
+                        return [...newState];
+                    });
+
+                }));
+                setFiles([]);
+            }catch (e) {
+                console.log(e);
+            }
+
+
+
+        };
+
+        if (files.length) {
+            uploadFiles()
+        }
+    }, [files]);
+
 
     useEffect(() => {
         setIsFormValid(formValidation(name, lastName, email, company, message))
+    }, [name, lastName, email, company, message]);
 
-    }, [name, lastName, email, company,message]);
-
-    const sendForm = async (e) => {
-        e.preventDefault();
+    const sendForm = async () => {
         const data = {
             service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
             template_id: process.env.NEXT_PUBLIC_TEMPLATE_ID,
             user_id: process.env.NEXT_PUBLIC_USER_ID,
             template_params: {
-                'name': name,
-                'lastName': lastName,
-                'company': company,
-                'email': email,
-                'message': message
+                'name': name, 'lastName': lastName, 'company': company, 'email': email, 'message': message
             }
         };
 
@@ -78,13 +117,11 @@ const Form = () => {
             console.log(e);
             setError(!error);
         }
-
-    cleanForm();
+        cleanForm();
     }
 
 
-    return (
-        <FormWrapper>
+    return (<FormWrapper>
             <ContactForm onSubmit={sendForm} id={'form'}>
                 <FormDescription variant={'h4'}>
                     Fill the Form Below!
