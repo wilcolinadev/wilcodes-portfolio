@@ -31,7 +31,7 @@ font-family: 'inconsolata', monospace;
 export const FormWrapper = styled(Box)`
   background-color: rgba(255, 255, 255, 0.91);
   border-top: 2px solid #3F3D55;
-  padding: 2rem;
+  padding: 1rem;
 
   ${props => props.theme.breakpoints.up("md")} {
     margin-top: 2.5rem;

@@ -15,7 +15,7 @@ export const FooterBox = styled('footer')`
 
 `
 export const FooterLink = styled(Typography)`
-  margin: 0 .5rem;
+  margin: 0 .5rem .6rem;
   font-size: 1rem;
   text-transform: uppercase;
 
@@ -27,7 +27,7 @@ export const FooterLink = styled(Typography)`
 `
 
 export const FooterCopyright = styled('p')`
-  margin: 0;
+  margin: .5rem 0;
   padding: .5rem;
 `
 

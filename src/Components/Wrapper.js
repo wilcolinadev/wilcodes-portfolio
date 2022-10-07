@@ -1,20 +1,20 @@
 import React from "react";
 import {styled} from "@mui/material/styles";
 import {Box} from "@mui/material";
-import bg from "../assets/home-bg.svg"
-import bgAbout from "../assets/home-bg.svg";
-import aboutBg from "../assets/about-bg1.svg"
-import contactBg from "../assets/contact-bg1.svg"
+import homeBg from "../assets/home-bg.svg";
+import aboutBg from "../assets/about-bg.svg";
+import contactBg from "../assets/contact-bg.svg";
+import projectBg from "../assets/projects-bg.svg";
 const getBg = (type) => {
     switch (type) {
-        case 'home':
-            return bg;
         case 'about':
             return aboutBg;
         case 'contact':
-            return contactBg
+            return contactBg;
+        case 'projects':
+            return projectBg;
         default:
-            return bgAbout
+            return homeBg;
     }
 
 }

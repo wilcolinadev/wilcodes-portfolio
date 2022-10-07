@@ -14,7 +14,7 @@ export const AboutImage = styled('img')`
 
 export const IntroductionBox = styled(Box)`
   display:flex;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-top: 1rem;
   box-sizing: border-box;
   justify-content: center;
