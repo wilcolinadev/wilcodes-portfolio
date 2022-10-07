@@ -7,6 +7,7 @@ import UploadFileOutlinedIcon from '@mui/icons-material/UploadFileOutlined';
 import {formValidation} from "./formValidation";
 import axios from "axios";
 import CustomizedSnackbars from "./AlertMessage";
+import ProgressBar from "./ProgressBar";
 
 const Form = () => {
     const instance = axios.create();
@@ -16,26 +17,22 @@ const Form = () => {
     }
     const [isButtonHover, setIsButtonHover] = useState(false);
     const [isFormValid, setIsFormValid] = useState(false);
-
     const nameRef = useRef(null);
     const [name, setName] = useState('');
-
     const lastNameRef = useRef(null);
     const [lastName, setLastName] = useState('');
-
     const companyRef = useRef(null);
     const [company, setCompany] = useState('');
-
     const emailRef = useRef(null);
     const [email, setEmail] = useState('');
-
     const messageRef = useRef(null);
     const [message, setMessage] = useState('');
-
     const [error, setError] = useState(false);
     const [successResponse, setsuccessResponse] = useState(false);
     const [files, setFiles] = useState([]);
     const [urlFiles, setUrlFiles] = useState([]);
+    const [messageAlert, setMessageAlert] = useState('');
+    const [isProgressActive, setIsProgressActive] = useState(false);
 
     const handleFile = (e) => {
         const file = [...e.target.files];
@@ -53,6 +50,7 @@ const Form = () => {
 
     useEffect(() => {
         const uploadFiles = async () => {
+            setIsProgressActive(!isProgressActive);
             const uploaders = files.map(file => {
                 const formData = new FormData();
                 formData.append('file', file);
@@ -65,11 +63,12 @@ const Form = () => {
                         },
                     });
                 } catch (e) {
-                    console.log(e);
+                    setError(!error);
+                    setMessageAlert('Server Error, Try again!');
                 }
             });
 
-            try{
+            try {
                 await axios.all(uploaders.map(async (data) => {
                     const result = await data;
                     const fileURL = result.data.secure_url;
@@ -80,11 +79,18 @@ const Form = () => {
                     });
 
                 }));
+                setIsProgressActive(false);
                 setFiles([]);
-            }catch (e) {
-                console.log(e);
-            }
+                setMessageAlert('File attached Successfully!');
+                setsuccessResponse(!successResponse);
 
+
+            } catch (e) {
+                setMessageAlert('Server Error, Try again!');
+                setError(!error);
+
+
+            }
 
 
         };
@@ -99,25 +105,37 @@ const Form = () => {
         setIsFormValid(formValidation(name, lastName, email, company, message))
     }, [name, lastName, email, company, message]);
 
-    const sendForm = async () => {
+    const sendForm = async (e) => {
+        e.preventDefault();
+        setIsProgressActive(!isProgressActive);
         const data = {
             service_id: process.env.NEXT_PUBLIC_SERVICE_ID,
             template_id: process.env.NEXT_PUBLIC_TEMPLATE_ID,
             user_id: process.env.NEXT_PUBLIC_USER_ID,
             template_params: {
-                'name': name, 'lastName': lastName, 'company': company, 'email': email, 'message': message
+                'name': name,
+                'lastName': lastName,
+                'company': company,
+                'email': email,
+                'message': message,
+                'files': urlFiles
             }
         };
 
         try {
-            let response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', data);
-            console.log(response);
-            await setsuccessResponse(!successResponse);
+            await axios.post('https://api.emailjs.com/api/v1.0/email/send', data);
+            setsuccessResponse(true);
+            setMessageAlert('Message sent Successfully!');
+
+
         } catch (e) {
-            console.log(e);
+            setMessageAlert('Server Error, Try again!');
             setError(!error);
+
         }
+
         cleanForm();
+
     }
 
 
@@ -196,7 +214,9 @@ const Form = () => {
                     </FormControl>
                 </Grid>
                 <Grid>
+                    <ProgressBar status={isProgressActive}/>
                     <FileLabel htmlFor="choose-file">
+
                         <input
                             name={'files'}
                             accept="image/*, .pdf"
@@ -226,7 +246,8 @@ const Form = () => {
             </ContactForm>
 
             <CustomizedSnackbars error={error} success={successResponse} setError={setError}
-                                 setSuccess={setsuccessResponse}/>
+                                 setSuccess={setsuccessResponse} message={messageAlert} setLoading={setIsProgressActive}
+            />
         </FormWrapper>
 
     )
