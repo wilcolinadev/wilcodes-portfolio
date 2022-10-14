@@ -1,7 +1,6 @@
 import {styled} from "@mui/material/styles";
-import {Accordion, Grid} from "@mui/material";
+import {Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {Button} from "@material-ui/core";
 
 
 export const ProjectWrapper = styled(Grid)`
@@ -11,7 +10,7 @@ export const ProjectWrapper = styled(Grid)`
   img {
     width: 90%;
     height: auto;
-    margin: 1rem 0;
+    margin: .5rem 0;
     }
  
 `
