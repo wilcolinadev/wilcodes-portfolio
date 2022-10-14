@@ -22,7 +22,7 @@ const Navigation = ({page}) => {
     return (<Wrapper>
         <HamburgerModal active={isBurgerOpen}/>
         <UList>
-            <Link href='/pages'>
+            <Link href='/'>
                 <Box>
                     <Logo variant={"h5"}>
                         Wilfredo Colina

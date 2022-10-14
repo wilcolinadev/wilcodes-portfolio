@@ -5,13 +5,12 @@ import {Wrapper} from "../Wrapper";
 import Typography from "@mui/material/Typography";
 import ActionCall from "../ActionCall/ActionCall";
 import Project from "./Project/Project";
+import ProjectsHeader from "./ProjectsHeader/ProjectsHeader";
 const Projects = ()=>{
     return(
         <Wrapper type={'projects'}>
             <Navigation page={'projects'}/>
-            <Typography variant={'h1'}>
-               This is my work so far!
-            </Typography>
+           <ProjectsHeader/>
             <Project/>
             <ActionCall/>
             <Footer/>

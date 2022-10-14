@@ -51,7 +51,7 @@ const HamburgerModal = ({active}) => {
 
                 </LinkItem>
             </Link>
-            <Link href={'/'}>
+            <Link href={'/projects'}>
                 <LinkItem>
                     PROJECTS
                 </LinkItem>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {ProjectWrapper, ProjectTitle} from "./ProjectStyles";
 import {Grid} from "@mui/material";
 import {ProjectImage} from "../../Home/FeaturedProjects/Project/ProjectStyles";
@@ -6,7 +6,6 @@ import ProjectAccordion from "../ProjectAccordion/ProjectAccordion";
 
 const Project = () => {
 
-    const [isDataOpened, setIsDataOpened] = useState(false);
     return (
         <ProjectWrapper container>
             <Grid item xs={12} md={6}>
