@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {Box, Grid} from "@mui/material";
+import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 

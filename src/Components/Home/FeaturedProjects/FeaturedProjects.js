@@ -1,27 +1,13 @@
-import React, {useEffect, useState} from "react";
-import {getDatabase, ref, get} from "firebase/database";
+import React, { useState} from "react";
 import Project from "./Project/Project";
 import BoxIcon from "../../BoxIcon";
-import {Wrapper, MainWrapper, Title, Description, ProjectsLink, InnerText} from "./FeaturedProjectStyles";
+import {Wrapper, MainWrapper, Title, Description, ProjectsLink} from "./FeaturedProjectStyles";
 import Link from "../../../Link";
+import useProjects from "../../../hooks/useProjects";
 
 const FeaturedProjects = () => {
-    const [projects, setProjects] = useState([]);
     const [logHover, isLogHover] = useState(false);
-    useEffect(() => {
-        const getProjects = async () => {
-            const db = getDatabase();
-            const data = await get(ref(db, 'featuredProjects'));
-            const projectsObject = data.val();
-            const projects = [];
-            Object.values(projectsObject).forEach(project => {
-                projects.push(project)
-            });
-            setProjects(projects);
-        }
-        getProjects();
-    }, []);
-
+   const serverProjects = useProjects('featuredProjects');
     return (<MainWrapper>
         <Title variant={'h3'}>Feature Projects</Title>
 
@@ -35,7 +21,7 @@ const FeaturedProjects = () => {
         </Link>
 
         <Wrapper container fluid="true">
-            {projects.map(project => {
+            {serverProjects.map(project => {
                 return (<Project key={project.name} name={project.name} urlImage={project.urlImage} url={project.url}
                                  description={project.description}/>)
             })}

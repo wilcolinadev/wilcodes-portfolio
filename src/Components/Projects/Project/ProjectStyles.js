@@ -8,10 +8,15 @@ export const ProjectWrapper = styled(Grid)`
   border-top: 2px solid #3F3D55;
   padding: 2rem;
   img {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: .5rem 0;
+    ${props => props.theme.breakpoints.up("lg")} {
+      
+      width: 90%;
     }
+    }
+  
  
 `
 

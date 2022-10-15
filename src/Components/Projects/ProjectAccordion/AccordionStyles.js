@@ -18,14 +18,17 @@ export const ProjectButton = styled(Button)`
 `
 
 export const AccordionWrapper = styled(Accordion)`
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 90%;
+  background-color: rgba(255, 255, 255, 0.4);
+ 
   border: none;
   box-shadow: none;
   padding: .5rem;
   text-align: justify;
+
   ${props => props.theme.breakpoints.up("lg")} {
-    padding: 1rem;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    width: 90%;
   }
 
 `
