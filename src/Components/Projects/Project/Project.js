@@ -6,7 +6,7 @@ import ProjectAccordion from "../ProjectAccordion/ProjectAccordion";
 import ProjectSkeleton from "../ProjectSkeleton";
 
 const Project = (props) => {
-    const {name, githubUrl, urlImage, url} = props;
+    const {name, githubUrl, urlImage, url,description} = props;
     const defineImage = () => {
         if (Array.isArray(urlImage)) return urlImage[1];
         return urlImage;
@@ -21,7 +21,7 @@ const Project = (props) => {
                 <ProjectImage
                     src={defineImage()}
                     alt={'Image test'}/>
-                <ProjectAccordion githubUrl={githubUrl} url={url}/></div>)
+                <ProjectAccordion githubUrl={githubUrl} url={url} description={description}/></div>)
         }
     }
 

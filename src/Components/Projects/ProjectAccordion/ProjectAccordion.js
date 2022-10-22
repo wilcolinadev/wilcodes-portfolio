@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import {AccordionWrapper, ProjectDescription,ProjectButton, AccordionLabel, ButtonWrapper} from "./AccordionStyles";
 
 export const ProjectAccordion = (props) => {
-    const {githubUrl, url} = props;
+    const {githubUrl, url,description} = props;
     return (<AccordionWrapper>
         <AccordionSummary
             expandIcon={<ExpandMoreIcon/>}
@@ -14,12 +14,8 @@ export const ProjectAccordion = (props) => {
             <AccordionLabel sx={{color: 'text.secondary'}} >Show more!</AccordionLabel>
         </AccordionSummary>
         <AccordionDetails sx={{ padding:'0'}}>
-            <ProjectDescription> In this Project I will build an application that will allow companies to keep
-                on
-                track of
-                issues presented with their customers . It will be possible to create a record that will have a
-                status, description and the basic information of the client. With it the issue can be addressed
-                properly later if it cannot be solved at the moment.
+            <ProjectDescription>
+                {description}
             </ProjectDescription>
 
             <ButtonWrapper direction={'row'}>

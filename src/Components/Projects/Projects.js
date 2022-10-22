@@ -17,6 +17,7 @@ const Projects = () => {
         <ProjectWrapper container>
             {serverProjects.map((projectData, i) => <Project key={i} name={projectData.name} url={projectData.url}
                                                              githubUrl={projectData.githubUrl}
+                                                             description={projectData.description}
                                                              urlImage={projectData.urlImage}/>)}
         </ProjectWrapper>
 
