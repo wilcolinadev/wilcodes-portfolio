@@ -1,5 +1,6 @@
 import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import {Box} from "@material-ui/core";
 
 
 export const ProjectBox = styled('div')`
@@ -13,7 +14,6 @@ export const ProjectImage = styled('img')`
   height: auto;
   border: 2px solid #000000;
   border-radius: 10px;
-  cursor: pointer;
   transition: .5s;
   margin-bottom: 2.5rem;
   &:hover, &:active {
@@ -56,3 +56,4 @@ export const ProjectDescription = styled(Typography)`
   text-align: justify;
   font-size: 1.1rem;
 `
+

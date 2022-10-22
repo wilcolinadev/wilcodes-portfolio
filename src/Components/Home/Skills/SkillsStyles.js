@@ -20,7 +20,7 @@ export const SkillsTitle = styled(Typography)`
   color: #ffffff;
   text-align: center;
   font-family: 'Inconsolata', monospace;
-  line-height: 2.7rem;
+  line-height: 2rem;
   font-size: 1.3rem;
   width: 70%;
   margin: .5rem auto;
@@ -29,7 +29,8 @@ export const SkillsTitle = styled(Typography)`
 
   ${props => props.theme.breakpoints.up("sm")} {
     font-size: 2rem;
-    width: 70%;
+    line-height: 2.3rem;
+    width: 60%;
   }
   ${props => props.theme.breakpoints.up("lg")} {
     font-size: 2.2rem;
@@ -60,6 +61,10 @@ export const Element = styled(ListItem)`
   }
 
   ${props => props.theme.breakpoints.up("sm")} {
+    width: 60px;
+    height: 60px;
+  }
+  ${props => props.theme.breakpoints.up("lg")} {
     width: 65px;
     height: 65px;
   }
@@ -76,6 +81,7 @@ export const SkillsRow = styled('div')`
     margin: 2rem 0;
 
   }
+
 `
 
 export const Label = styled(Typography)`
@@ -90,13 +96,14 @@ export const GridController = styled('div')`
   margin: 2rem 1.3rem;
 
   ${props => props.theme.breakpoints.up("sm")} {
-    margin: 2rem 2rem;
+    margin: 2rem .9rem;
+   
 
   }
 
   ${props => props.theme.breakpoints.up("md")} {
     margin: 1rem 2rem;
-
+  
   }
 
 `

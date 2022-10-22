@@ -58,7 +58,3 @@ export const ProjectsLink = styled(Typography)`
 
 
 `
-export const InnerText = styled(Typography)`
-  display: flex;
-  align-items: center;
-`
