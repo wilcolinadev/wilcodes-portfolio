@@ -11,6 +11,10 @@ export const Item = styled(ListItem)`
   display: flex;
   justify-content: center;
 
+  &&:hover {
+    color: #019058;
+    transition: .5ms ease-in-out;
+  }
 
   ${props => props.theme.breakpoints.up("sm")} {
 
@@ -67,7 +71,11 @@ export const Logo = styled(Typography)`
   font-family: 'Inconsolata', monospace;
   letter-spacing: -1.5px;
   font-weight: bold;
-
+  transition: .5ms ease-in-out;
+&&:hover{
+  color: #019058;
+  transition: .5ms ease-in-out;
+}
 `
 
 export const ContactLink = styled(Stack)`
@@ -79,12 +87,13 @@ export const ContactLink = styled(Stack)`
     display: none;
 
   }
+  
 `
 
 
 export const Identifier = styled('span')`
   position: absolute;
-  background: #01B19C;
+  background: #3F3D55;
   border: 1px solid #000;
   border-radius: 60%;
   height: 10px;

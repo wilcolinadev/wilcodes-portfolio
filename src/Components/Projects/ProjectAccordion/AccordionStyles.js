@@ -7,14 +7,20 @@ export const ProjectButton = styled(Button)`
   color: #3F3D55 !important;
   box-shadow: 1px 1px 1px 1px #ebe8e8;
   margin-right: 1rem !important;
-  padding: .5rem !important;
+  padding: .3rem !important;
+  margin-bottom: .5rem !important;
   a {
     color: #3F3D55;
     text-decoration: none;
 
 
   }
-  
+  ${props => props.theme.breakpoints.up("lg")} {
+
+    margin-bottom: 1rem !important;
+  }
+
+
 `
 
 export const AccordionWrapper = styled(Accordion)`
@@ -22,12 +28,12 @@ export const AccordionWrapper = styled(Accordion)`
  
   border: none;
   box-shadow: none;
-  padding: .5rem;
+  padding: 0 .7rem;
   text-align: justify;
+  margin-bottom: 2rem;
 
-  ${props => props.theme.breakpoints.up("lg")} {
-    padding: 0 1rem;
-    margin: 0 1rem;
+  ${props => props.theme.breakpoints.up("md")} {
+
     width: 90%;
   }
 

@@ -11,7 +11,7 @@ export const ProjectWrapper = styled(Grid)`
     width: 100%;
     height: auto;
     margin: .5rem 0;
-    ${props => props.theme.breakpoints.up("lg")} {
+    ${props => props.theme.breakpoints.up("md")} {
       
       width: 90%;
     }

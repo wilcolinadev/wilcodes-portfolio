@@ -5,7 +5,8 @@ import CloudIcon from "@mui/icons-material/Cloud";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import {AccordionWrapper, ProjectDescription,ProjectButton, AccordionLabel, ButtonWrapper} from "./AccordionStyles";
 
-export const ProjectAccordion = () => {
+export const ProjectAccordion = (props) => {
+    const {githubUrl, url} = props;
     return (<AccordionWrapper>
         <AccordionSummary
             expandIcon={<ExpandMoreIcon/>}
@@ -23,10 +24,10 @@ export const ProjectAccordion = () => {
 
             <ButtonWrapper direction={'row'}>
                 <ProjectButton color={'primary'} variant={'text'} startIcon={<CloudIcon/>}>
-                    <a href={''} target={"_blank"}> Live project Link</a>
+                    <a href={url} target={"_blank"}> Live project Link</a>
                 </ProjectButton>
                 <ProjectButton variant={'text'} startIcon={<GitHubIcon/>}>
-                    <a href={''} target={"_blank"}> Github Link</a>
+                    <a href={githubUrl} target={"_blank"}> Github Link</a>
                 </ProjectButton>
             </ButtonWrapper>
         </AccordionDetails>

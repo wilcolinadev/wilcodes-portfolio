@@ -12,17 +12,18 @@ const Projects = () => {
     const serverProjects = useProjects('projects');
 
     return (<Wrapper type={'projects'}>
-            <Navigation page={'projects'}/>
-            <ProjectsHeader/>
-            <ProjectWrapper container>
-                {serverProjects.map((projectData, i) => <Project key={i} name={projectData.name} url={projectData.url}
-                                                                 githubUrl={projectData.githubUrl}
-                                                                 urlImage={projectData.urlImage}/>)}
-            </ProjectWrapper>
+        <Navigation page={'projects'}/>
+        <ProjectsHeader/>
+        <ProjectWrapper container>
+            {serverProjects.map((projectData, i) => <Project key={i} name={projectData.name} url={projectData.url}
+                                                             githubUrl={projectData.githubUrl}
+                                                             urlImage={projectData.urlImage}/>)}
+        </ProjectWrapper>
 
-            <ActionCall/>
-            <Footer/>
-        </Wrapper>)
+        <ActionCall/>
+
+        <Footer/>
+    </Wrapper>)
 };
 
 export default Projects;
