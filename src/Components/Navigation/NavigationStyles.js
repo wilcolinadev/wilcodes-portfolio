@@ -69,7 +69,7 @@ export const Logo = styled(Typography)`
   margin-left: 1rem;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
-  letter-spacing: -1.5px;
+  letter-spacing: -.5px;
   font-weight: bold;
   transition: .5ms ease-in-out;
 &&:hover{

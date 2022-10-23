@@ -7,7 +7,12 @@ const Index = () => {
     return (
         <Box>
             <Head>
-                <title> Hello Wil</title>
+                <title> Wilfredo Colina | UI / UX Web Developer </title>
+
+                <meta name="description"
+                      content="I'm Wilfredo Colina, a UI/UX Web developer who loves to face new challenges every day. I am located in Houston Texas, and I am a graduated in Web development Applications "/>
+                <meta charSet="utf-8"/>
+
             </Head>
             <Home/>
         </Box>

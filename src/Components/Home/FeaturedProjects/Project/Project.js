@@ -26,7 +26,7 @@ const Project = ({name, url, urlImage, description}) => {
             <ProjectBox>
 
                 <ProjectTitle variant={'h5'}>
-                    <Link href={'/projects'}> {name}  </Link> <ArrowCircleRightIcon style={{marginLeft: '6px'}}/>
+                    <Link href={'/projects'} style={{display:'flex',alignItems:'center'}}> {name}  <ArrowCircleRightIcon style={{marginLeft: '6px'}}/> </Link>
                 </ProjectTitle>
 
                 <ProjectDescription>
