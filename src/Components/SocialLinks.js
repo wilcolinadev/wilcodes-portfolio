@@ -36,7 +36,7 @@ const SocialLinks = (props) => {
             <Link href={'https://github.com/wilcodes'}>
                 <GitHubIcon fontSize={'large'}/>
             </Link>
-            <Link href={'https://github.com/wilcodes'}>
+            <Link href={'https://www.instagram.com/wilcodes.dev/'}>
                 <InstagramIcon fontSize={'large'}/>
             </Link>
         </SocialStack>)
