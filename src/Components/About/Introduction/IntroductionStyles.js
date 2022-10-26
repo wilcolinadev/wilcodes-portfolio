@@ -14,7 +14,7 @@ export const AboutImage = styled('img')`
 
 export const IntroductionBox = styled(Box)`
   display:flex;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-top: 1rem;
   box-sizing: border-box;
   justify-content: center;
@@ -32,7 +32,7 @@ export const TextController = styled(Stack)`
     width: 35%;
   }
 `
-export const Description =styled(Typography)`
+export const Description = styled(Typography)`
   font-family: 'Open Sans', serif;
   text-align: justify;
   margin-top: .5rem;

@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 
-import {Grid, Box} from "@mui/material";
-import {GridController, MainTitle, MainDescription, MainButton, ImageBox} from "./DescriptionStyles";
-import {ImageS} from "./DescriptionStyles";
+import {Grid} from "@mui/material";
+import {GridController, ImageBox, ImageS, MainButton, MainDescription, MainTitle} from "./DescriptionStyles";
 import dev from "../../../assets/undraw_developer.svg"
 import BoxIcon from "../../BoxIcon"
 import Link from "next/link";

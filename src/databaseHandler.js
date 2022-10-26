@@ -1,4 +1,4 @@
-import {ref, getDatabase, set} from "firebase/database";
+import {getDatabase, ref, set} from "firebase/database";
 import React from "react";
 
 const db = getDatabase();
@@ -26,7 +26,7 @@ const useDb = () => {
             link: 'http://www.uft.edu.ve/',
             location: 'Cabudare, Venezuela'
         },
-        others:{
+        others: {
             year: '2018-2020',
             about: 'Frontend developer path',
             type: 'Online software academy',
@@ -50,7 +50,7 @@ const useDb = () => {
             link: 'https://www.wildliferesponse.net/',
             location: 'Seabrook, Texas'
         },
-        phiThetaKappa:{
+        phiThetaKappa: {
             year: '2022',
             about: 'Honor Society',
             type: 'Organization',

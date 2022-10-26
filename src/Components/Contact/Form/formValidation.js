@@ -7,6 +7,6 @@ const validateName = (name) => {
     return regex.test(name);
 };
 
-export const formValidation = (name, lastName, email, companyName) => {
-    return (validateName(name) && validateName(lastName) && validateName(companyName) && validateEmail(email))
+export const formValidation = (name, lastName, email, companyName, message) => {
+    return (validateName(name) && validateName(lastName) && validateName(companyName) && validateEmail(email) && message.length > 1)
 };

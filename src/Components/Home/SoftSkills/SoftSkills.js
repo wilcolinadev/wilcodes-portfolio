@@ -1,5 +1,5 @@
 import React from "react";
-import {SoftBox, SoxtText, IconBox} from "./SoftSkillsStyles";
+import {IconBox, SoftBox, SoxtText} from "./SoftSkillsStyles";
 import PsychologyRoundedIcon from '@mui/icons-material/PsychologyRounded';
 import EmojiObjectsRoundedIcon from '@mui/icons-material/EmojiObjectsRounded';
 import RecordVoiceOverRoundedIcon from '@mui/icons-material/RecordVoiceOverRounded';

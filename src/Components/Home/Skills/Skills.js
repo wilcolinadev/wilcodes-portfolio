@@ -1,6 +1,6 @@
 import React from "react";
 import {Box} from "@mui/material";
-import {SkillsBox, SkillsTitle, SkillsRow,} from './SkillsStyles'
+import {SkillsBox, SkillsRow, SkillsTitle,} from './SkillsStyles'
 import Skill from './Skill';
 
 const Skills = () => {

@@ -8,10 +8,11 @@ export const BioWrapper = styled(Box)`
   background-color: rgba(255, 255, 255, 0.7);
   border-top: 2px solid #3F3D55;
   padding: 2rem;
+
   ${props => props.theme.breakpoints.up("md")} {
     margin-top: 2.5rem;
   }
- 
+
 `
 
 export const BioTittle = styled(Typography)`
@@ -24,6 +25,7 @@ export const BioImage = styled('img')`
 
   ${props => props.theme.breakpoints.up("md")} {
     width: 300px;
+    margin-top: 2.5rem;
     margin-left: 4rem;
   }
 `
@@ -48,21 +50,22 @@ export const BioSpan = styled('span')`
 
 export const BioLink = styled(Link)`
   font-size: 1.1rem;
-  
+
   margin: 2rem 0;
   color: #3F3D55;
   display: flex;
   align-items: center;
- 
+
   font-weight: bold;
   text-decoration-color: #3F3D55;
-  
+
   &:hover {
     transition: .5s ease-in-out;
     text-decoration-color: #20c976;
   }
+
   ${props => props.theme.breakpoints.up("md")} {
     justify-content: flex-end;
   }
-  
+
 `

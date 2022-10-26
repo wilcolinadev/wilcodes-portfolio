@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {Grid, Button, Box} from "@mui/material";
+import {Box, Button, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 
@@ -10,6 +10,7 @@ export const GridController = styled(Grid)`
   padding: .5rem;
   margin-left: 1rem;
   margin-bottom: 2rem;
+
   ${props => props.theme.breakpoints.up("lg")} {
     width: 60%;
     padding: 1rem;
@@ -60,10 +61,6 @@ export const MainDescription = styled(Typography)`
     width: 60%;
   }
 
-
-
-
-
 `;
 
 export const MainButton = styled(Button)`
@@ -73,6 +70,7 @@ export const MainButton = styled(Button)`
   text-transform: unset;
   font-family: 'Inconsolata', monospace;
   letter-spacing: -1px;
+
 
   &:hover {
     transition: .4ms ease-in-out;

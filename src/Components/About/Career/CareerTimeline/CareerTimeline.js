@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {TimelineBox} from "../CareerStyles";
 import Timeline from '@mui/lab/Timeline';
-import {getDatabase, ref, get} from "firebase/database";
+import {get, getDatabase, ref} from "firebase/database";
 import TimelineStep from "./TimelineItem/TimelineItem";
 
 const CareerTimeline = () => {
@@ -26,10 +26,11 @@ const CareerTimeline = () => {
 
     return (<TimelineBox>
 
-        <Timeline position="left" sx={{margin:0}}>
-            {careerData.map(background => (
-                <TimelineStep year={background.year} about={background.about} type={background.type}
-                              institution={background.institution} id={background.about} location={background.location}/> ))}
+        <Timeline position="left" sx={{margin: 0}}>
+            {careerData.map((background, i) => (
+                <TimelineStep key={i} year={background.year} about={background.about} type={background.type}
+                              institution={background.institution} id={background.about}
+                              location={background.location}/>))}
         </Timeline>
 
     </TimelineBox>)

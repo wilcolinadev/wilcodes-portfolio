@@ -5,11 +5,12 @@ import {Wrapper} from "../Wrapper";
 import FormHeader from "./FormHeader/FormHeader";
 import Form from './Form/Form'
 import ActionCall from "../ActionCall/ActionCall";
-const Contact = ()=>{
-    return(
+
+const Contact = () => {
+    return (
         <Wrapper type={'contact'}>
             <Navigation/>
-           <FormHeader/>
+            <FormHeader/>
             <Form/>
             <ActionCall/>
             <Footer/>

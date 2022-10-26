@@ -47,20 +47,21 @@ const HamburgerModal = ({active}) => {
         <ModalController direction="column" open={active}>
             <Link href={'/'}>
                 <LinkItem>
-                    HOME
+                    Home
 
-                </LinkItem>
-            </Link>
-            <Link href={'/'}>
-                <LinkItem>
-                    PROJECTS
                 </LinkItem>
             </Link>
             <Link href={'/about'}>
                 <LinkItem>
-                    ABOUT
+                    About
                 </LinkItem>
             </Link>
+            <Link href={'/projects'}>
+                <LinkItem>
+                    Projects
+                </LinkItem>
+            </Link>
+
             <Link href={'/contact'}>
                 <LinkItem>
                     Let's Chat
@@ -69,7 +70,7 @@ const HamburgerModal = ({active}) => {
 
             </Link>
 
-            <SocialLinks  padding={true}/>
+            <SocialLinks padding={true}/>
         </ModalController>)
 };
 

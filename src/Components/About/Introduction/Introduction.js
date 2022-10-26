@@ -1,8 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import {Stack} from "@mui/material";
 import devImage from "../../../assets/undraw_programming_re_kg9v.svg";
-import {AboutImage, IntroductionBox, TextController, Description} from "./IntroductionStyles";
+import {AboutImage, Description, IntroductionBox, TextController} from "./IntroductionStyles";
 
 
 const Introduction = () => {

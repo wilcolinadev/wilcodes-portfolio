@@ -6,15 +6,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import {styled} from "@mui/material/styles";
 import Link from "next/link";
 
-const SocialStack = styled((props)=><Stack {...props}/>)`
+const SocialStack = styled((props) => <Stack {...props}/>)`
   
   display: flex;
   justify-content: center;
   margin-top: .5rem;
-  padding: ${props => !props.padding ? '.5rem' : '1rem'};
+  padding: ${props => !props.padding ? '0rem' : '1rem'};
   cursor: pointer;
   *{
-    margin-left: .7rem;
+    margin-right: .7rem;
   }
   ${props => props.theme.breakpoints.up("sm")} {
     margin-top: ${props => !props.padding ? '0' : '1rem'};

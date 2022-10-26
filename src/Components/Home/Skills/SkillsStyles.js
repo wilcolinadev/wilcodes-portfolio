@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {ListItem, Stack, Typography, Grid} from "@mui/material";
+import {List, ListItem, Stack, Typography} from "@mui/material";
 
 export const SkillsBox = styled(Stack)`
   //background-color: #f1eaea;
@@ -20,17 +20,18 @@ export const SkillsTitle = styled(Typography)`
   color: #ffffff;
   text-align: center;
   font-family: 'Inconsolata', monospace;
-  line-height: 2.7rem;
+  line-height: 2rem;
   font-size: 1.3rem;
   width: 70%;
   margin: .5rem auto;
-  
-  
+
 
   ${props => props.theme.breakpoints.up("sm")} {
     font-size: 2rem;
-    width: 70%;
+    line-height: 2.3rem;
+    width: 60%;
   }
+
   ${props => props.theme.breakpoints.up("lg")} {
     font-size: 2.2rem;
     width: 90%;
@@ -39,7 +40,7 @@ export const SkillsTitle = styled(Typography)`
 `
 
 export const Element = styled(ListItem)`
-  
+
   color: #474646;
   animation: translateinfinite 1s infinite alternate;
   position: relative;
@@ -60,6 +61,11 @@ export const Element = styled(ListItem)`
   }
 
   ${props => props.theme.breakpoints.up("sm")} {
+    width: 60px;
+    height: 60px;
+  }
+
+  ${props => props.theme.breakpoints.up("lg")} {
     width: 65px;
     height: 65px;
   }
@@ -71,11 +77,12 @@ export const SkillsRow = styled('div')`
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  
+
   ${props => props.theme.breakpoints.up("sm")} {
     margin: 2rem 0;
 
   }
+
 `
 
 export const Label = styled(Typography)`
@@ -85,12 +92,13 @@ export const Label = styled(Typography)`
   color: #ffffff;
 `
 
-export const GridController = styled('div')`
+export const GridController = styled(List)`
   align-items: center;
   margin: 2rem 1.3rem;
 
   ${props => props.theme.breakpoints.up("sm")} {
-    margin: 2rem 2rem;
+    margin: 2rem .9rem;
+
 
   }
 

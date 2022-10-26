@@ -3,7 +3,6 @@ import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 
-
 export const ContactForm = styled('form')`
   padding: 1rem;
   margin: 0 auto;
@@ -25,12 +24,13 @@ export const ContactForm = styled('form')`
 export const FormDescription = styled(Typography)`
 font-family: 'inconsolata', monospace;
   padding: 1rem 0;
+  color: #3F3D55;
 `
 
 export const FormWrapper = styled(Box)`
   background-color: rgba(255, 255, 255, 0.91);
   border-top: 2px solid #3F3D55;
-  padding: 2rem;
+  padding: 1rem;
 
   ${props => props.theme.breakpoints.up("md")} {
     margin-top: 2.5rem;
@@ -49,6 +49,7 @@ export const Button = styled(props => (
   align-items: center;
   cursor: pointer;
   margin: 1rem 0 2rem;
+  color: ${props => props.disabled ? '#c7c4c4' : '#3F3D55;'};
   
   
 `

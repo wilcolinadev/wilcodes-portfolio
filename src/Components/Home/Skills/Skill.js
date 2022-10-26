@@ -1,10 +1,7 @@
 import React, {useState} from "react";
-import {Element, Label} from "./SkillsStyles";
-import {GridController} from "./SkillsStyles";
-import {
-    IoLogoReact, IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoNpm,
-} from "react-icons/io5";
-import {TbBrandNotion, TbBrandBootstrap, TbBrandNextjs} from "react-icons/tb";
+import {Element, GridController, Label} from "./SkillsStyles";
+import {IoLogoCss3, IoLogoHtml5, IoLogoJavascript, IoLogoNpm, IoLogoReact,} from "react-icons/io5";
+import {TbBrandBootstrap, TbBrandNextjs, TbBrandNotion} from "react-icons/tb";
 
 const Skill = ({name}) => {
     //Create function to return the icon needed
