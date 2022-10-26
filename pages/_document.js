@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
     return (
         <Html lang="en">
           <Head>
-
+              google-site-verification: googlec8e2b5077f992bfd.html
             {/* Not exactly required, but this is the PWA primary color */}
             <meta name="theme-color" content={theme.palette.primary.main} />
               <Favicon/>
