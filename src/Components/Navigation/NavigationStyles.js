@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {ListItem, List, Box, Stack, Grid} from "@mui/material";
+import {Box, Grid, List, ListItem, Stack} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
@@ -72,10 +72,11 @@ export const Logo = styled(Typography)`
   letter-spacing: -.5px;
   font-weight: bold;
   transition: .5ms ease-in-out;
-&&:hover{
-  color: #019058;
-  transition: .5ms ease-in-out;
-}
+
+  &&:hover {
+    color: #019058;
+    transition: .5ms ease-in-out;
+  }
 `
 
 export const ContactLink = styled(Stack)`
@@ -87,7 +88,7 @@ export const ContactLink = styled(Stack)`
     display: none;
 
   }
-  
+
 `
 
 

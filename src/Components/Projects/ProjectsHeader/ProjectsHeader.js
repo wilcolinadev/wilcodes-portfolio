@@ -1,6 +1,6 @@
 import React from "react";
 import {Grid} from "@mui/material";
-import {HeaderWrapper, HeaderTitle, HeaderDescription} from "./HeaderStyles";
+import {HeaderDescription, HeaderTitle, HeaderWrapper} from "./HeaderStyles";
 import headerImage1 from '../../../assets/undraw_react_re_g3ui.svg'
 import headerImage2 from '../../../assets/undraw_version_control_re_mg66.svg'
 

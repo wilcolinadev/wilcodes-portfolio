@@ -15,7 +15,7 @@ export const HeaderWrapper = styled(Box)`
     img:first-of-type {
       display: block;
     }
-   
+
   }
 
   img {
@@ -34,6 +34,7 @@ export const HeaderTitle = styled(Typography)`
   font-size: 2rem;
   font-family: 'Open Sans', serif;
   text-align: center;
+
   ${props => props.theme.breakpoints.up("md")} {
     font-size: 4rem;
   }
@@ -43,10 +44,12 @@ export const HeaderDescription = styled(Typography)`
   margin: .5rem;
   font-size: 1.2rem;
   font-family: 'Inconsolata', monospace;
+
   ${props => props.theme.breakpoints.up("sm")} {
-   width: 60%;
+    width: 60%;
     margin: 1.5rem auto;
   }
+
   ${props => props.theme.breakpoints.up("lg")} {
     width: 35%;
     margin: 0 auto;

@@ -1,6 +1,6 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {FormControl, Grid} from "@mui/material";
-import {ContactForm, FormWrapper, Button, FormDescription, FormInput, FormArea, FileLabel} from './FormStyles'
+import {Button, ContactForm, FileLabel, FormArea, FormDescription, FormInput, FormWrapper} from './FormStyles'
 import BoxIcon from "../../BoxIcon";
 import Typography from "@mui/material/Typography";
 import UploadFileOutlinedIcon from '@mui/icons-material/UploadFileOutlined';

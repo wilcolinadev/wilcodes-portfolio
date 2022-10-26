@@ -1,9 +1,9 @@
 import React from "react";
-import {AccordionDetails, AccordionSummary, Stack} from "@mui/material";
+import {AccordionDetails, AccordionSummary} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CloudIcon from "@mui/icons-material/Cloud";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import {AccordionWrapper, ProjectDescription, ProjectButton, AccordionLabel, ButtonWrapper} from "./AccordionStyles";
+import {AccordionLabel, AccordionWrapper, ButtonWrapper, ProjectButton, ProjectDescription} from "./AccordionStyles";
 
 export const ProjectAccordion = (props) => {
     const {githubUrl, url, description} = props;

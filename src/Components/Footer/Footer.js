@@ -2,7 +2,7 @@ import React from "react";
 import {Stack} from "@mui/material";
 import Link from "../../Link";
 import SocialLinks from "../SocialLinks";
-import {FooterBox, FooterLink, FooterCopyright} from "./FooterStyles";
+import {FooterBox, FooterCopyright, FooterLink} from "./FooterStyles";
 import {Grid} from "@material-ui/core"
 
 const Footer = () => {

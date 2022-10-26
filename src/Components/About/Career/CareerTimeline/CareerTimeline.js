@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {TimelineBox} from "../CareerStyles";
 import Timeline from '@mui/lab/Timeline';
-import {getDatabase, ref, get} from "firebase/database";
+import {get, getDatabase, ref} from "firebase/database";
 import TimelineStep from "./TimelineItem/TimelineItem";
 
 const CareerTimeline = () => {

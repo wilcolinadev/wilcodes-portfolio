@@ -1,11 +1,5 @@
 import React from "react";
-import {
-    ProjectBox,
-    ProjectImage,
-    ProjectTitle,
-    ProjectDescription,
-
-} from "./ProjectStyles";
+import {ProjectBox, ProjectDescription, ProjectImage, ProjectTitle,} from "./ProjectStyles";
 import {Grid} from '@material-ui/core';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import Link from "../../../../Link"

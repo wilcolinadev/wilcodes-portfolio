@@ -1,9 +1,8 @@
-import React from "react";
-import {useEffect, useState} from "react";
-import {getDatabase, ref, get} from "firebase/database";
+import React, {useEffect, useState} from "react";
+import {get, getDatabase, ref} from "firebase/database";
 
 
-const useProjects = (path)=>{
+const useProjects = (path) => {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
         const getProjects = async () => {

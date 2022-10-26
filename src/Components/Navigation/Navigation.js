@@ -1,16 +1,7 @@
 import React, {useState} from "react";
 import Box from "@mui/material/Box";
 import {Stack} from "@mui/material";
-import {
-    Item,
-    UList,
-    Wrapper,
-    Logo,
-    ContactLink,
-    Identifier,
-    Burger,
-    BurgerController
-} from "./NavigationStyles"
+import {Burger, BurgerController, ContactLink, Identifier, Item, Logo, UList, Wrapper} from "./NavigationStyles"
 import Link from "../../Link"
 import Typography from "@mui/material/Typography";
 import BoxIcon from "../BoxIcon";
@@ -34,20 +25,20 @@ const Navigation = ({page}) => {
                     <Item> Home {page === 'home' && <Identifier/>} </Item>
 
                 </Link>
-
-                <Link href="/projects" color="secondary">
-                    <Item> Projects {page === 'projects' && <Identifier/>} </Item>
-                </Link>
                 <Link href="/about" color="secondary">
                     <Item> About {page === 'about' && <Identifier/>} </Item>
                 </Link>
+                <Link href="/projects" color="secondary">
+                    <Item> Projects {page === 'projects' && <Identifier/>} </Item>
+                </Link>
+
 
             </Stack>
             <Stack direction={'row'}>
 
 
                 <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)}>
-                    <Link href="/contact" color="secondary">
+                    <Link href="/contact" color="secondary" aria-label={'contact-page'}>
                         <ContactLink direction="row">
                             <BoxIcon hoverState={logHover}/>
                             <Typography style={{display: "flex", alignItems: 'center'}}>

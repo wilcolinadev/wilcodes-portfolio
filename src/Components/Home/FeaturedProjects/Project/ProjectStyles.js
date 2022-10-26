@@ -2,10 +2,9 @@ import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
 
-
 export const ProjectBox = styled('div')`
   text-align: center;
-  
+
 `
 
 export const ProjectImage = styled('img')`
@@ -16,8 +15,9 @@ export const ProjectImage = styled('img')`
   border-radius: 10px;
   transition: .5s;
   margin-bottom: 2.5rem;
+
   &:hover, &:active {
-   
+
     --c: #000000; /* the color */
     color: #0000;
     padding-bottom: var(--s);
@@ -26,7 +26,7 @@ export const ProjectImage = styled('img')`
     linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
     -webkit-background-clip: text, padding-box;
     transition: 0.5s;
-   
+
   }
 `
 

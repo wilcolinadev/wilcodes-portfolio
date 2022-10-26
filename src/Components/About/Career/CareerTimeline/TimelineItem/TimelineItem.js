@@ -1,12 +1,11 @@
 import React from "react"
-import {TimelineOppositeContent} from "@mui/lab";
+import {TimelineItem, TimelineOppositeContent} from "@mui/lab";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineDot from "@mui/lab/TimelineDot";
 import SchoolIcon from '@mui/icons-material/School';
 import TimelineContent from "@mui/lab/TimelineContent";
 import Typography from "@mui/material/Typography";
-import {TimelineItem} from "@mui/lab";
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import DataObjectIcon from '@mui/icons-material/DataObject';
@@ -39,7 +38,7 @@ const TimelineStep = (props) => {
             color="text.secondary"
         >
             {year}
-            <Typography style={{textTransform:'capitalize'}}>{about}</Typography>
+            <Typography style={{textTransform: 'capitalize'}}>{about}</Typography>
         </TimelineOppositeContent>
         <TimelineSeparator sx={{
             height: '170px',
@@ -56,7 +55,7 @@ const TimelineStep = (props) => {
             <TimelineConnector/>
         </TimelineSeparator>
         <TimelineContent sx={{py: '14px', px: 2}}>
-            <Typography variant="h6" component="span" style={{textTransform:'capitalize'}}>
+            <Typography variant="h6" component="span" style={{textTransform: 'capitalize'}}>
                 {institution}
 
             </Typography>

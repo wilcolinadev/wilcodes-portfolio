@@ -2,14 +2,16 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles'; // works with @material-ui/core/styles, if you prefer to use it.
 import theme from '../src/theme'; // Adjust here as well
-
+import Favicon from "../src/Components/Favicon";
 export default class MyDocument extends Document {
   render() {
     return (
         <Html lang="en">
           <Head>
+
             {/* Not exactly required, but this is the PWA primary color */}
             <meta name="theme-color" content={theme.palette.primary.main} />
+              <Favicon/>
           </Head>
           <body>
           <Main />

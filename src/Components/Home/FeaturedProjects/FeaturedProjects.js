@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Project from "./Project/Project";
 import BoxIcon from "../../BoxIcon";
-import {Wrapper, MainWrapper, Title, Description, ProjectsLink} from "./FeaturedProjectStyles";
+import {Description, MainWrapper, ProjectsLink, Title, Wrapper} from "./FeaturedProjectStyles";
 import Link from "../../../Link";
 import useProjects from "../../../hooks/useProjects";
 

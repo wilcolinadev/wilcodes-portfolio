@@ -1,5 +1,5 @@
 import React from "react";
-import {Title, HeaderBox, Description, ContactImage} from "./FormHeaderStyles";
+import {ContactImage, Description, HeaderBox, Title} from "./FormHeaderStyles";
 import contactImage from "../../../assets/undraw_fill_form_re_cwyf.svg"
 import {Stack} from "@mui/material";
 import SocialLinks from "../../SocialLinks";
@@ -30,7 +30,7 @@ const FormHeader = () => {
 
         </Stack>
 
-        <ContactImage src={contactImage}/>
+        <ContactImage src={contactImage} alt={'resume developer'}/>
 
     </HeaderBox>)
 };

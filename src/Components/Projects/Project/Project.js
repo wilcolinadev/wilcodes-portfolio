@@ -3,7 +3,6 @@ import {ProjectTitle} from "./ProjectStyles";
 import {Grid} from "@mui/material";
 import ProjectAccordion from "../ProjectAccordion/ProjectAccordion";
 import ProjectSkeleton from "../ProjectSkeleton";
-import {Image} from "@mui/icons-material";
 import {ProjectImage} from "../../Home/FeaturedProjects/Project/ProjectStyles";
 
 const Project = (props) => {

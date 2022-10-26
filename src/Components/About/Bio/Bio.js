@@ -1,8 +1,8 @@
 import React from "react";
-import {BioTittle, BioWrapper, BioImage, BioContentBox, BioSpan, BioLink} from "./BioStyles";
+import {BioContentBox, BioImage, BioLink, BioSpan, BioTittle, BioWrapper} from "./BioStyles";
 import bioImage from "../../../assets/undraw_profile_details_re_ch9r.svg";
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
-import {TextController, Description} from "../Introduction/IntroductionStyles";
+import {Description, TextController} from "../Introduction/IntroductionStyles";
 import {Box} from "@material-ui/core";
 
 
