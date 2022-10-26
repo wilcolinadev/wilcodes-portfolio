@@ -61,6 +61,6 @@ export const AccordionLabel = styled(Typography)`
   color:#3F3D55 !important;
 `;
 
-export const ButtonWrapper =  styled(Stack)`
+export const ButtonWrapper = styled(Stack)`
   margin-top: 1rem;
 `

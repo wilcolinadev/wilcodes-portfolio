@@ -48,7 +48,7 @@ export const HeaderDescription = styled(Typography)`
     margin: 1.5rem auto;
   }
   ${props => props.theme.breakpoints.up("lg")} {
-    width: 30%;
+    width: 35%;
     margin: 0 auto;
   }
 `

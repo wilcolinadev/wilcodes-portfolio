@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 import Project from "./Project/Project";
 import BoxIcon from "../../BoxIcon";
 import {Wrapper, MainWrapper, Title, Description, ProjectsLink} from "./FeaturedProjectStyles";
@@ -7,7 +7,7 @@ import useProjects from "../../../hooks/useProjects";
 
 const FeaturedProjects = () => {
     const [logHover, isLogHover] = useState(false);
-   const serverProjects = useProjects('featuredProjects');
+    const serverProjects = useProjects('featuredProjects');
     return (<MainWrapper>
         <Title variant={'h3'}>Feature Projects</Title>
 

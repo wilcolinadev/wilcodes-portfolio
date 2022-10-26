@@ -5,6 +5,7 @@ import homeBg from "../assets/home-bg.svg";
 import aboutBg from "../assets/about-bg.svg";
 import contactBg from "../assets/contact-bg.svg";
 import projectBg from "../assets/projects-bg.svg";
+
 const getBg = (type) => {
     switch (type) {
         case 'about':

@@ -11,11 +11,12 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
+
 const TimelineStep = (props) => {
-    const {year, about, type, institution,location} = props;
-    const determineIcon = ()=>{
+    const {year, about, type, institution, location} = props;
+    const determineIcon = () => {
         const newType = type.toLowerCase();
-        switch (newType){
+        switch (newType) {
             case 'college':
                 return <SchoolIcon/>;
             case 'freelance':
@@ -30,7 +31,7 @@ const TimelineStep = (props) => {
                 return <SchoolIcon/>
         }
     };
-    return (<TimelineItem >
+    return (<TimelineItem>
         <TimelineOppositeContent
             sx={{m: 'auto 0'}}
             align="right"
@@ -38,24 +39,24 @@ const TimelineStep = (props) => {
             color="text.secondary"
         >
             {year}
-            <Typography >{about}</Typography>
+            <Typography style={{textTransform:'capitalize'}}>{about}</Typography>
         </TimelineOppositeContent>
         <TimelineSeparator sx={{
-            height:'170px',
-            color:'#3F3D55',
+            height: '170px',
+            color: '#3F3D55',
 
         }}>
-            <TimelineConnector  />
+            <TimelineConnector/>
             <TimelineDot sx={{
-                color:'#3F3D56',
-                backgroundColor:'transparent'
+                color: '#3F3D56',
+                backgroundColor: 'transparent'
             }}>
                 {determineIcon()}
             </TimelineDot>
             <TimelineConnector/>
         </TimelineSeparator>
-        <TimelineContent sx={{py: '14px', px: 2}}  >
-            <Typography variant="h6" component="span" >
+        <TimelineContent sx={{py: '14px', px: 2}}>
+            <Typography variant="h6" component="span" style={{textTransform:'capitalize'}}>
                 {institution}
 
             </Typography>

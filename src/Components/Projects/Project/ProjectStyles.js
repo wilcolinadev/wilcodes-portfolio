@@ -20,7 +20,7 @@ export const ProjectWrapper = styled(Grid)`
  
 `
 
-export const ProjectTitle =  styled(Typography)`
+export const ProjectTitle = styled(Typography)`
     margin-bottom: 1.5rem;
 `
 

@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import {ListItem, Stack, Typography, Grid} from "@mui/material";
+import {List, ListItem, Stack, Typography} from "@mui/material";
 
 export const SkillsBox = styled(Stack)`
   //background-color: #f1eaea;
@@ -91,7 +91,7 @@ export const Label = styled(Typography)`
   color: #ffffff;
 `
 
-export const GridController = styled('div')`
+export const GridController = styled(List)`
   align-items: center;
   margin: 2rem 1.3rem;
 

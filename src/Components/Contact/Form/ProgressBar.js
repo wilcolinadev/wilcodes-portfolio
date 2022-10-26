@@ -5,8 +5,8 @@ import LinearProgress from '@mui/material/LinearProgress';
 export default function ProgressBar({status}) {
     return (
         <>
-            {status && <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
-                <LinearProgress color="inherit" />
+            {status && <Stack sx={{width: '100%', color: 'grey.500'}} spacing={2}>
+                <LinearProgress color="inherit"/>
             </Stack>}
         </>
 

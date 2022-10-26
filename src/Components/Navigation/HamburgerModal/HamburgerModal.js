@@ -69,7 +69,7 @@ const HamburgerModal = ({active}) => {
 
             </Link>
 
-            <SocialLinks  padding={true}/>
+            <SocialLinks padding={true}/>
         </ModalController>)
 };
 

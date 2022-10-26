@@ -6,7 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import {styled} from "@mui/material/styles";
 import Link from "next/link";
 
-const SocialStack = styled((props)=><Stack {...props}/>)`
+const SocialStack = styled((props) => <Stack {...props}/>)`
   
   display: flex;
   justify-content: center;

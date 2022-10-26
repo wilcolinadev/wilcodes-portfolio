@@ -3,7 +3,6 @@ import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 
-
 export const ContactForm = styled('form')`
   padding: 1rem;
   margin: 0 auto;
@@ -50,7 +49,7 @@ export const Button = styled(props => (
   align-items: center;
   cursor: pointer;
   margin: 1rem 0 2rem;
-  color: ${props => props.disabled ? '#c7c4c4' :'#3F3D55;'};
+  color: ${props => props.disabled ? '#c7c4c4' : '#3F3D55;'};
   
   
 `

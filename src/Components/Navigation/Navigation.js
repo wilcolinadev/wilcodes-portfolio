@@ -31,15 +31,15 @@ const Navigation = ({page}) => {
             </Link>
             <Stack direction="row">
                 <Link href="/" color="secondary">
-                    <Item> Home {page==='home' && <Identifier/>} </Item>
+                    <Item> Home {page === 'home' && <Identifier/>} </Item>
 
                 </Link>
 
                 <Link href="/projects" color="secondary">
-                    <Item> Projects {page==='projects' && <Identifier/>} </Item>
+                    <Item> Projects {page === 'projects' && <Identifier/>} </Item>
                 </Link>
                 <Link href="/about" color="secondary">
-                    <Item> About {page==='about' && <Identifier/>} </Item>
+                    <Item> About {page === 'about' && <Identifier/>} </Item>
                 </Link>
 
             </Stack>

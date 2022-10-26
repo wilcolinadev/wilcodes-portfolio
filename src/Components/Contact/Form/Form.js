@@ -83,6 +83,7 @@ const Form = () => {
                 setFiles([]);
                 setMessageAlert('File attached Successfully!');
                 setsuccessResponse(!successResponse);
+                console.log(files[0]);
 
 
             } catch (e) {

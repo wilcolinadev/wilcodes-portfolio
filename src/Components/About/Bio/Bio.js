@@ -35,7 +35,7 @@ const Bio = () => {
             <Box>
                 <BioImage src={bioImage} alt={'bio of a web developer'}/>
                 <BioLink
-                    href={'https://res.cloudinary.com/djf9jqpml/image/upload/v1664377054/WilfredoResume_zgqpyh.pdf'}
+                    href={'https://res.cloudinary.com/djf9jqpml/image/upload/v1666545483/wilcodes/WilfredoHire_tewtcv.pdf'}
                     download={'WilfredoColina.pdf'}>
                     Download Resume
                     <CloudDownloadOutlinedIcon sx={{marginLeft: '.5rem'}}/>

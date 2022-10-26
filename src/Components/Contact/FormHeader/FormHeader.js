@@ -18,7 +18,7 @@ const FormHeader = () => {
             <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} marginTop={'1rem'}>
                 <SocialLinks align={'left'}/>
                 <Stack>
-                    <Typography sx={{fontFamily:'inconsolata'}}>
+                    <Typography sx={{fontFamily: 'inconsolata'}}>
                         Location
                     </Typography>
                     <Typography variant={"h6"}>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {
     ProjectBox,
     ProjectImage,
@@ -9,7 +9,8 @@ import {
 import {Grid} from '@material-ui/core';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import Link from "../../../../Link"
-const Project = ({name, url, urlImage, description}) => {
+
+const Project = ({name, urlImage, description}) => {
 
     const urlHandler = (url) => {
         if (Array.isArray(url)) {
@@ -18,7 +19,6 @@ const Project = ({name, url, urlImage, description}) => {
             return url
         }
     }
-    const [isImageHover, setIsImageHover] = useState(false);
 
 
     return (
@@ -26,7 +26,8 @@ const Project = ({name, url, urlImage, description}) => {
             <ProjectBox>
 
                 <ProjectTitle variant={'h5'}>
-                    <Link href={'/projects'} style={{display:'flex',alignItems:'center'}}> {name}  <ArrowCircleRightIcon style={{marginLeft: '6px'}}/> </Link>
+                    <Link href={'/projects'} style={{display: 'flex', alignItems: 'center'}}> {name}
+                        <ArrowCircleRightIcon style={{marginLeft: '6px'}}/> </Link>
                 </ProjectTitle>
 
                 <ProjectDescription>
@@ -34,7 +35,7 @@ const Project = ({name, url, urlImage, description}) => {
 
                 </ProjectDescription>
 
-                <ProjectImage src={urlHandler(urlImage)}/>
+                <ProjectImage src={urlHandler(urlImage)} alt={name}/>
 
 
             </ProjectBox>

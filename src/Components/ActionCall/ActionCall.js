@@ -52,7 +52,7 @@ const ActionCall = () => {
         <ActionCallWrapper>
             <ActionCallMainBox>
                 <ActionCallText>
-                     Let's build an amazing Project! 👋🏼
+                    Let's build an amazing Project! 👋🏼
                 </ActionCallText>
             </ActionCallMainBox>
         </ActionCallWrapper>

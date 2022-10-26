@@ -1,6 +1,6 @@
 import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import {Box} from "@material-ui/core";
+
 
 
 export const ProjectBox = styled('div')`
@@ -31,7 +31,7 @@ export const ProjectImage = styled('img')`
 `
 
 
-export const ProjectTitle =  styled(Typography)`
+export const ProjectTitle = styled(Typography)`
   font-family: 'Open sans', monospace;
   margin: 1rem 0 1rem 0;
   transition: background-size .5s ease-in-out;

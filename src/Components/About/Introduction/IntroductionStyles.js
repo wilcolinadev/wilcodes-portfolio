@@ -32,7 +32,7 @@ export const TextController = styled(Stack)`
     width: 35%;
   }
 `
-export const Description =styled(Typography)`
+export const Description = styled(Typography)`
   font-family: 'Open Sans', serif;
   text-align: justify;
   margin-top: .5rem;

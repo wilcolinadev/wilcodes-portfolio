@@ -6,14 +6,14 @@ import {styled} from "@mui/material/styles";
 const SkeletonOne = styled(Skeleton)`
 width: 95%
 `
-const ProjectSkeleton = ()=>{
+const ProjectSkeleton = () => {
 
-    return(
-        <Stack >
+    return (
+        <Stack>
             <SkeletonOne variant="rectangular"/>
-            <SkeletonOne   height={200} />
-            <SkeletonOne variant="rectangular" />
-            <SkeletonOne   height={200} />
+            <SkeletonOne height={200}/>
+            <SkeletonOne variant="rectangular"/>
+            <SkeletonOne height={200}/>
         </Stack>
 
     )
