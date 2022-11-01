@@ -16,18 +16,18 @@ const Footer = () => {
 
                 <Grid item sm={12} lg={3}>
                     <Stack direction="row" justifyContent={'center'}>
-                        <Link href="/pages" color="secondary">
+                        <Link href="/" color="secondary">
                             <FooterLink> Home </FooterLink>
 
                         </Link>
 
-                        <Link href="/pages/projects" color="secondary">
+                        <Link href="/projects" color="secondary">
                             <FooterLink> Projects </FooterLink>
                         </Link>
-                        <Link href="/pages/about" color="secondary">
+                        <Link href="/about" color="secondary">
                             <FooterLink> About </FooterLink>
                         </Link>
-                        <Link href="/pages/about" color="secondary">
+                        <Link href="/contact" color="secondary">
                             <FooterLink> Contact </FooterLink>
                         </Link>
 
