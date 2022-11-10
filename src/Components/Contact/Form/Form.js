@@ -151,7 +151,7 @@ const Form = () => {
                             <label>First Name</label>
                             <FormInput name={'firstName'} onChange={() => setName(nameRef.current.value)}
                                        type={'text'}
-                                       placeholder={'John'} required value={name}
+                                       placeholder={'e.g. John'} required value={name}
                                        ref={nameRef}></FormInput>
                         </FormControl>
                     </Grid>
@@ -160,7 +160,7 @@ const Form = () => {
                             <label>Last Name</label>
                             <FormInput name={'lastName'}
                                        type={'text'}
-                                       placeholder={'Mauer'}
+                                       placeholder={'e.g. Mauer'}
                                        ref={lastNameRef}
                                        value={lastName}
                                        onChange={() => setLastName(lastNameRef.current.value)}
@@ -189,7 +189,7 @@ const Form = () => {
                         <FormInput
                             name={'email'}
                             type={'email'}
-                            placeholder={'example@mail.com'}
+                            placeholder={'e.g. example@mail.com'}
                             ref={emailRef}
                             value={email}
                             onChange={() => setEmail(emailRef.current.value)}
