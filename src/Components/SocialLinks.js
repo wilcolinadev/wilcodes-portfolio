@@ -4,7 +4,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import {styled} from "@mui/material/styles";
-import Link from "next/link";
 
 const SocialStack = styled((props) => <Stack {...props}/>)`
   
@@ -13,6 +12,9 @@ const SocialStack = styled((props) => <Stack {...props}/>)`
   margin-top: .5rem;
   padding: ${props => !props.padding ? '0rem' : '1rem'};
   cursor: pointer;
+  a{
+    color:#3F3D55;
+  }
   *{
     margin-right: .7rem;
   }
@@ -29,16 +31,16 @@ const SocialLinks = (props) => {
     return (
 
         <SocialStack direction={'row'} padding={props.padding}>
-            <Link href={'https://www.linkedin.com/in/wilcodes/'}>
-                <LinkedInIcon fontSize={'large'}/>
-            </Link>
+            <a href={'https://www.linkedin.com/in/wilcodes/'} target={'_blank'}>
+                    <LinkedInIcon fontSize={'large'}/>
+            </a>
 
-            <Link href={'https://github.com/wilcodes'}>
+            <a href={'https://github.com/wilcodes'} target={'_blank'}>
                 <GitHubIcon fontSize={'large'}/>
-            </Link>
-            <Link href={'https://www.instagram.com/wilcodes.dev/'}>
+            </a>
+            <a href={'https://www.instagram.com/wilcodes.dev/'} target={'_blank'}>
                 <InstagramIcon fontSize={'large'}/>
-            </Link>
+            </a>
         </SocialStack>)
 
 };

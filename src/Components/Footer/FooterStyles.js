@@ -15,7 +15,7 @@ export const FooterBox = styled('footer')`
 
 `
 export const FooterLink = styled(Typography)`
-  margin: 0 .5rem .6rem;
+  margin: 0 1rem;
   font-size: 1rem;
   text-transform: uppercase;
 
@@ -24,6 +24,12 @@ export const FooterLink = styled(Typography)`
     color: #0cb978;
 
   }
+
+  ${props => props.theme.breakpoints.up("lg")} {
+    margin: 0 .6rem;
+  }
+  
+  
 `
 
 export const FooterCopyright = styled('p')`

@@ -15,7 +15,7 @@ const Footer = () => {
             <Grid container fluid="true" justifyContent={'space-evenly'} alignItems={'center'}>
 
                 <Grid item sm={12} lg={3}>
-                    <Stack direction="row" justifyContent={'center'}>
+                    <Stack direction="row" justifyContent={'center'} >
                         <Link href="/" color="secondary">
                             <FooterLink> Home </FooterLink>
 
