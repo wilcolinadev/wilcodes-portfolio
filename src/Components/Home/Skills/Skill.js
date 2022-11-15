@@ -4,11 +4,10 @@ import {IoLogoCss3, IoLogoHtml5, IoLogoJavascript, IoLogoNpm, IoLogoReact,} from
 import {TbBrandBootstrap, TbBrandNextjs, TbBrandNotion} from "react-icons/tb";
 
 const Skill = ({name}) => {
-    //Create function to return the icon needed
     const determineElement = () => {
         const fontSize = '45px';
         switch (name) {
-            case 'Html5':
+            case 'HTML5':
                 return (<IoLogoHtml5 fontSize={fontSize}/>)
             case 'JavaScript':
                 return (<IoLogoJavascript fontSize={fontSize}/>)
@@ -20,7 +19,7 @@ const Skill = ({name}) => {
                 return (<IoLogoNpm fontSize={fontSize}/>)
             case 'Notion':
                 return (<TbBrandNotion fontSize={fontSize}/>)
-            case 'BootsTrap':
+            case 'Bootstrap':
                 return (<TbBrandBootstrap fontSize={fontSize}/>)
             case 'CCS3':
                 return (<IoLogoCss3 fontSize={fontSize}/>)

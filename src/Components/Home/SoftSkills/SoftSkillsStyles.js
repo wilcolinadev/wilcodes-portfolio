@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 export const SoftBox = styled(Stack)`
   display: flex;
   justify-content: space-evenly;
-  animation: cycle 25s linear infinite;
+  animation: cycle 14s linear 1;
   padding: 1rem;
   
  
@@ -14,13 +14,9 @@ export const SoftBox = styled(Stack)`
       transform: translateX(-100%);
 
     }
-
-    50% {
-      transform: translateX(0);
-    }
-
+    
     100% {
-      transform: translateX(-100%);
+      transform: translateX(0);
     }
   }
 `

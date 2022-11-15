@@ -4,7 +4,7 @@ import {SkillsBox, SkillsRow, SkillsTitle,} from './SkillsStyles'
 import Skill from './Skill';
 
 const Skills = () => {
-    const skills = ['Html5', 'CCS3', 'JavaScript', 'React', 'Next.js', 'NPM', 'Notion', 'BootsTrap'];
+    const skills = ['HTML5', 'CCS3', 'JavaScript', 'React', 'Next.js', 'NPM', 'Notion', 'Bootstrap'];
 
 
     return (<Box>

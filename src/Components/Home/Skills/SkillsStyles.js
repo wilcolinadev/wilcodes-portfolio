@@ -2,7 +2,6 @@ import {styled} from "@mui/material/styles";
 import {List, ListItem, Stack, Typography} from "@mui/material";
 
 export const SkillsBox = styled(Stack)`
-  //background-color: #f1eaea;
   background: #3F3D55;
   height: auto;
   padding: .5rem;
