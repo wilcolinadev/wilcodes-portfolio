@@ -8,5 +8,5 @@ const validateName = (name) => {
 };
 
 export const formValidation = (name, lastName, email, companyName, message) => {
-    return (validateName(name) && validateName(lastName) && validateName(companyName) && validateEmail(email) && message.length > 1)
+    return (validateName(name) && validateName(lastName)  && validateEmail(email) && message.length > 1)
 };
