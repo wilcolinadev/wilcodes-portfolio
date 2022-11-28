@@ -22,11 +22,13 @@ export const BioImage = styled('img')`
   width: 90%;
   height: auto;
   margin-top: 2rem;
-
+  
+  
   ${props => props.theme.breakpoints.up("md")} {
-    width: 300px;
-    margin-top: 2.5rem;
-    margin-left: 4rem;
+    width: 280px;
+   
+   padding-left: 1rem;
+    text-align: center;
   }
 `
 export const BioContentBox = styled(Box)`
@@ -65,7 +67,7 @@ export const BioLink = styled(Link)`
   }
 
   ${props => props.theme.breakpoints.up("md")} {
-    justify-content: flex-end;
+    justify-content: center;
   }
 
 `
