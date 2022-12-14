@@ -37,7 +37,7 @@ const Bio = () => {
                 </figure>
 
                 <BioLink
-                    href={'https://res.cloudinary.com/djf9jqpml/image/upload/v1670211884/wilcodes/wcolinaresume_mw13ws.pdf'}
+                    href={'https://res.cloudinary.com/djf9jqpml/image/upload/v1670975935/wilcodes/wcolinaresume_wm1xer.pdf'}
                     download={'WilfredoColina.pdf'}>
                     Download Resume
                     <CloudDownloadOutlinedIcon sx={{marginLeft: '.5rem'}}/>
