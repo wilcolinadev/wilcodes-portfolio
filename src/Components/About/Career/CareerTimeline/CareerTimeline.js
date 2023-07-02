@@ -8,8 +8,14 @@ const CareerTimeline = () => {
 
     const [careerData, setCareerData] = useState([]);
 
-
     useEffect(() => {
+        const sortArray = (array) => {
+            // Sort the array by order property
+            return array.sort((a, b) => {
+                return a.order - b.order;
+            })
+        };
+
         const getData = async () => {
 
             const db = getDatabase();
@@ -18,7 +24,8 @@ const CareerTimeline = () => {
             Object.values(data.val()).forEach(project => {
                 serverData.push(project)
             });
-            setCareerData(serverData);
+            const orderedCollection = sortArray(serverData);
+            setCareerData(orderedCollection);
         };
         getData();
     }, []);
