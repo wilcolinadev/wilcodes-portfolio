@@ -1,7 +1,6 @@
-import {styled} from "@mui/material/styles";
-import {Box} from "@mui/material";
-import Typography from "@mui/material/Typography";
-
+import { styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 export const HeaderWrapper = styled(Box)`
   padding: 1rem;
@@ -11,11 +10,10 @@ export const HeaderWrapper = styled(Box)`
     display: none;
   }
 
-  ${props => props.theme.breakpoints.up("sm")} {
+  ${(props) => props.theme.breakpoints.up('sm')} {
     img:first-of-type {
       display: block;
     }
-
   }
 
   img {
@@ -23,11 +21,11 @@ export const HeaderWrapper = styled(Box)`
     height: 200px;
     margin-top: 2rem;
 
-    ${props => props.theme.breakpoints.up("sm")} {
+    ${(props) => props.theme.breakpoints.up('sm')} {
       width: 300px;
     }
   }
-`
+`;
 export const HeaderTitle = styled(Typography)`
   margin: 1rem 0;
   font-weight: normal;
@@ -35,23 +33,23 @@ export const HeaderTitle = styled(Typography)`
   font-family: 'Open Sans', serif;
   text-align: center;
 
-  ${props => props.theme.breakpoints.up("md")} {
+  ${(props) => props.theme.breakpoints.up('md')} {
     font-size: 4rem;
   }
-`
+`;
 
 export const HeaderDescription = styled(Typography)`
-  margin: .5rem;
+  margin: 0.5rem;
   font-size: 1.2rem;
   font-family: 'Inconsolata', monospace;
 
-  ${props => props.theme.breakpoints.up("sm")} {
+  ${(props) => props.theme.breakpoints.up('sm')} {
     width: 60%;
     margin: 1.5rem auto;
   }
 
-  ${props => props.theme.breakpoints.up("lg")} {
+  ${(props) => props.theme.breakpoints.up('lg')} {
     width: 35%;
     margin: 0 auto;
   }
-`
+`;

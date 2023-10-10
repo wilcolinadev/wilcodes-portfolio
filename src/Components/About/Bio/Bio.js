@@ -1,53 +1,59 @@
-import React from "react";
-import {BioContentBox, BioImage, BioLink, BioSpan, BioTittle, BioWrapper} from "./BioStyles";
+import React from 'react';
+import { BioContentBox, BioImage, BioLink, BioSpan, BioTittle, BioWrapper } from './BioStyles';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
-import {Description, TextController} from "../Introduction/IntroductionStyles";
-import {Box} from "@material-ui/core";
-import wilGrad from '../../../assets/wil-grad-min.png'
+import { Description, TextController } from '../Introduction/IntroductionStyles';
+import { Box } from '@material-ui/core';
+import wilGrad from '../../../assets/wil-grad-min.png';
 
 const Bio = () => {
-    return (<BioWrapper>
+  return (
+    <BioWrapper>
+      <BioContentBox>
+        <TextController>
+          <BioTittle variant={'h2'}>Bio 👨🏻‍💻</BioTittle>
+          <Description>
+            From my early coding journey that began at the age of 17, I've embarked on a dynamic path of learning and
+            growth in the world of software development. My journey began at a software academy where I honed my
+            algorithmic thinking and grasped the fundamentals of data structures. This foundation laid the groundwork
+            for my passion for programming.
+          </Description>
+          <Description>
+            I'm a versatile web developer with a passion for creating outstanding digital experiences. My journey
+            started with a strong foundation in JavaScript and evolved into expertise in various web technologies,
+            including HTML, CSS, TypeScript, React, WordPress, Angular, Node.js, and PHP.
+          </Description>
+          <Description>
+            As a proficient in Adobe Photoshop and Figma, I seamlessly merge design with functionality. With a sharp eye
+            for detail and strong organizational skills, I've effectively managed projects and led teams in my current
+            role.
+          </Description>
+          <Description>
+            At Gaido's Seaside Inn and StayGalveston, I've played a pivotal role in web development and SEO strategies,
+            driving substantial growth in online traffic and bookings.
+          </Description>
+          <Description>
+            Let's connect and discuss how I can leverage my skills to contribute to your team's success.
+          </Description>
+        </TextController>
+        <Box>
+          <figure style={{ textAlign: 'center' }}>
+            <BioImage src={wilGrad} alt={'bio of a web developer'} />
+          </figure>
 
-        <BioContentBox>
-            <TextController>
-                <BioTittle variant={'h2'}>
-                    Bio 👨🏻‍💻
-                </BioTittle>
-                <Description>
-                    <BioSpan>I</BioSpan> started coding at 17 years old, in a software academy that taught me how to
-                    approach algorithms and the most basic data structures. During my journey, I explored multiple tools
-                    and found C++ as my first programming language in college, with it I started to understand more the
-                    flow of data and programming concepts. However, I quickly discovered Javascript and its
-                    possibilities and for that reason, I decided to continue my programming preparation by focusing on
-                    Web technologies.
-                </Description>
-                <Description>
-                    <BioSpan>I</BioSpan> have worked with a variety of tools and technologies which includes HTML, CSS,
-                    JavaScript, PHP, TypeScript, React, Next.js, Gatsby.js, Redux, MaterialUI, and Bootstrap for the
-                    architecture, design, and organization of my projects. In regards to the design aspect, I feel
-                    comfortable using Adobe photoshop and Figma. In addition to my technical skills, I have a good eye
-                    for details and organization, as well as clear communication experience that I developed during my
-                    time working at retail with customers.
-                </Description>
+          <BioLink
+            target="_blank"
+            href={
+              'https://res.cloudinary.com/djf9jqpml/image/upload/v1696786692/wilcodes/wcolinaresume-2023_lnyj80.pdf'
+            }
+            download={'WilfredoColina.pdf'}
+          >
+            Download Resume
+            <CloudDownloadOutlinedIcon sx={{ marginLeft: '.5rem' }} />
+          </BioLink>
+        </Box>
+      </BioContentBox>
+    </BioWrapper>
+  );
+};
 
-            </TextController>
-            <Box>
-                <figure style={{textAlign:'center'}}>
-                    <BioImage src={wilGrad} alt={'bio of a web developer'}/>
-                </figure>
-
-                <BioLink
-                    href={'https://res.cloudinary.com/djf9jqpml/image/upload/v1670975935/wilcodes/wcolinaresume_wm1xer.pdf'}
-                    download={'WilfredoColina.pdf'}>
-                    Download Resume
-                    <CloudDownloadOutlinedIcon sx={{marginLeft: '.5rem'}}/>
-                </BioLink>
-            </Box>
-
-        </BioContentBox>
-
-
-    </BioWrapper>)
-}
-
-export default Bio
+export default Bio;

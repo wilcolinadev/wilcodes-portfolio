@@ -1,30 +1,40 @@
-import React from "react";
-import Footer from "../Footer/Footer";
+import React from 'react';
+import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
-import {Wrapper} from "../Wrapper";
-import ActionCall from "../ActionCall/ActionCall";
-import Project from "./Project/Project";
-import ProjectsHeader from "./ProjectsHeader/ProjectsHeader";
-import useProjects from "../../hooks/useProjects";
-import {ProjectWrapper} from "./Project/ProjectStyles";
+import { Wrapper } from '../Wrapper';
+import ActionCall from '../ActionCall/ActionCall';
+import Project from './Project/Project';
+import ProjectsHeader from './ProjectsHeader/ProjectsHeader';
+import useProjects from '../../hooks/useProjects';
+import { ProjectWrapper } from './Project/ProjectStyles';
+import { Grid } from '@mui/material';
 
 const Projects = () => {
-    const serverProjects = useProjects('projects');
+  const serverProjects = useProjects('projects');
 
-    return (<Wrapper type={'projects'}>
-        <Navigation page={'projects'}/>
-        <ProjectsHeader/>
-        <ProjectWrapper container>
-            {serverProjects.map((projectData, i) => <Project key={i} name={projectData.name} url={projectData.url}
-                                                             githubUrl={projectData.githubUrl}
-                                                             description={projectData.description}
-                                                             urlImage={projectData.urlImage}/>)}
-        </ProjectWrapper>
+  return (
+    <Wrapper type={'projects'}>
+      <Navigation page={'projects'} />
+      <ProjectsHeader />
+      <ProjectWrapper>
+        <Grid container maxWidth="xl" m="auto">
+          {serverProjects.map((projectData, i) => (
+            <Project
+              key={i}
+              name={projectData.name}
+              url={projectData.url}
+              githubUrl={projectData.githubUrl}
+              description={projectData.description}
+              urlImage={projectData.urlImage}
+            />
+          ))}
+        </Grid>
+      </ProjectWrapper>
+      <ActionCall />
 
-        <ActionCall/>
-
-        <Footer/>
-    </Wrapper>)
+      <Footer />
+    </Wrapper>
+  );
 };
 
 export default Projects;

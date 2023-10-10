@@ -2,22 +2,22 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles'; // works with @material-ui/core/styles, if you prefer to use it.
 import theme from '../src/theme'; // Adjust here as well
-import Favicon from "../src/Components/Favicon";
+import Favicon from '../src/Components/Favicon';
 export default class MyDocument extends Document {
   render() {
     return (
-        <Html lang="en">
-          <Head>
-            {/* Not exactly required, but this is the PWA primary color */}
-            <meta name="theme-color" content={theme.palette.primary.main} />
-              <meta name="google-site-verification" content="0MxO3YSirb6zQMoVO9sWKdqUCUlz5U2VWuZ294wgWZI" />
-              <Favicon/>
-          </Head>
-          <body>
+      <Html lang="en">
+        <Head>
+          {/* Not exactly required, but this is the PWA primary color */}
+          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="google-site-verification" content="0MxO3YSirb6zQMoVO9sWKdqUCUlz5U2VWuZ294wgWZI" />
+          <Favicon />
+        </Head>
+        <body>
           <Main />
           <NextScript />
-          </body>
-        </Html>
+        </body>
+      </Html>
     );
   }
 }
@@ -52,9 +52,9 @@ MyDocument.getInitialProps = async (ctx) => {
   const originalRenderPage = ctx.renderPage;
 
   ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-      });
+    originalRenderPage({
+      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+    });
 
   const initialProps = await Document.getInitialProps(ctx);
 

@@ -1,8 +1,7 @@
-import {styled} from "@mui/material/styles";
-import {Box, Grid, List, ListItem, Stack} from "@mui/material";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-
+import { styled } from '@mui/material/styles';
+import { Box, Grid, List, ListItem, Stack } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 export const Item = styled(ListItem)`
   color: #000;
@@ -13,33 +12,29 @@ export const Item = styled(ListItem)`
 
   &&:hover {
     color: #019058;
-    transition: .5ms ease-in-out;
+    transition: 0.5ms ease-in-out;
   }
 
-  ${props => props.theme.breakpoints.up("sm")} {
-
+  ${(props) => props.theme.breakpoints.up('sm')} {
   }
 
-  ${props => props.theme.breakpoints.down("md")} {
+  ${(props) => props.theme.breakpoints.down('md')} {
     display: none;
-
   }
 
-  ${props => props.theme.breakpoints.up("lg")} {
-
+  ${(props) => props.theme.breakpoints.up('lg')} {
   }
-`
+`;
 
 export const UList = styled(List)`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  padding: .5rem;
+  padding: 0.5rem;
   font-weight: 400;
 
   & a {
-
     text-decoration: none;
   }
 
@@ -47,11 +42,10 @@ export const UList = styled(List)`
     font-family: 'Inconsolata', monospace;
   }
 
-  ${props => props.theme.breakpoints.down("md")} {
+  ${(props) => props.theme.breakpoints.down('md')} {
     justify-content: space-between;
-
   }
-`
+`;
 
 export const Wrapper = styled(Grid)`
   box-sizing: border-box;
@@ -60,57 +54,53 @@ export const Wrapper = styled(Grid)`
   background-color: #f8f7f7;
   top: 0;
   position: sticky;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
   z-index: 99;
-`
+`;
 
 export const Logo = styled(Typography)`
   color: #000;
   margin-left: 1rem;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   font-weight: bold;
-  transition: .5ms ease-in-out;
+  transition: 0.5ms ease-in-out;
 
   &&:hover {
     color: #019058;
-    transition: .5ms ease-in-out;
+    transition: 0.5ms ease-in-out;
   }
-`
+`;
 
 export const ContactLink = styled(Stack)`
   color: #000;
   font-weight: 400;
   margin-right: 1rem;
 
-  ${props => props.theme.breakpoints.down("sm")} {
+  ${(props) => props.theme.breakpoints.down('sm')} {
     display: none;
-
   }
-
-`
-
+`;
 
 export const Identifier = styled('span')`
   position: absolute;
-  background: #3F3D55;
+  background: #3f3d55;
   border: 1px solid #000;
   border-radius: 60%;
   height: 10px;
   width: 10px;
   top: 45px;
-`
+`;
 export const BurgerController = styled(Box)`
-  ${props => props.theme.breakpoints.up("md")} {
+  ${(props) => props.theme.breakpoints.up('md')} {
     display: none;
   }
-`
+`;
 
-export const Burger = styled((props) => (<Button{...props} />))`
-
-  ${props => props.theme.breakpoints.down("md")} {
-    padding: .5rem;
+export const Burger = styled((props) => <Button {...props} />)`
+  ${(props) => props.theme.breakpoints.down('md')} {
+    padding: 0.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -138,27 +128,25 @@ export const Burger = styled((props) => (<Button{...props} />))`
     div {
       width: 2rem;
       height: 0.2rem;
-      background: ${(props) => props.open ? "#313030" : "#0b0b0b"};
+      background: ${(props) => (props.open ? '#313030' : '#0b0b0b')};
       transition: all 0.3s linear;
       position: relative;
       transform-origin: 3px;
     }
 
     div:first-of-type {
-      transform: ${(props) => props.open ? "rotate(45deg)" : "rotate(0)"};
+      transform: ${(props) => (props.open ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     div:nth-of-type(2) {
       margin-top: 0.4rem;
-      opacity: ${(props) => (props.open ? "0" : "1")};
-      transform: ${(props) => props.open ? "translateX(20px)" : "translateX(0)"};
+      opacity: ${(props) => (props.open ? '0' : '1')};
+      transform: ${(props) => (props.open ? 'translateX(20px)' : 'translateX(0)')};
     }
 
     div:nth-of-type(3) {
       margin-top: 0.4rem;
-      transform: ${(props) => props.open ? "rotate(-45deg)" : "rotate(0)"};
+      transform: ${(props) => (props.open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
-
   }
-
-`
+`;

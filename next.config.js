@@ -1,9 +1,7 @@
 const withImages = require('next-images');
 module.exports = withImages({
-    images: {
-        domains: ['res.cloudinary.com'],
-        disableStaticImages: true
-    }
+  images: {
+    domains: ['res.cloudinary.com'],
+    disableStaticImages: true,
+  },
 });
-
-

@@ -1,6 +1,6 @@
-import {styled} from "@mui/material/styles";
-import {Stack} from "@mui/material";
-import Typography from "@mui/material/Typography";
+import { styled } from '@mui/material/styles';
+import { Stack } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 export const SoftBox = styled(Stack)`
   display: flex;
@@ -31,25 +31,25 @@ export const SoftBox = styled(Stack)`
   }
 }
     
-    ${props => props.theme.breakpoints.up("lg")} {
+    ${(props) => props.theme.breakpoints.up('lg')} {
       animation: cycle 14s linear 1;
       
     }
   }
-`
+`;
 
 export const SoxtText = styled(Typography)`
   font-size: 1.2rem;
   margin: 0 1rem;
   font-family: 'Inconsolata', monospace;
-  padding: .5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   flex: 0 0 auto;
-  color: #3F3D55;
-`
-export const IconBox = styled("span")`
-  padding: .5rem;
+  color: #3f3d55;
+`;
+export const IconBox = styled('span')`
+  padding: 0.5rem;
   display: flex;
   align-items: center;
-  color: #3F3D55;
-`
+  color: #3f3d55;
+`;
