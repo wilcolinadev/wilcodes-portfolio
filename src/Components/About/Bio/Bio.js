@@ -3,7 +3,7 @@ import { BioContentBox, BioImage, BioLink, BioSpan, BioTittle, BioWrapper } from
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import { Description, TextController } from '../Introduction/IntroductionStyles';
 import { Box } from '@material-ui/core';
-import wilGrad from '../../../assets/wil-grad-min.png';
+
 
 const Bio = () => {
   return (
@@ -37,7 +37,7 @@ const Bio = () => {
         </TextController>
         <Box>
           <figure style={{ textAlign: 'center' }}>
-            <BioImage src={wilGrad} alt={'bio of a web developer'} />
+            <BioImage src={"https://res.cloudinary.com/djf9jqpml/image/upload/w_auto,f_auto,c_fill,q_auto/v1710021727/wil-grad-min-b15ff6c3a2fb0d1b6d48bc73f5d4bd9d_Large_Background_Removed_y4wxnn.png"} alt={'bio of a web developer'} />
           </figure>
 
           <BioLink
