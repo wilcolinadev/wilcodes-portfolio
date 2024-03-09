@@ -43,7 +43,7 @@ const Bio = () => {
           <BioLink
             target="_blank"
             href={
-              'https://res.cloudinary.com/djf9jqpml/image/upload/v1696786692/wilcodes/wcolinaresume-2023_lnyj80.pdf'
+              'https://res.cloudinary.com/djf9jqpml/image/upload/v1710017770/wcolinacv-2024_wv9nka.pdf'
             }
             download={'WilfredoColina.pdf'}
           >
