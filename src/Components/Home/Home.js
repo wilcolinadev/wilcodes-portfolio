@@ -7,16 +7,22 @@ import FeaturedProjects from './FeaturedProjects/FeaturedProjects';
 import SoftSkills from './SoftSkills/SoftSkills';
 import Footer from '../Footer/Footer';
 import ActionCall from '../ActionCall/ActionCall';
-
+import Bio from '../About/Bio/Bio';
+import Career from '../About/Career/Career';
+import Introduction from '../About/Introduction/Introduction';
 const Home = () => {
   return (
     <Wrapper type={'home'}>
       <Navigation page={'home'} />
       <OverFlow>
-        <Description />
+      <Introduction />
+        {/* <Description /> */}
         <SoftSkills />
         <Skills />
         <FeaturedProjects />
+     
+        <Bio />
+        <Career />
         <ActionCall />
         <Footer />
       </OverFlow>

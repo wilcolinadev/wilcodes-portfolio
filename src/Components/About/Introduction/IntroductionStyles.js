@@ -3,28 +3,11 @@ import { Box, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 export const AboutImage = styled('img')`
-  width: 90%;
+  width: 80%;
   height: auto;
-  margin-top: 2rem;
-  ${(props) => props.theme.breakpoints.up('md')} {
-    width: 300px;
-    margin-left: 4rem;
-  }
 `;
 
-export const IntroductionBox = styled(Box)`
-  display: flex;
-  padding: 1.5rem;
-  margin-top: 1rem;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  ${(props) => props.theme.breakpoints.up('md')} {
-    flex-flow: row nowrap;
-    padding: 2rem;
-  }
-`;
+
 
 export const TextController = styled(Stack)`
   ${(props) => props.theme.breakpoints.up('md')} {
