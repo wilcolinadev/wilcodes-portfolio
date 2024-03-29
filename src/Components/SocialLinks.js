@@ -25,14 +25,14 @@ const SocialStack = styled((props) => <Stack {...props} />)`
 const SocialLinks = (props) => {
   return (
     <SocialStack direction={'row'} padding={props.padding}>
-      <a href={'https://www.linkedin.com/in/wilcodes/'} target={'_blank'}>
+      <a href={'https://www.linkedin.com/in/wilcolinadev/'} target={'_blank'}>
         <LinkedInIcon fontSize={'large'} />
       </a>
 
-      <a href={'https://github.com/wilcodes'} target={'_blank'}>
+      <a href={'https://github.com/wilcolinadev'} target={'_blank'}>
         <GitHubIcon fontSize={'large'} />
       </a>
-      <a href={'https://www.instagram.com/wilcodes.dev/'} target={'_blank'}>
+      <a href={'https://www.instagram.com/wilcolinadev'} target={'_blank'}>
         <InstagramIcon fontSize={'large'} />
       </a>
     </SocialStack>

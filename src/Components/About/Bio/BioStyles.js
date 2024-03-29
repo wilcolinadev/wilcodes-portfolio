@@ -20,7 +20,7 @@ export const BioImage = styled('img')`
   width: 90%;
   height: auto;
   margin-top: 2rem;
-
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0) 80%, transparent 100%);
   ${(props) => props.theme.breakpoints.up('md')} {
     width: 280px;
 

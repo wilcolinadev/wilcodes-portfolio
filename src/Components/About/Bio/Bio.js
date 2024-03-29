@@ -1,5 +1,5 @@
 import React from 'react';
-import { BioContentBox, BioImage, BioLink, BioSpan, BioTittle, BioWrapper } from './BioStyles';
+import { BioContentBox, BioImage, BioLink, BioTittle, BioWrapper } from './BioStyles';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import { Description, TextController } from '../Introduction/IntroductionStyles';
 import { Box } from '@material-ui/core';

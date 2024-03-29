@@ -15,7 +15,7 @@ const FormHeader = () => {
           <SocialLinks align={'left'} />
           <Stack>
             <Typography sx={{ fontFamily: 'inconsolata' }}>Location</Typography>
-            <Typography variant={'h6'}>Houston, Texas.</Typography>
+            <Typography variant={'h6'}>Austin, Texas.</Typography>
           </Stack>
         </Stack>
       </Stack>
