@@ -56,6 +56,7 @@ export const Wrapper = styled(Grid)`
   position: sticky;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
   z-index: 99;
+  padding: 0.5rem;
 `;
 
 export const Logo = styled(Typography)`
@@ -78,9 +79,7 @@ export const ContactLink = styled(Stack)`
   font-weight: 400;
   margin-right: 1rem;
 
-  ${(props) => props.theme.breakpoints.down('sm')} {
-    display: none;
-  }
+ 
 `;
 
 export const Identifier = styled('span')`

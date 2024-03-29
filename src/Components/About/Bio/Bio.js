@@ -3,14 +3,18 @@ import { BioContentBox, BioImage, BioLink, BioTittle, BioWrapper } from './BioSt
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import { Description, TextController } from '../Introduction/IntroductionStyles';
 import { Box } from '@material-ui/core';
-
+import Grid from '@mui/material/Grid';
 
 const Bio = () => {
   return (
-    <BioWrapper>
-      <BioContentBox>
-        <TextController>
-          <BioTittle variant={'h2'}>Bio 👨🏻‍💻</BioTittle>
+    <Grid container sx={{
+      backgroundColor:'rgba(255, 255, 255, 0.7)',
+      borderTop: '2px solid #3f3d55',
+      padding: { xs: '2rem', lg: '5rem'} ,
+    }}  justifyContent={'center'}>
+      <Grid item xs={12} md={8}>
+      <div>
+          <BioTittle variant={'h2'}>About me 👨🏻‍💻</BioTittle>
           <Description>
             From my early coding journey that began at the age of 17, I've embarked on a dynamic path of learning and
             growth in the world of software development. My journey began at a software academy where I honed my
@@ -34,12 +38,6 @@ const Bio = () => {
           <Description>
             Let's connect and discuss how I can leverage my skills to contribute to your team's success.
           </Description>
-        </TextController>
-        <Box>
-          <figure style={{ textAlign: 'center' }}>
-            <BioImage src={"https://res.cloudinary.com/djf9jqpml/image/upload/w_auto,f_auto,c_fill,q_auto/v1710021727/wil-grad-min-b15ff6c3a2fb0d1b6d48bc73f5d4bd9d_Large_Background_Removed_y4wxnn.png"} alt={'bio of a web developer'} />
-          </figure>
-
           <BioLink
             target="_blank"
             href={
@@ -50,9 +48,20 @@ const Bio = () => {
             Download Resume
             <CloudDownloadOutlinedIcon sx={{ marginLeft: '.5rem' }} />
           </BioLink>
+        </div>
+      </Grid>
+      
+        <Grid item xs={12} md={4}>
+        <BioContentBox>
+        <Box>
+          <figure style={{ textAlign: 'center' }}>
+            <BioImage src={"https://res.cloudinary.com/djf9jqpml/image/upload/w_auto,f_auto,c_fill,q_auto/v1710021727/wil-grad-min-b15ff6c3a2fb0d1b6d48bc73f5d4bd9d_Large_Background_Removed_y4wxnn.png"} alt={'bio of a web developer'} />
+          </figure>
         </Box>
       </BioContentBox>
-    </BioWrapper>
+        </Grid>
+        
+    </Grid>
   );
 };
 

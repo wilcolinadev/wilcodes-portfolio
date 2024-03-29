@@ -28,6 +28,7 @@ export const Wrapper = styled((props) => <Box {...props} />)`
   z-index: 99;
   background-color: #ffffff;
   min-height: 100vh;
+  scroll-behavior: smooth;
 `;
 
 export const OverFlow = styled(Box)`

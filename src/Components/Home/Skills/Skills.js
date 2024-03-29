@@ -7,7 +7,8 @@ const Skills = () => {
   const skills = ['HTML5', 'CCS3', 'JavaScript', 'React', 'Next.js', 'NPM', 'Notion', 'Bootstrap'];
 
   return (
-    <Box>
+    <Box >
+
       <SkillsBox>
         <SkillsTitle variant={'h4'}>Core tools I use to build my projects 🛠</SkillsTitle>
 

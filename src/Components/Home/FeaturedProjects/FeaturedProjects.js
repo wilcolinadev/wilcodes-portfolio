@@ -9,7 +9,7 @@ const FeaturedProjects = () => {
   const [logHover, isLogHover] = useState(false);
   const serverProjects = useProjects('featuredProjects');
   return (
-    <MainWrapper>
+    <MainWrapper id='projects'>
       <Title variant={'h3'}>Feature Projects</Title>
 
       <Description>Get a first Impression on my feature projects</Description>

@@ -20,33 +20,28 @@ const Navigation = ({ page }) => {
           </Box>
         </Link>
         <Stack direction="row">
-          <Link href="/" color="secondary">
-            <Item> Home {page === 'home' && <Identifier />} </Item>
+          <Link href="#projects" color="secondary">
+            <Item> Projects {page === 'home' && <Identifier />} </Item>
           </Link>
-          <Link href="/about" color="secondary">
-            <Item> About {page === 'about' && <Identifier />} </Item>
+          <Link href="#career" color="secondary">
+            <Item> Career {page === 'about' && <Identifier />} </Item>
           </Link>
-          <Link href="/projects" color="secondary">
-            <Item> Projects {page === 'projects' && <Identifier />} </Item>
+          <Link href="#about" color="secondary">
+            <Item> About {page === 'projects' && <Identifier />} </Item>
           </Link>
         </Stack>
         <Stack direction={'row'}>
+
           <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)}>
             <Link href="/contact" color="secondary" aria-label={'contact-page'}>
               <ContactLink direction="row">
-                <BoxIcon hoverState={logHover} />
                 <Typography style={{ display: 'flex', alignItems: 'center' }}>Let's chat</Typography>
+                <BoxIcon hoverState={logHover} />
               </ContactLink>
             </Link>
           </Box>
 
-          <BurgerController>
-            <Burger open={isBurgerOpen} onClick={() => setIsBurgerOpen(!isBurgerOpen)}>
-              <div />
-              <div />
-              <div />
-            </Burger>
-          </BurgerController>
+         
         </Stack>
       </UList>
     </Wrapper>

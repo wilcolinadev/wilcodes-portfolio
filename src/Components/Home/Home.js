@@ -16,13 +16,12 @@ const Home = () => {
       <Navigation page={'home'} />
       <OverFlow>
       <Introduction />
-        {/* <Description /> */}
         <SoftSkills />
         <Skills />
         <FeaturedProjects />
-     
-        <Bio />
         <Career />
+        <Bio />
+       
         <ActionCall />
         <Footer />
       </OverFlow>

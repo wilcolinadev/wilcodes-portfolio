@@ -52,8 +52,6 @@ export const BioLink = styled(Link)`
   margin: 2rem 0;
   color: #3f3d55;
   display: flex;
-  align-items: center;
-
   font-weight: bold;
   text-decoration-color: #3f3d55;
 
@@ -62,7 +60,4 @@ export const BioLink = styled(Link)`
     text-decoration-color: #20c976;
   }
 
-  ${(props) => props.theme.breakpoints.up('md')} {
-    justify-content: center;
-  }
 `;
