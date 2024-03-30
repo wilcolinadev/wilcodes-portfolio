@@ -59,5 +59,4 @@ export const BioLink = styled(Link)`
     transition: 0.5s ease-in-out;
     text-decoration-color: #20c976;
   }
-
 `;

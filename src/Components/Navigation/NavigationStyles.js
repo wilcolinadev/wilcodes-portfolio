@@ -78,8 +78,6 @@ export const ContactLink = styled(Stack)`
   color: #000;
   font-weight: 400;
   margin-right: 1rem;
-
- 
 `;
 
 export const Identifier = styled('span')`

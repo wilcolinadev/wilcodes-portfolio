@@ -15,13 +15,12 @@ const Home = () => {
     <Wrapper type={'home'}>
       <Navigation page={'home'} />
       <OverFlow>
-      <Introduction />
+        <Introduction />
         <SoftSkills />
         <Skills />
         <FeaturedProjects />
         <Career />
         <Bio />
-       
         <ActionCall />
         <Footer />
       </OverFlow>

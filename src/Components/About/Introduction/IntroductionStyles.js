@@ -7,8 +7,6 @@ export const AboutImage = styled('img')`
   height: auto;
 `;
 
-
-
 export const TextController = styled(Stack)`
   ${(props) => props.theme.breakpoints.up('md')} {
     width: 35%;

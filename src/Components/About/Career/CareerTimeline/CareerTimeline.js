@@ -29,7 +29,7 @@ const CareerTimeline = () => {
   }, []);
 
   return (
-    <TimelineBox >
+    <TimelineBox>
       <Timeline position="left" sx={{ margin: 0 }}>
         {careerData.map((background, i) => (
           <TimelineStep
