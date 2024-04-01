@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FormControl, Grid } from '@mui/material';
+import { FormControl, Grid, Box } from '@mui/material';
 import { Button, ContactForm, FileLabel, FormArea, FormDescription, FormInput, FormWrapper } from './FormStyles';
 import BoxIcon from '../../BoxIcon';
 import Typography from '@mui/material/Typography';
@@ -134,7 +134,8 @@ const Form = () => {
   };
 
   return (
-    <FormWrapper>
+    <FormWrapper >
+      <Box maxWidth={'xl'} margin={'auto'}>  
       <ContactForm onSubmit={sendForm} id={'form'}>
         <FormDescription variant={'h4'}>Fill the Form Below!</FormDescription>
         <Grid container spacing={3}>
@@ -236,6 +237,7 @@ const Form = () => {
           </Button>
         </Grid>
       </ContactForm>
+      </Box>
 
       <CustomizedSnackbars
         error={error}

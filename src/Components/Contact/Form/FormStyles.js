@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 export const ContactForm = styled('form')`
   padding: 1rem;
   margin: 0 auto;
-
   ${(props) => props.theme.breakpoints.up('md')} {
     width: 60%;
     padding: 0;

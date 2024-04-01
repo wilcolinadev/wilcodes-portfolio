@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 
 const FormHeader = () => {
   return (
-    <HeaderBox>
+    <HeaderBox maxWidth={'xl'} margin={'auto'}>
       <Stack>
         <Title variant={'h3'}>Get in touch 👋🏼</Title>
         <Description variant={'h4'}>Love to hear from you!</Description>

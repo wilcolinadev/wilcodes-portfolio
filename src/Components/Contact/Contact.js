@@ -5,7 +5,7 @@ import { Wrapper } from '../Wrapper';
 import FormHeader from './FormHeader/FormHeader';
 import Form from './Form/Form';
 import ActionCall from '../ActionCall/ActionCall';
-
+import {Container} from '@mui/material';
 const Contact = () => {
   return (
     <Wrapper type={'contact'}>
