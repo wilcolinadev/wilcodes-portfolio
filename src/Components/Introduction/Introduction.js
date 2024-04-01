@@ -10,7 +10,6 @@ const Introduction = () => {
           <Typography variant={'h3'}>Hi, Hello 👋🏼</Typography>
 
           <Typography variant={'h2'}>I'm Wilfredo Colina</Typography>
-
           <Description>
             I'm Wilfredo, a <span style={{ fontWeight: 'bolder', fontStyle: 'italic' }}> Web Developer</span> who loves
             to face new challenges every day. My passion about translating designs into functional web applications

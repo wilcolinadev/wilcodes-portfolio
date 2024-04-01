@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import { Stack } from '@mui/material';
-import { ContactLink, Item, Logo, UList, Wrapper } from './NavigationStyles';
+import { Stack, Container} from '@mui/material';
+import { ContactLink, Item, Logo, UList } from './NavigationStyles';
 import Link from '../../Link';
 import Typography from '@mui/material/Typography';
 import BoxIcon from '../BoxIcon';
-import HamburgerModal from './HamburgerModal/HamburgerModal';
 
 const Navigation = ({ page }) => {
   const [logHover, isLogHover] = useState(false);
-  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const scrollIntoView = (id) => {
     const element = document.getElementById(id);
@@ -22,8 +20,7 @@ const Navigation = ({ page }) => {
     }
   };
   return (
-    <Wrapper>
-      <HamburgerModal active={isBurgerOpen} />
+    <Container sx={{position: 'sticky', top: 0, zIndex: 99}} maxWidth={'xl'}>
       <UList>
         <Link href="/">
           <Box>
@@ -38,17 +35,17 @@ const Navigation = ({ page }) => {
           </Stack>
         )}
         <Stack direction={'row'}>
-          <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)}>
-            <Link href="/contact" color="secondary" aria-label={'contact-page'}>
+          <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)} onClick={() => scrollIntoView('contact')}>
+           
               <ContactLink direction="row">
                 <Typography style={{ display: 'flex', alignItems: 'center' }}>Let's chat</Typography>
                 <BoxIcon hoverState={logHover} />
               </ContactLink>
-            </Link>
+          
           </Box>
         </Stack>
       </UList>
-    </Wrapper>
+    </Container>
   );
 };
 

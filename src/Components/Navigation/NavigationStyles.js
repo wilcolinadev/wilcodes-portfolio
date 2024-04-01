@@ -29,10 +29,9 @@ export const Item = styled(ListItem)`
 export const UList = styled(List)`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
   align-items: center;
   font-weight: 400;
-
+  justify-content: space-between;
   min-height: 75px;
   & a {
     text-decoration: none;
@@ -42,22 +41,10 @@ export const UList = styled(List)`
     font-family: 'Inconsolata', monospace;
   }
 
-  ${(props) => props.theme.breakpoints.down('md')} {
-    margin: 0 3rem;
-  }
+  
 `;
 
-export const Wrapper = styled(Grid)`
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  background-color: #f8f7f7;
-  top: 0;
-  position: sticky;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
-  z-index: 99;
-  padding: 0.5rem;
-`;
+
 
 export const Logo = styled(Typography)`
   color: #000;

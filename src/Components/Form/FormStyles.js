@@ -3,12 +3,8 @@ import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 export const ContactForm = styled('form')`
-  padding: 1rem;
   margin: 0 auto;
-  ${(props) => props.theme.breakpoints.up('md')} {
-    width: 60%;
-    padding: 0;
-  }
+  width: 100%;
 
   label {
     font-weight: 400;
@@ -24,16 +20,6 @@ export const FormDescription = styled(Typography)`
   color: #3f3d55;
 `;
 
-export const FormWrapper = styled(Box)`
-  background-color: rgba(255, 255, 255, 0.91);
-  border-top: 2px solid #3f3d55;
-  padding: 1rem;
-
-  ${(props) => props.theme.breakpoints.up('md')} {
-    margin-top: 2.5rem;
-    padding: 0;
-  }
-`;
 export const Button = styled((props) => <button {...props} />)`
   background-color: transparent;
   border: none;

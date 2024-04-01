@@ -43,16 +43,16 @@ export const HeaderBox = styled(Box)`
   }
 `;
 export const ContactImage = styled('img')`
-  width: 80%;
+  width: 90%;
   height: auto;
   margin-top: 2rem;
 
   ${(props) => props.theme.breakpoints.up('sm')} {
-    width: 280px;
+    width: 230px;
     margin-left: 4rem;
   }
 
   ${(props) => props.theme.breakpoints.up('md')} {
-    width: 300px;
+    width: 250px;
   }
 `;

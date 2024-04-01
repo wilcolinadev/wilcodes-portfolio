@@ -17,7 +17,7 @@ const Projects = () => {
       <Navigation page={'projects'} />
       <ProjectsHeader />
       <ProjectWrapper maxWidth={'xl'} margin={'auto'}>
-        <Grid container  >
+        <Grid container>
           {serverProjects.map((projectData, i) => (
             <Project
               key={i}
