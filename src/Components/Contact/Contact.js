@@ -9,7 +9,7 @@ import ActionCall from '../ActionCall/ActionCall';
 const Contact = () => {
   return (
     <Wrapper type={'contact'}>
-      <Navigation />
+      <Navigation page={'contact'} />
       <FormHeader />
       <Form />
       <ActionCall />

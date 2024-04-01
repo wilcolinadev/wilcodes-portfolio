@@ -10,6 +10,7 @@ import ActionCall from '../ActionCall/ActionCall';
 import Bio from '../About/Bio/Bio';
 import Career from '../About/Career/Career';
 import Introduction from '../About/Introduction/Introduction';
+import Container from '@mui/material/Container';
 const Home = () => {
   return (
     <Wrapper type={'home'}>

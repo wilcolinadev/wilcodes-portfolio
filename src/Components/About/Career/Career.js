@@ -5,7 +5,7 @@ import CareerTimeline from './CareerTimeline/CareerTimeline';
 
 const Career = () => {
   return (
-    <CareerWrapper id='career'>
+    <CareerWrapper id="career">
       <Typography variant={'h2'} textAlign={'center'} sx={{ margin: '2rem 0' }}>
         Career Preparation
       </Typography>

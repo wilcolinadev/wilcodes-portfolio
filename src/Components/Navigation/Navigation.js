@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { Stack } from '@mui/material';
-import { Burger, BurgerController, ContactLink, Identifier, Item, Logo, UList, Wrapper } from './NavigationStyles';
+import { ContactLink, Item, Logo, UList, Wrapper } from './NavigationStyles';
 import Link from '../../Link';
 import Typography from '@mui/material/Typography';
 import BoxIcon from '../BoxIcon';
@@ -14,7 +14,11 @@ const Navigation = ({ page }) => {
   const scrollIntoView = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Scroll to the element with the id "myElement" with an offset of 100 pixels
+      window.scrollTo({
+        top: element.offsetTop - 50,
+        behavior: 'smooth',
+      });
     }
   };
   return (
@@ -26,11 +30,13 @@ const Navigation = ({ page }) => {
             <Logo variant={'h5'}>Wilfredo Colina</Logo>
           </Box>
         </Link>
-        <Stack direction="row">
-          <Item onClick={() => scrollIntoView('projects')}> Projects </Item>
-          <Item onClick={() => scrollIntoView('career')}> Career </Item>
-          <Item onClick={() => scrollIntoView('about')}> About  </Item>
-        </Stack>
+        {page !== 'contact' && (
+          <Stack direction="row">
+            <Item onClick={() => scrollIntoView('projects')}> Projects </Item>
+            <Item onClick={() => scrollIntoView('career')}> Career </Item>
+            <Item onClick={() => scrollIntoView('about')}> About </Item>
+          </Stack>
+        )}
         <Stack direction={'row'}>
           <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)}>
             <Link href="/contact" color="secondary" aria-label={'contact-page'}>

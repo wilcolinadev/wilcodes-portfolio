@@ -4,7 +4,7 @@ import { AboutImage, Description } from './IntroductionStyles';
 import Grid from '@mui/material/Grid';
 const Introduction = () => {
   return (
-    <Grid container sx={{ padding: { xs: '2rem', lg: '5rem' } }} justifyContent={'center'}>
+    <Grid container sx={{ padding: { xs: '2rem', lg: '5rem' }, margin: '0 auto' }} maxWidth={'xl'}>
       <Grid item xs={12} md={8} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <div>
           <Typography variant={'h3'}>Hi, Hello 👋🏼</Typography>

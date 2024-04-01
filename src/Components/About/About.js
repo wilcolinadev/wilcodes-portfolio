@@ -9,13 +9,13 @@ import ActionCall from '../ActionCall/ActionCall';
 
 const About = () => {
   return (
-    <Wrapper type={'about'} >
+    <Wrapper type={'about'}>
       <Navigation page={'about'} />
       <Introduction />
       <Bio />
       <Career />
       <ActionCall />
-      <Footer />     
+      <Footer />
     </Wrapper>
   );
 };

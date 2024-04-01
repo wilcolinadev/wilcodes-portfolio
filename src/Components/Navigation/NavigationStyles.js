@@ -9,7 +9,7 @@ export const Item = styled(ListItem)`
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
-
+  cursor: pointer;
   &&:hover {
     color: #019058;
     transition: 0.5ms ease-in-out;
@@ -29,11 +29,11 @@ export const Item = styled(ListItem)`
 export const UList = styled(List)`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
   font-weight: 400;
 
+  min-height: 75px;
   & a {
     text-decoration: none;
   }
@@ -43,7 +43,7 @@ export const UList = styled(List)`
   }
 
   ${(props) => props.theme.breakpoints.down('md')} {
-    justify-content: space-between;
+    margin: 0 3rem;
   }
 `;
 
