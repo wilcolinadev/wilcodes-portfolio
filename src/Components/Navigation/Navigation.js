@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import { Stack, Container} from '@mui/material';
-import { ContactLink, Item, Logo, UList } from './NavigationStyles';
-import Link from '../../Link';
+import { Stack, Box } from '@mui/material';
+import { ContactLink, Item, Logo, UList, Wrapper } from './NavigationStyles';
 import Typography from '@mui/material/Typography';
 import BoxIcon from '../BoxIcon';
 
@@ -20,32 +18,34 @@ const Navigation = ({ page }) => {
     }
   };
   return (
-    <Container sx={{position: 'sticky', top: 0, zIndex: 99}} maxWidth={'xl'}>
-      <UList>
-        <Link href="/">
-          <Box>
-            <Logo variant={'h5'}>Wilfredo Colina</Logo>
-          </Box>
-        </Link>
-        {page !== 'contact' && (
-          <Stack direction="row">
-            <Item onClick={() => scrollIntoView('projects')}> Projects </Item>
-            <Item onClick={() => scrollIntoView('career')}> Career </Item>
-            <Item onClick={() => scrollIntoView('about')}> About </Item>
-          </Stack>
-        )}
-        <Stack direction={'row'}>
-          <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)} onClick={() => scrollIntoView('contact')}>
-           
-              <ContactLink direction="row">
-                <Typography style={{ display: 'flex', alignItems: 'center' }}>Let's chat</Typography>
-                <BoxIcon hoverState={logHover} />
-              </ContactLink>
-          
-          </Box>
+    <UList>
+      <Box sx={{cursor: 'pointer'}}>
+        <Logo variant={'h6'} onClick={() => scrollIntoView('home')}>
+          Wilfredo Colina
+        </Logo>
+      </Box>
+
+      {page !== 'contact' && (
+        <Stack direction="row">
+          <Item onClick={() => scrollIntoView('projects')}> Projects </Item>
+          <Item onClick={() => scrollIntoView('career')}> Career </Item>
+          <Item onClick={() => scrollIntoView('about')}> About </Item>
         </Stack>
-      </UList>
-    </Container>
+      )}
+      <Stack direction={'row'}>
+        <Box
+          onMouseEnter={() => isLogHover(true)}
+          onMouseLeave={() => isLogHover(false)}
+          onClick={() => scrollIntoView('contact')}
+          sx={{cursor: 'pointer'}}
+        >
+          <ContactLink direction="row">
+            <Typography style={{ display: 'flex', alignItems: 'center', fontFamily: 'Inconsolata' }}>Let's chat</Typography>
+            <BoxIcon hoverState={logHover} />
+          </ContactLink>
+        </Box>
+      </Stack>
+    </UList>
   );
 };
 

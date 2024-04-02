@@ -48,7 +48,8 @@ export const BioSpan = styled('span')`
 
 export const BioLink = styled(Link)`
   font-size: 1.1rem;
-
+  font-family: 'Inconsolata', monospace;
+  color: #3f3d55;
   margin: 2rem 0;
   color: #3f3d55;
   display: flex;
@@ -57,6 +58,7 @@ export const BioLink = styled(Link)`
 
   &:hover {
     transition: 0.5s ease-in-out;
+    color: #20c976;
     text-decoration-color: #20c976;
   }
 `;

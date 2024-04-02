@@ -137,7 +137,6 @@ const Form = () => {
     <>
       <Grid container>
         <ContactForm onSubmit={sendForm} id={'form'}>
-          <FormDescription variant={'h4'}>Fill the Form Below!</FormDescription>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <FormControl sx={sxStyles}>

@@ -29,19 +29,5 @@ export const Wrapper = styled((props) => <Box {...props} />)`
   background-color: #ffffff;
   min-height: 100vh;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 `;
 
-export const OverFlow = styled(Box)`
-  overflow-x: hidden;
-`;
-
-export const WrapperBg = styled(Box)`
-  background-color: rgba(255, 255, 255, 0.7);
-  border-top: 2px solid #3f3d55;
-`;
-
-export const InnerBox = styled(Box)`
-  max-width: 1200px;
-  margin: 0 auto;
-`;

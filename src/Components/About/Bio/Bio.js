@@ -1,16 +1,24 @@
 import React from 'react';
-import { BioContentBox, BioImage, BioLink, BioTittle } from './BioStyles';
+import { BioContentBox, BioImage, BioLink } from './BioStyles';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import { Description } from '../../Introduction/IntroductionStyles';
 import { Box } from '@material-ui/core';
 import Grid from '@mui/material/Grid';
-
+import Typography from '@mui/material/Typography';
 const Bio = () => {
   return (
     <Grid id="about" container>
       <Grid item xs={12} md={8}>
         <div>
-          <BioTittle variant={'h2'}>About me 👨🏻‍💻</BioTittle>
+        <Typography variant={'h2'} sx={{
+        textAlign: 'center',
+        margin: { xs: '2rem 0 1rem 0', md: '4rem 0 2rem 0' },
+        fontWeight: 'bold',
+        fontFamily: 'Inconsolata',
+        fontSize: { xs: '2.5rem', md: '3.5rem' }
+      
+      }}>About me</Typography>
+          
           <Description>
             From my early coding journey that began at the age of 17, I've embarked on a dynamic path of learning and
             growth in the world of software development. My journey began at a software academy where I honed my

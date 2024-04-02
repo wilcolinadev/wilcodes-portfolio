@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Box, Grid, List, ListItem, Stack } from '@mui/material';
+import { Box, List, ListItem, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
@@ -40,15 +40,10 @@ export const UList = styled(List)`
   & * {
     font-family: 'Inconsolata', monospace;
   }
-
-  
 `;
-
-
 
 export const Logo = styled(Typography)`
   color: #000;
-  margin-left: 1rem;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
   letter-spacing: -0.5px;
@@ -64,7 +59,6 @@ export const Logo = styled(Typography)`
 export const ContactLink = styled(Stack)`
   color: #000;
   font-weight: 400;
-  margin-right: 1rem;
 `;
 
 export const Identifier = styled('span')`
