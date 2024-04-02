@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import { GridController, ImageBox, ImageS, MainButton, MainDescription, MainTitle } from './DescriptionStyles';
 import dev from '../../../assets/undraw_developer.svg';
-import BoxIcon from '../../BoxIcon';
+import BoxIcon from '../BoxIcon';
 import Link from 'next/link';
 
 const Description = () => {

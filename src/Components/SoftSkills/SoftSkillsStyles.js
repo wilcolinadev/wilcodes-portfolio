@@ -7,7 +7,7 @@ export const SoftBox = styled(Stack)`
   justify-content: space-evenly;
   padding: 1rem;
   animation: infinite 20s linear infinite;
- 
+  overflow-x: hidden;
   @keyframes cycle {
     0% {
       transform: translateX(-100%);
@@ -35,7 +35,7 @@ export const SoftBox = styled(Stack)`
       animation: cycle 14s linear 1;
       
     }
-  }
+  
 `;
 
 export const SoxtText = styled(Typography)`

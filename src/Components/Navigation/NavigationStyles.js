@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Box, Grid, List, ListItem, Stack } from '@mui/material';
+import { Box, List, ListItem, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
@@ -9,7 +9,7 @@ export const Item = styled(ListItem)`
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
-
+  cursor: pointer;
   &&:hover {
     color: #019058;
     transition: 0.5ms ease-in-out;
@@ -29,11 +29,10 @@ export const Item = styled(ListItem)`
 export const UList = styled(List)`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
   align-items: center;
-  padding: 0.5rem;
   font-weight: 400;
-
+  justify-content: space-between;
+  min-height: 75px;
   & a {
     text-decoration: none;
   }
@@ -41,26 +40,10 @@ export const UList = styled(List)`
   & * {
     font-family: 'Inconsolata', monospace;
   }
-
-  ${(props) => props.theme.breakpoints.down('md')} {
-    justify-content: space-between;
-  }
-`;
-
-export const Wrapper = styled(Grid)`
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  background-color: #f8f7f7;
-  top: 0;
-  position: sticky;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
-  z-index: 99;
 `;
 
 export const Logo = styled(Typography)`
   color: #000;
-  margin-left: 1rem;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
   letter-spacing: -0.5px;
@@ -76,11 +59,6 @@ export const Logo = styled(Typography)`
 export const ContactLink = styled(Stack)`
   color: #000;
   font-weight: 400;
-  margin-right: 1rem;
-
-  ${(props) => props.theme.breakpoints.down('sm')} {
-    display: none;
-  }
 `;
 
 export const Identifier = styled('span')`
