@@ -48,21 +48,17 @@ export const BioSpan = styled('span')`
 
 export const BioLink = styled(Link)`
   font-size: 1.1rem;
-
+  font-family: 'Inconsolata', monospace;
+  color: #3f3d55;
   margin: 2rem 0;
   color: #3f3d55;
   display: flex;
-  align-items: center;
-
   font-weight: bold;
   text-decoration-color: #3f3d55;
 
   &:hover {
     transition: 0.5s ease-in-out;
+    color: #20c976;
     text-decoration-color: #20c976;
-  }
-
-  ${(props) => props.theme.breakpoints.up('md')} {
-    justify-content: center;
   }
 `;

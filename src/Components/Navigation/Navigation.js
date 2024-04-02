@@ -1,55 +1,51 @@
 import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import { Stack } from '@mui/material';
-import { Burger, BurgerController, ContactLink, Identifier, Item, Logo, UList, Wrapper } from './NavigationStyles';
-import Link from '../../Link';
+import { Stack, Box } from '@mui/material';
+import { ContactLink, Item, Logo, UList, Wrapper } from './NavigationStyles';
 import Typography from '@mui/material/Typography';
 import BoxIcon from '../BoxIcon';
-import HamburgerModal from './HamburgerModal/HamburgerModal';
 
 const Navigation = ({ page }) => {
   const [logHover, isLogHover] = useState(false);
-  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-  return (
-    <Wrapper>
-      <HamburgerModal active={isBurgerOpen} />
-      <UList>
-        <Link href="/">
-          <Box>
-            <Logo variant={'h5'}>Wilfredo Colina</Logo>
-          </Box>
-        </Link>
-        <Stack direction="row">
-          <Link href="/" color="secondary">
-            <Item> Home {page === 'home' && <Identifier />} </Item>
-          </Link>
-          <Link href="/about" color="secondary">
-            <Item> About {page === 'about' && <Identifier />} </Item>
-          </Link>
-          <Link href="/projects" color="secondary">
-            <Item> Projects {page === 'projects' && <Identifier />} </Item>
-          </Link>
-        </Stack>
-        <Stack direction={'row'}>
-          <Box onMouseEnter={() => isLogHover(true)} onMouseLeave={() => isLogHover(false)}>
-            <Link href="/contact" color="secondary" aria-label={'contact-page'}>
-              <ContactLink direction="row">
-                <BoxIcon hoverState={logHover} />
-                <Typography style={{ display: 'flex', alignItems: 'center' }}>Let's chat</Typography>
-              </ContactLink>
-            </Link>
-          </Box>
 
-          <BurgerController>
-            <Burger open={isBurgerOpen} onClick={() => setIsBurgerOpen(!isBurgerOpen)}>
-              <div />
-              <div />
-              <div />
-            </Burger>
-          </BurgerController>
+  const scrollIntoView = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Scroll to the element with the id "myElement" with an offset of 100 pixels
+      window.scrollTo({
+        top: element.offsetTop - 50,
+        behavior: 'smooth',
+      });
+    }
+  };
+  return (
+    <UList>
+      <Box sx={{cursor: 'pointer'}}>
+        <Logo variant={'h6'} onClick={() => scrollIntoView('home')}>
+          Wilfredo Colina
+        </Logo>
+      </Box>
+
+      {page !== 'contact' && (
+        <Stack direction="row">
+          <Item onClick={() => scrollIntoView('projects')}> Projects </Item>
+          <Item onClick={() => scrollIntoView('career')}> Career </Item>
+          <Item onClick={() => scrollIntoView('about')}> About </Item>
         </Stack>
-      </UList>
-    </Wrapper>
+      )}
+      <Stack direction={'row'}>
+        <Box
+          onMouseEnter={() => isLogHover(true)}
+          onMouseLeave={() => isLogHover(false)}
+          onClick={() => scrollIntoView('contact')}
+          sx={{cursor: 'pointer'}}
+        >
+          <ContactLink direction="row">
+            <Typography style={{ display: 'flex', alignItems: 'center', fontFamily: 'Inconsolata' }}>Let's chat</Typography>
+            <BoxIcon hoverState={logHover} />
+          </ContactLink>
+        </Box>
+      </Stack>
+    </UList>
   );
 };
 
