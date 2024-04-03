@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Description} from './FormHeaderStyles';
+import { Description } from './FormHeaderStyles';
 import { Stack, Grid, Box } from '@mui/material';
 import SocialLinks from '../SocialLinks';
 import Typography from '@mui/material/Typography';
@@ -9,7 +9,9 @@ const FormHeader = () => {
     <Grid container>
       <Grid item xs={12} md={9}>
         <Stack>
-        <Typography variant={'h4'} sx={{ marginBottom: '1rem', fontFamily: 'Inconsolata', fontWeight: '500' }}>Fill the form below </Typography>
+          <Typography variant={'h4'} sx={{ marginBottom: '1rem', fontFamily: 'Inconsolata', fontWeight: '500' }}>
+            Fill the form below{' '}
+          </Typography>
           <Description variant={'h6'}>Let's work together!</Description>
           <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} marginTop={'1rem'}>
             <SocialLinks align={'left'} />

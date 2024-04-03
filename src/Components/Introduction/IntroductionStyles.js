@@ -13,7 +13,8 @@ export const TextController = styled(Stack)`
   }
 `;
 export const Description = styled(Typography)`
-  font-family: 'Open Sans', serif;
+  font-family: 'Inconsolata', serif;
+  font-weight: 500;
   line-height: 1.8;
   margin-top: 0.5rem;
 

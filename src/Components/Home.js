@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Navigation from './Navigation/Navigation';
-import {  Wrapper } from './Wrapper';
+import { Wrapper } from './Wrapper';
 import Skills from './Skills/Skills';
 import FeaturedProjects from './FeaturedProjects/FeaturedProjects';
 import SoftSkills from './SoftSkills/SoftSkills';
@@ -15,7 +15,6 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 const maxSize = 'lg';
-
 
 const Home = () => {
   const isMobile = useMediaQuery('(max-width: 600px)');

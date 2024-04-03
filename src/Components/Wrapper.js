@@ -30,4 +30,3 @@ export const Wrapper = styled((props) => <Box {...props} />)`
   min-height: 100vh;
   scroll-behavior: smooth;
 `;
-

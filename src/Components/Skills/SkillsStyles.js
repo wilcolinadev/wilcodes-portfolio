@@ -15,21 +15,8 @@ export const SkillsTitle = styled(Typography)`
   color: #ffffff;
   text-align: center;
   font-family: 'Inconsolata', monospace;
-  line-height: 2rem;
-  font-size: 1.3rem;
-  width: 70%;
-  margin: 0.5rem auto;
-
-  ${(props) => props.theme.breakpoints.up('sm')} {
-    font-size: 2rem;
-    line-height: 2.3rem;
-    width: 60%;
-  }
-
-  ${(props) => props.theme.breakpoints.up('lg')} {
-    font-size: 2.2rem;
-    width: 90%;
-  }
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Element = styled(ListItem)`

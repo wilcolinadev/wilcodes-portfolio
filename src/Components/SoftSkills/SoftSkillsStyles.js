@@ -11,31 +11,26 @@ export const SoftBox = styled(Stack)`
   @keyframes cycle {
     0% {
       transform: translateX(-100%);
-
     }
 
     100% {
       transform: translateX(0);
     }
   }
-  
-  
-    @keyframes infinite{
-      0%{
-        
-    transform: translateX(-100%);
+
+  @keyframes infinite {
+    0% {
+      transform: translateX(-100%);
     }
 
-  100% {
-    transform: translateX(0);
-  }
-}
-    
-    ${(props) => props.theme.breakpoints.up('lg')} {
-      animation: cycle 14s linear 1;
-      
+    100% {
+      transform: translateX(0);
     }
-  
+  }
+
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    animation: cycle 14s linear 1;
+  }
 `;
 
 export const SoxtText = styled(Typography)`

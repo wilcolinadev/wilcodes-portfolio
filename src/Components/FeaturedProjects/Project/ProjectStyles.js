@@ -6,13 +6,14 @@ export const ProjectBox = styled('div')`
 `;
 
 export const ProjectImage = styled('img')`
-  width: 95%;
+  width: 100%;
   height: auto;
   border: 2px solid #000000;
   border-radius: 10px;
   transition: 0.5s;
   margin-bottom: 2.5rem;
-
+  object-fit: cover;
+  min-height: 310px;
   &:hover,
   &:active {
     --c: #000000; /* the color */

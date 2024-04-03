@@ -19,7 +19,7 @@ const Navigation = ({ page }) => {
   };
   return (
     <UList>
-      <Box sx={{cursor: 'pointer'}}>
+      <Box sx={{ cursor: 'pointer' }}>
         <Logo variant={'h6'} onClick={() => scrollIntoView('home')}>
           Wilfredo Colina
         </Logo>
@@ -37,10 +37,12 @@ const Navigation = ({ page }) => {
           onMouseEnter={() => isLogHover(true)}
           onMouseLeave={() => isLogHover(false)}
           onClick={() => scrollIntoView('contact')}
-          sx={{cursor: 'pointer'}}
+          sx={{ cursor: 'pointer' }}
         >
           <ContactLink direction="row">
-            <Typography style={{ display: 'flex', alignItems: 'center', fontFamily: 'Inconsolata' }}>Let's chat</Typography>
+            <Typography style={{ display: 'flex', alignItems: 'center', fontFamily: 'Inconsolata' }}>
+              Let's chat
+            </Typography>
             <BoxIcon hoverState={logHover} />
           </ContactLink>
         </Box>
