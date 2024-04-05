@@ -15,7 +15,7 @@ const CarouselBox = styled(Box)`
 
   .embla__container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
   }
 
@@ -23,7 +23,11 @@ const CarouselBox = styled(Box)`
     flex: 0 0 auto;
     margin-right: 10px;
     margin-bottom: 20px;
-    max-width: 100%;
+  }
+  ${(props) => props.theme.breakpoints.up('sm')} {
+    .embla__container {
+      justify-content: center;
+    }
   }
 `;
 

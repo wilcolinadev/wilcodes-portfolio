@@ -13,6 +13,7 @@ const Index = () => {
           content="I'm Wilfredo Colina, Web developer who loves to face new challenges every day. I am in Austin Texas, and I am a graduated in Web development Applications. Software development, React developer with Next.js, Typescript, and Node.js."
         />
         <meta charSet="utf-8" />
+        <link rel="preconnect" href="https://res.cloudinary.com" />
       </Head>
       <Home />
     </Box>

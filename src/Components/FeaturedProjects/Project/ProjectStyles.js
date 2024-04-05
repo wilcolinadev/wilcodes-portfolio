@@ -13,7 +13,7 @@ export const ProjectImage = styled('img')`
   transition: 0.5s;
   margin-bottom: 2.5rem;
   object-fit: cover;
-  min-height: 310px;
+  min-height: 200px;
   &:hover,
   &:active {
     --c: #000000; /* the color */
@@ -24,6 +24,10 @@ export const ProjectImage = styled('img')`
       linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
     -webkit-background-clip: text, padding-box;
     transition: 0.5s;
+  }
+
+  ${(props) => props.theme.breakpoints.up('md')} {
+    height: 300px;
   }
 `;
 
