@@ -28,8 +28,9 @@ const Navigation = ({ page }) => {
       {page !== 'contact' && (
         <Stack direction="row">
           <Item onClick={() => scrollIntoView('projects')}> Projects </Item>
-          <Item onClick={() => scrollIntoView('career')}> Career </Item>
           <Item onClick={() => scrollIntoView('about')}> About </Item>
+          <Item onClick={() => scrollIntoView('career')}> Career </Item>
+          
         </Stack>
       )}
       <Stack direction={'row'}>
