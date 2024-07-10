@@ -17,12 +17,12 @@ export const BioTittle = styled(Typography)`
   padding: 0.5rem 0;
 `;
 export const BioImage = styled('img')`
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin-top: 2rem;
+  
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0) 80%, transparent 100%);
   ${(props) => props.theme.breakpoints.up('md')} {
-    width: 280px;
+    width: 400px;
 
     padding-left: 1rem;
     text-align: center;

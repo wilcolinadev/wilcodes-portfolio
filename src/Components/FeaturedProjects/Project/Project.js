@@ -34,7 +34,9 @@ const Project = ({ name, urlImage, description, url }) => {
           </Stack>
 
           <ProjectDescription>{description}</ProjectDescription>
+        
           <ProjectImage src={urlHandler(urlImage)} alt={name} />
+        
         </ProjectBox>
       </a>
     </Grid>

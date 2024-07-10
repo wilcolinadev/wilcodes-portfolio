@@ -65,7 +65,7 @@ const Bio = () => {
             <figure style={{ textAlign: 'center' }}>
               <BioImage
                 src={
-                  'https://res.cloudinary.com/djf9jqpml/image/upload/w_auto,f_auto,c_fill,q_auto/v1710021727/wil-grad-min-b15ff6c3a2fb0d1b6d48bc73f5d4bd9d_Large_Background_Removed_y4wxnn.png'
+                  'https://res.cloudinary.com/djf9jqpml/image/upload/v1720615749/IMG_4735_Background_Removed_gzjwcu.png'
                 }
                 alt={'bio of a web developer'}
               />

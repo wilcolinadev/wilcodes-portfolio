@@ -39,6 +39,7 @@ const FeaturedProjects = () => {
         {serverProjects.map((project) => {
           return (
             <Project
+             
               key={project.name}
               name={project.name}
               urlImage={project.urlImage}
