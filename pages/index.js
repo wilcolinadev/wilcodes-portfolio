@@ -5,9 +5,6 @@ import Head from 'next/head';
 import Script from 'next/script';
 
 const Index = () => {
-  
-
-
   return (
     <Box>
       <Head>
@@ -18,15 +15,26 @@ const Index = () => {
         />
         <meta charSet="utf-8" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PSN0TYFHRH"></Script>
-        <Script>
-          window.dataLayer = window.dataLayer || []
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
-
-          gtag('config', 'G-PSN0TYFHRH');
-        </Script>
       </Head>
+      <Script
+        id="GA-src"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-PSN0TYFHRH`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PSN0TYFHRH', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <Home />
     </Box>
   );
